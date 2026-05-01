@@ -14,6 +14,7 @@ public class Destillering {
     private String rygeMateriale;
     private String kommentar;
 
+    // Kommentar
     public Destillering(String newMakeNr, LocalDate startDato, LocalDate slutDato,
                         String maltBatch, String kornsort, double maengdeVaeske,
                         double alkoholProcent, String rygeMateriale, String kommentar) {
