@@ -16,6 +16,20 @@ public class Fad {
         this.plads = plads;
     }
 
+    public void setLager(Lager lager) {
+        if (this.lager != lager) {
+            Lager oldLager = this.lager;
+            if (oldLager != null) {
+                oldLager.removeFad(this);
+            }
+            this.lager = lager;
+            if (lager != null) {
+               lager.addFad(this);
+            }
+        }
+    }
+
+
     public String getFadId() {
         return fadId;
     }
@@ -34,5 +48,9 @@ public class Fad {
 
     public String getPlads() {
         return plads;
+    }
+
+    public Lager getLager() {
+        return lager;
     }
 }
