@@ -7,6 +7,7 @@ public class Fad {
     private double stoerrelse;
     private String plads;
     private Lager lager;
+    private FadStatus status;
 
     public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse, String plads) {
         this.fadId = fadId;
@@ -14,6 +15,7 @@ public class Fad {
         this.beskrivelse = beskrivelse;
         this.stoerrelse = stoerrelse;
         this.plads = plads;
+        this.status = FadStatus.DEAKTIVERET;
     }
 
     public void setLager(Lager lager) {
