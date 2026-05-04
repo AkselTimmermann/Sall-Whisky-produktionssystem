@@ -7,12 +7,12 @@ public class Fad implements LagerObjekt {
     private double stoerrelse;
     private FadStatus status;
 
-    public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse, FadStatus fadStatus) {
+    public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse) {
         this.fadId = fadId;
         this.traaType = traaType;
         this.beskrivelse = beskrivelse;
         this.stoerrelse = stoerrelse;
-        this.status = fadStatus;
+        this.status = FadStatus.DEAKTIVERET;
     }
 
 
