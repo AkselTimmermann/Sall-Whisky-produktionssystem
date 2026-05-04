@@ -42,8 +42,23 @@ public class Lager {
         throw new IllegalStateException("Plads findes ikke i systemet");
     }
 
+    //Metode til at fjerne objekt på en lagerPlads
+    public void fjernObjekt(LagerObjekt objekt) {
+        for (Reol reol : reoler) {
+            for (Hylde hylde : reol.getHylder()) {
+                for (LagerPlads lagerPlads : hylde.getPladser()) {
+                    if (lagerPlads.getIndhold() == objekt) {
+                        lagerPlads.fjernIndhold();
+                        return;
+                    }
+                }
+            }
+        }
+        throw new IllegalStateException("Objekt ikke fundet");
+    }
+
     //Metode til at finde placering på lageret for et objekt
-    public String getPlacering(LagerObjekt objekt) {
+    public String findPlacering(LagerObjekt objekt) {
         for (Reol reol : reoler) {
             for (Hylde hylde : reol.getHylder()) {
                 for (LagerPlads lagerPlads : hylde.getPladser()) {
