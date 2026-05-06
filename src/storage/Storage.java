@@ -13,26 +13,32 @@ public class Storage {
 
 
     public static void addDestillering(Destillering destillering) {
-
+        if (!destilleringer.contains(destillering)) {
+            destilleringer.add(destillering);
+        }
     }
 
     public static void addFad(Fad fad) {
-
+        if (!fade.contains(fad)) {
+            fade.add(fad);
+        }
     }
 
     public static void addLager(Lager lager) {
-
+        if (!lagre.contains(lager)) {
+            lagre.add(lager);
+        }
     }
 
     public static ArrayList<Destillering> getDestilleringer() {
-        return null;
+        return new ArrayList<Destillering>(destilleringer);
     }
 
     public static ArrayList<Fad> getFade() {
-        return null;
+        return new ArrayList<Fad>(fade);
     }
 
     public static ArrayList<Lager> getLagre() {
-        return null;
+        return new ArrayList<Lager>(lagre);
     }
 }
