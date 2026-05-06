@@ -1,5 +1,6 @@
 package model;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Fad implements LagerObjekt {
@@ -9,6 +10,7 @@ public class Fad implements LagerObjekt {
     private double stoerrelse;
     private FadStatus status;
     private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
+    private ArrayList<ModningsRegistrering> modningsRegistreringer = new ArrayList<>();
 
     public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse) {
         this.fadId = fadId;
@@ -41,7 +43,18 @@ public class Fad implements LagerObjekt {
         return fadId;
     }
 
+    public ModningsRegistrering opretModningsRegistrering(double alkoholProcent, LocalDate dato, double antalLiter, String note, String titel){
+        ModningsRegistrering modningsRegistrering = new ModningsRegistrering(alkoholProcent, dato, antalLiter, note, titel);
+        modningsRegistreringer.add(modningsRegistrering);
+        return modningsRegistrering;
+    }
+
     public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
         return new ArrayList<>(paafyldningsRegistreringer);
     }
+
+    public ArrayList<ModningsRegistrering> getModningsRegistreringer() {
+        return new ArrayList<>(modningsRegistreringer);
+    }
+
 }
