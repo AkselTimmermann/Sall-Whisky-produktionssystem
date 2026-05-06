@@ -1,11 +1,14 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Fad implements LagerObjekt {
     private String fadId;
     private String traaType;
     private String beskrivelse;
     private double stoerrelse;
     private FadStatus status;
+    private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
 
     public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse) {
         this.fadId = fadId;
@@ -36,5 +39,9 @@ public class Fad implements LagerObjekt {
     @Override
     public String getId() {
         return fadId;
+    }
+
+    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
+        return new ArrayList<>(paafyldningsRegistreringer);
     }
 }
