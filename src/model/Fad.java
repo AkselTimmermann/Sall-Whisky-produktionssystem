@@ -1,5 +1,7 @@
 package model;
 
+import net.bytebuddy.asm.Advice;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -44,10 +46,28 @@ public class Fad implements LagerObjekt {
         return fadId;
     }
 
+    public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering) {
+        PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillering, this);
+        paafyldningsRegistreringer.add(paafyldningsRegistrering);
+        return paafyldningsRegistrering;
+    }
+
+    public void fjernPaafyldningsRegistrering(PaafyldningsRegistrering paafyldningsRegistrering) {
+        if (paafyldningsRegistreringer.contains(paafyldningsRegistrering)) {
+            paafyldningsRegistreringer.remove(paafyldningsRegistrering);
+        }
+    }
+
     public ModningsRegistrering opretModningsRegistrering(double alkoholProcent, LocalDate dato, double antalLiter, String note, String titel){
         ModningsRegistrering modningsRegistrering = new ModningsRegistrering(alkoholProcent, dato, antalLiter, note, titel);
         modningsRegistreringer.add(modningsRegistrering);
         return modningsRegistrering;
+    }
+
+    public void fjernModningsRegistrering(ModningsRegistrering modningsRegistrering) {
+        if (modningsRegistreringer.contains(modningsRegistrering)) {
+            modningsRegistreringer.remove(modningsRegistrering);
+        }
     }
 
     public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
