@@ -7,9 +7,9 @@ import model.Lager;
 import java.util.ArrayList;
 
 public class Storage implements StorageInterface {
-    private ArrayList<Destillering> destilleringer;
-    private ArrayList<Fad> fade;
-    private ArrayList<Lager> lagre;
+    private ArrayList<Destillering> destilleringer = new ArrayList<>();
+    private ArrayList<Fad> fade = new ArrayList<>();
+    private ArrayList<Lager> lagre = new ArrayList<>();
 
 
     public void addDestillering(Destillering destillering) {
