@@ -6,39 +6,39 @@ import model.Lager;
 
 import java.util.ArrayList;
 
-public class Storage {
-    private static ArrayList<Destillering> destilleringer;
-    private static ArrayList<Fad> fade;
-    private static ArrayList<Lager> lagre;
+public class Storage implements StorageInterface {
+    private ArrayList<Destillering> destilleringer;
+    private ArrayList<Fad> fade;
+    private ArrayList<Lager> lagre;
 
 
-    public static void addDestillering(Destillering destillering) {
+    public void addDestillering(Destillering destillering) {
         if (!destilleringer.contains(destillering)) {
             destilleringer.add(destillering);
         }
     }
 
-    public static void addFad(Fad fad) {
+    public void addFad(Fad fad) {
         if (!fade.contains(fad)) {
             fade.add(fad);
         }
     }
 
-    public static void addLager(Lager lager) {
+    public void addLager(Lager lager) {
         if (!lagre.contains(lager)) {
             lagre.add(lager);
         }
     }
 
-    public static ArrayList<Destillering> getDestilleringer() {
+    public ArrayList<Destillering> getDestilleringer() {
         return new ArrayList<Destillering>(destilleringer);
     }
 
-    public static ArrayList<Fad> getFade() {
+    public ArrayList<Fad> getFade() {
         return new ArrayList<Fad>(fade);
     }
 
-    public static ArrayList<Lager> getLagre() {
+    public ArrayList<Lager> getLagre() {
         return new ArrayList<Lager>(lagre);
     }
 }
