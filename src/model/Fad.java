@@ -19,6 +19,7 @@ public class Fad implements LagerObjekt {
     }
 
 
+
     public FadStatus getStatus() {
         return status;
     }
