@@ -30,6 +30,13 @@ public class Destillering {
         this.kommentar = kommentar;
     }
 
+    public void reducerResterendeLiter(double liter) {
+        if (liter > maengdeVaeske) {
+            throw new IllegalArgumentException("Ikke nok væske");
+        }
+        this.maengdeVaeske -= liter;
+    }
+
     public String getNewMakeNr() {
         return newMakeNr;
     }

@@ -35,6 +35,12 @@ public class Controller {
 
     //Mangler Modningsregistrering og paafyldningsregistrering
 
+    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Fad fad) {
+        PaafyldningsRegistrering paafyldningsRegistrering = fad.opretPaafyldningsRegistrering(antalLiter, dato, destillering);
+        destillering.reducerResterendeLiter(antalLiter);
+        return paafyldningsRegistrering;
+    }
+
     public Destillering createDestillering(String newMakeNr, LocalDate startDato, LocalDate slutDato, String maltBatch, String kornSort, double maengdeVaeske, double alkoholProcent, String rygeMateriale, String kommentar){
         return null;
     }
