@@ -93,10 +93,12 @@ public class StartVindue extends BorderPane {
 
     private void showOpretFad() {
         markSelected(btnOpretFad);
+        this.setCenter(new OpretFadPane(controller));
     }
 
     private void showOpretDestillering() {
         markSelected(btnOpretDestillering);
+        this.setCenter(new OpretDestilleringPane(controller));
     }
 
     private void markSelected(Button selectedButton) {
