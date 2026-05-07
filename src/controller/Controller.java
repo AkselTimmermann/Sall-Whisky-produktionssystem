@@ -13,27 +13,33 @@ public class Controller {
     this.storage = storage;
     }
 
-    public Lager createLager(String navn, String lokation, int kapacitet){
-        return null;
+    public Lager createLager(String navn, String lokation, int stoerrelse){
+        Lager lager = new Lager(navn, lokation, stoerrelse);
+        storage.addLager(lager);
+        return lager;
     }
 
     public Reol createReol(int reolNr){
-        return null;
+        Reol reol = new Reol(reolNr);
+        return reol;
     }
 
     public Hylde createHylde(int hyldeNr){
-        return null;
+        Hylde hylde = new Hylde(hyldeNr);
+        return hylde;
     }
 
     public LagerPlads createLagerPlads(int pladsNr){
-        return null;
+        LagerPlads lagerPlads = new LagerPlads(pladsNr);
+        return lagerPlads;
     }
 
-    public Fad createFad(String fadId, String traeType, String beskrivelse, int stoerrelse, FadStatus status){
-        return null;
+    public Fad createFad(String fadId, String traeType, String beskrivelse, int stoerrelse){
+        Fad fad = new Fad(fadId, traeType, beskrivelse, stoerrelse);
+        storage.addFad(fad);
+        return fad;
     }
 
-    //Mangler Modningsregistrering og paafyldningsregistrering
 
     public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Fad fad) {
         PaafyldningsRegistrering paafyldningsRegistrering = fad.opretPaafyldningsRegistrering(antalLiter, dato, destillering);
@@ -41,8 +47,15 @@ public class Controller {
         return paafyldningsRegistrering;
     }
 
+    public ModningsRegistrering createModningsRegistrering(double alkoholProcent, LocalDate dato, double antalLiter, String note, String titel, Fad fad) {
+        ModningsRegistrering modningsRegistrering = fad.opretModningsRegistrering(alkoholProcent, dato, antalLiter, note, titel);
+        return modningsRegistrering;
+    }
+
     public Destillering createDestillering(String newMakeNr, LocalDate startDato, LocalDate slutDato, String maltBatch, String kornSort, double maengdeVaeske, double alkoholProcent, String rygeMateriale, String kommentar){
-        return null;
+        Destillering destillering = new Destillering(newMakeNr, startDato, slutDato, maltBatch, kornSort, maengdeVaeske, alkoholProcent, rygeMateriale, kommentar);
+        storage.addDestillering(destillering);
+        return destillering;
     }
 
 
