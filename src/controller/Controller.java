@@ -9,7 +9,7 @@ import java.time.LocalDate;
 public class Controller {
     private StorageInterface storage;
 
-    Controller(StorageInterface storage){
+    public Controller(StorageInterface storage){
     this.storage = storage;
     }
 
