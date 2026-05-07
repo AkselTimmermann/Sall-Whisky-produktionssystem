@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="paafyldningsRegistrering lavet i Controllerr">
-      <change beforePath="$PROJECT_DIR$/out/production/Sall-Whisky-produktionssystem/controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Gui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="paafyldningsRegistrering lavet i Controllerrr">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,36 +48,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.Test_Lager_Metoder.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlads_HyldeFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlads_ReolFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlads_gyldigplads_returnererPlads.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.placerObjekt_GyldigPlads_objektPlaceres.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.placerObjekt_PlaceringFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.placerObjekt_UgyldigPlads_PladsOptaget.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.Test_Lager_Metoder (1).executor": "Run",
+    "JUnit.Test_Lager_Metoder.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_HyldeFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_ReolFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_gyldigplads_returnererPlads.executor": "Run",
+    "JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_GyldigPlads_objektPlaceres.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_PlaceringFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_UgyldigPlads_PladsOptaget.executor": "Run",
+    "Maven.sall-whisky-produktionssystem [javafx:run].executor": "Run",
+    "Maven.sall-whisky-produktionssystem [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.Test_Lager_Metoder">
+}]]></component>
+  <component name="RunManager" selected="Maven.sall-whisky-produktionssystem [javafx:run]">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.App" />
+      <module name="sall-whisky-produktionssystem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_Lager_Metoder (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sall-whisky-produktionssystem" />
+      <option name="PACKAGE_NAME" value="lagerTests" />
+      <option name="MAIN_CLASS_NAME" value="lagerTests.Test_Lager_Metoder" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test_Lager_Metoder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sall-Whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="lagerTests" />
@@ -107,33 +127,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sall-Whisky-produktionssystem" />
-      <option name="PACKAGE_NAME" value="lagerTests" />
-      <option name="MAIN_CLASS_NAME" value="lagerTests.Test_Lager_Metoder" />
-      <option name="METHOD_NAME" value="fjernObjekt_ObjektFindesIkke_CastException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="sall-whisky-produktionssystem [javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
-    <configuration name="Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sall-Whisky-produktionssystem" />
-      <option name="PACKAGE_NAME" value="lagerTests" />
-      <option name="MAIN_CLASS_NAME" value="lagerTests.Test_Lager_Metoder" />
-      <option name="METHOD_NAME" value="fjernObjekt_ObjektFindes_ObjektFjernes" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
+      <item itemvalue="JUnit.Test_Lager_Metoder" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
+      <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.Test_Lager_Metoder" />
         <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
         <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
-        <item itemvalue="JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException" />
-        <item itemvalue="JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +212,7 @@
     <MESSAGE value="Modnings- og paafyldnings registreringer opdateret" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controller" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerr" />
-    <option name="LAST_COMMIT_MESSAGE" value="paafyldningsRegistrering lavet i Controllerr" />
+    <MESSAGE value="paafyldningsRegistrering lavet i Controllerrr" />
+    <option name="LAST_COMMIT_MESSAGE" value="paafyldningsRegistrering lavet i Controllerrr" />
   </component>
 </project>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: lagerTests.Test_Lager_Metoder
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 s -- in lagerTests.Test_Lager_Metoder
