@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Test navne opdateret">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Lager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Lager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/lagerTests/Test_Lager_Metoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/lagerTests/Test_Lager_Metoder.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AkselTimmermann&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,
+    &quot;accountId&quot;: &quot;243a52f7-dc64-4338-89d3-b4e43ed51bf1&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="3D4ll79KBDesCMivrDAao2c1ssx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.Test_Lager_Metoder (1).executor": "Run",
+    "JUnit.Test_Lager_Metoder.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_HyldeFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_ReolFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_gyldigplads_returnererPlads.executor": "Run",
+    "JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_GyldigPlads_objektPlaceres.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_PlaceringFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_UgyldigPlads_PladsOptaget.executor": "Run",
+    "Maven.sall-whisky-produktionssystem [javafx:run].executor": "Run",
+    "Maven.sall-whisky-produktionssystem [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
+  }
+}]]></component>
+  <component name="RunManager" selected="Maven.sall-whisky-produktionssystem [javafx:run]">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.App" />
+      <module name="sall-whisky-produktionssystem" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_Lager_Metoder (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sall-whisky-produktionssystem" />
+      <option name="PACKAGE_NAME" value="lagerTests" />
+      <option name="MAIN_CLASS_NAME" value="lagerTests.Test_Lager_Metoder" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_Lager_Metoder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sall-Whisky-produktionssystem" />
+      <option name="PACKAGE_NAME" value="lagerTests" />
+      <option name="MAIN_CLASS_NAME" value="lagerTests.Test_Lager_Metoder" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sall-Whisky-produktionssystem" />
+      <option name="PACKAGE_NAME" value="lagerTests" />
+      <option name="MAIN_CLASS_NAME" value="lagerTests.Test_Lager_Metoder" />
+      <option name="METHOD_NAME" value="findPlacering_ObjektFindes_Placeringprintes" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sall-Whisky-produktionssystem" />
+      <option name="PACKAGE_NAME" value="lagerTests" />
+      <option name="MAIN_CLASS_NAME" value="lagerTests.Test_Lager_Metoder" />
+      <option name="METHOD_NAME" value="findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sall-whisky-produktionssystem [javafx:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
+      <item itemvalue="JUnit.Test_Lager_Metoder" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
+      <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.Test_Lager_Metoder" />
+        <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
+        <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="" />
+      <created>1777549370612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1777549370612</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fad og lager klasse oprettet" />
+    <MESSAGE value="Fad og lager klasse skeletet færdigt." />
+    <MESSAGE value="Fad og lager klasse associering færdig" />
+    <MESSAGE value="Opdateret version af lager delen af systemet" />
+    <MESSAGE value="fjernObjekt metode lavet i lager klassen" />
+    <MESSAGE value="Test af lager oprettet og gennemført" />
+    <MESSAGE value="controller, storage og gui klasser oprettet" />
+    <MESSAGE value="controller, storage og gui klasser oprettet..." />
+    <MESSAGE value="storage opdateret" />
+    <MESSAGE value="storage opdaterett" />
+    <MESSAGE value="PaafyldningsRegistrering oprettet" />
+    <MESSAGE value="PaafyldningsRegistrering oprettett" />
+    <MESSAGE value="Modnings- og paafyldnings registreringer opdateret" />
+    <MESSAGE value="paafyldningsRegistrering lavet i Controller" />
+    <MESSAGE value="paafyldningsRegistrering lavet i Controllerr" />
+    <MESSAGE value="paafyldningsRegistrering lavet i Controllerrr" />
+    <MESSAGE value="Test navne opdateret" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test navne opdateret" />
+  </component>
+</project>

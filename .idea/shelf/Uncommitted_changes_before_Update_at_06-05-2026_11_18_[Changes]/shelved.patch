@@ -1,0 +1,17 @@
+Index: src/controller/Controller.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package controller;\r\n\r\npublic class Controller {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/controller/Controller.java b/src/controller/Controller.java
+--- a/src/controller/Controller.java	(revision 219fedbc313ca8629e7791e012d063bfcd81cfb6)
++++ b/src/controller/Controller.java	(date 1778059086858)
+@@ -1,4 +1,6 @@
+ package controller;
+ 
+ public class Controller {
++
++
+ }

@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_06-05-2026_11_18_[Changes]" date="1778059128018" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_11_18_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 06-05-2026 11:18 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Sall-Whisky-produktionssystem/storage/Storage.class" />
+    <option name="AFTER_PATH" value="out/production/Sall-Whisky-produktionssystem/storage/Storage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_11_18_[Changes]/Storage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Sall-Whisky-produktionssystem/controller/Controller.class" />
+    <option name="AFTER_PATH" value="out/production/Sall-Whisky-produktionssystem/controller/Controller.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_11_18_[Changes]/Controller.class" />
+  </binary>
+</changelist>

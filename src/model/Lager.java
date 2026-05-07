@@ -6,13 +6,13 @@ import java.util.ArrayList;
 public class Lager {
     private String navn;
     private String lokation;
-    private int kapacitet;
+    private int stoerrelse;
     private ArrayList<Reol> reoler = new ArrayList<>();
 
     public Lager(String navn, String lokation, int kapacitet) {
         this.navn = navn;
         this.lokation = lokation;
-        this.kapacitet = kapacitet;
+        this.stoerrelse = kapacitet;
     }
 
     //metode til at placere objekt på en lagerPlads
@@ -87,8 +87,8 @@ public class Lager {
         return lokation;
     }
 
-    public int getKapacitet() {
-        return kapacitet;
+    public int getStoerrelse() {
+        return stoerrelse;
     }
 
     public ArrayList<Reol> getReoler() {
