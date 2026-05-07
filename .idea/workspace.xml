@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Test navne opdateret">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="create metoder oprettet i controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Lager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Lager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/lagerTests/Test_Lager_Metoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/lagerTests/Test_Lager_Metoder.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +212,7 @@
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerr" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerrr" />
     <MESSAGE value="Test navne opdateret" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test navne opdateret" />
+    <MESSAGE value="create metoder oprettet i controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="create metoder oprettet i controller" />
   </component>
 </project>
