@@ -5,10 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="a">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Leverandoer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/MaltBatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Medarbejder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Destillering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/PaafyldningsRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PaafyldningsRegistrering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Fad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Fad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/PaafyldningsRegistrering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/PaafyldningsRegistrering.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,8 +171,8 @@
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
       <item itemvalue="JUnit.Test_Lager_Metoder" />
-      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
       <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
