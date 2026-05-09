@@ -17,6 +17,7 @@ public class Destillat {
         this.destillatNr = destillatNr;
         setDestilleringer(destilleringer);
         for (int i = 0; i < destilleringer.size(); i++) {
+            destilleringer.get(i).reducerResterendeLiter(antalLiterAfHverDestillat[i]);
             updateAntalLiterAndAlkoholprocent(antalLiterAfHverDestillat[i],destilleringer.get(i).getAlkoholProcent());
         }
     }
