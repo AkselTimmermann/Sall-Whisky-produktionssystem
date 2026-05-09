@@ -34,8 +34,8 @@ public class Controller {
         return lagerPlads;
     }
 
-    public Fad createFad(String fadId, String traeType, String beskrivelse, int stoerrelse){
-        Fad fad = new Fad(fadId, traeType, beskrivelse, stoerrelse);
+    public Fad createFad(String fadId, String traeType, String beskrivelse, int stoerrelse, Leverandoer leverandoer){
+        Fad fad = new Fad(fadId, traeType, beskrivelse, stoerrelse, leverandoer);
         storage.addFad(fad);
         return fad;
     }
