@@ -27,7 +27,7 @@ public class Destillering {
         this.alkoholProcent = alkoholProcent;
         this.rygeMateriale = rygeMateriale;
         this.kommentar = kommentar;
-        setMaltBatch(maltBatch);
+        this.maltBatch = maltBatch;
         this.medarbejder = medarbejder;
     }
 
@@ -64,13 +64,6 @@ public class Destillering {
 
     public String getKommentar() {
         return kommentar;
-    }
-
-    public void setMaltBatch(MaltBatch maltBatch) {
-        if (this.maltBatch==null){
-            this.maltBatch = maltBatch;
-            maltBatch.addDestillering(this);
-        }
     }
 
     public void addDestillat(Destillat destillat) {
