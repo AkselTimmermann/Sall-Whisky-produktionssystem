@@ -34,15 +34,15 @@ public class Controller {
         return lagerPlads;
     }
 
-    public Fad createFad(String fadId, String traeType, String beskrivelse, int stoerrelse){
-        Fad fad = new Fad(fadId, traeType, beskrivelse, stoerrelse);
+    public Fad createFad(String fadId, String traeType, String beskrivelse, int stoerrelse, Leverandoer leverandoer){
+        Fad fad = new Fad(fadId, traeType, beskrivelse, stoerrelse, leverandoer);
         storage.addFad(fad);
         return fad;
     }
 
 
-    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Fad fad) {
-        PaafyldningsRegistrering paafyldningsRegistrering = fad.opretPaafyldningsRegistrering(antalLiter, dato, destillering);
+    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Fad fad, Medarbejder medarbejder) {
+        PaafyldningsRegistrering paafyldningsRegistrering = fad.opretPaafyldningsRegistrering(antalLiter, dato, destillering, medarbejder);
         destillering.reducerResterendeLiter(antalLiter);
         return paafyldningsRegistrering;
     }
@@ -52,8 +52,8 @@ public class Controller {
         return modningsRegistrering;
     }
 
-    public Destillering createDestillering(String newMakeNr, LocalDate startDato, LocalDate slutDato, String maltBatch, String kornSort, double maengdeVaeske, double alkoholProcent, String rygeMateriale, String kommentar){
-        Destillering destillering = new Destillering(newMakeNr, startDato, slutDato, maltBatch, kornSort, maengdeVaeske, alkoholProcent, rygeMateriale, kommentar);
+    public Destillering createDestillering(String newMakeNr, LocalDate startDato, LocalDate slutDato, double maengdeVaeske, double alkoholProcent, String rygeMateriale, String kommentar, MaltBatch maltBatch, Medarbejder medarbejder){
+        Destillering destillering = new Destillering(newMakeNr, startDato, slutDato, maengdeVaeske, alkoholProcent, rygeMateriale, kommentar, maltBatch, medarbejder);
         storage.addDestillering(destillering);
         return destillering;
     }
