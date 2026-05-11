@@ -28,6 +28,7 @@ public class OpretDestillatPane extends BorderPane {
     public OpretDestillatPane(Controller controller) {
         this.controller = controller;
         initContent();
+        updateDestilleringer();
     }
 
     private void initContent() {
@@ -124,8 +125,76 @@ public class OpretDestillatPane extends BorderPane {
 
     private void updateDestilleringer() {
         cmbDestillering.getItems().clear();
-        cmbDestillering.getItems().addAll();
+        cmbDestillering.getItems().addAll(controller.getDestilleringer());
+    }
 
+
+
+
+
+
+    private void opretDestillatAction() {
+    }
+
+    private void fjernValgtDestilleringAction() {
+    }
+
+    private void tilfoejDestilleringAction() {
+        Destillering destillering = cmbDestillering.getValue();
+
+        if (destillering == null) {
+            visFejl("Vælg mindst en destillering.");
+            return;
+        }
+
+        if (valgteDestilleringer.contains(destillering)) {
+            visFejl("Denne destillering er allerede tilføjet.");
+            return;
+        }
+
+        int antalLiter;
+        try {
+            antalLiter = Integer.parseInt(txfAntalLiter.getText());
+        } catch (NumberFormatException e) {
+            visFejl(e.getMessage());
+            return;
+        }
+
+        valgteDestilleringer.add(destillering);
+        valgteLiter.add(antalLiter);
+
+        updateValgteListe();
+
+        cmbDestillering.getSelectionModel().clearSelection();
+        txfAntalLiter.clear();
+
+    }
+
+    private void updateValgteListe() {
+        lvwValgteDestilleringer.getItems().clear();
+
+        for (int i = 0; i < valgteDestilleringer.size(); i++) {
+            Destillering d = valgteDestilleringer.get(i);
+            int liter = valgteLiter.get(i);
+
+            String tekst = d.getNewMakeNr() +
+                    " (" + liter + " liter" + ", " + d.getAlkoholProcent() + "&)";
+
+            lvwValgteDestilleringer.getItems().add(tekst);
+        }
+    }
+
+    private void updateOpsummering() {
+        double samletLiter = 0;
+        double samletAlkohol = 0;
+
+        for (int i = 0; i < valgteLiter.size(); i++) {
+            double liter = valgteLiter.get(i);
+            double alkoholProcent = valgteDestilleringer.get(i).getAlkoholProcent();
+
+            samletLiter += liter;
+            samletAlkohol += liter * alkoholProcent;
+        }
     }
 
 
@@ -136,16 +205,6 @@ public class OpretDestillatPane extends BorderPane {
 
         valgteDestilleringer.clear();
         valgteLiter.clear();
-
-    }
-
-    private void opretDestillatAction() {
-    }
-
-    private void fjernValgtDestilleringAction() {
-    }
-
-    private void tilfoejDestilleringAction() {
     }
 
     private  void visFejl(String besked) {

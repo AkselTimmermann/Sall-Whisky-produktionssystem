@@ -13,6 +13,9 @@ public class App extends Application{
         StorageInterface storage = new Storage();
         Controller controller = new Controller(storage);
 
+        InitialData.initData(controller);
+
+
         StartVindue root = new StartVindue(controller);
 
         Scene scene = new Scene(root, 1200, 750);
