@@ -11,4 +11,8 @@ public class Leverandoer {
         this.navn = navn;
         this.lokation = lokation;
     }
+
+    public String toString() {
+        return navn;
+    }
 }
