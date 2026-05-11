@@ -41,11 +41,9 @@ public class OpretLagerPane extends BorderPane {
         VBox header = createHeader();
         GridPane format = createFormat();
 
+
         root.getChildren().addAll(header, format);
         this.setCenter(root);
-
-
-
 
     }
 
@@ -79,7 +77,6 @@ public class OpretLagerPane extends BorderPane {
         txfLokation.setPrefWidth(350);
         txfStoerrelse.setPrefWidth(350);
 
-        int row = 0;
 
         Label lblLagerInfo = new Label("Lageroplysninger");
         lblLagerInfo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
@@ -119,7 +116,6 @@ public class OpretLagerPane extends BorderPane {
 
 
         return pane;
-
     }
 
     private void opretLagerAction() {
