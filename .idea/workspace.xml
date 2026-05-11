@@ -4,37 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Leverandoer toString">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Sall-Whisky-produktionssystem.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Destillering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Fad.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/FadStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Gui.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Hylde.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Lager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/LagerObjekt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/LagerPlads.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Reol.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Storage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/Test_Lager_Metoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_09_14__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_11_18_[Changes]/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_11_18_[Changes]/Storage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_11_18_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06-05-2026_11_18__Changes_.xml" beforeDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="OpretDestillatPane completed (ish)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretDestillatPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestillatPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestillatPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretDestillatPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Destillering.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerModningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerModningPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/StartVindue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/StartVindue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Destillat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Medarbejder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Medarbejder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerModningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerModningPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Destillat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Medarbejder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Medarbejder.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +220,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Opdateret version af lager delen af systemet" />
     <MESSAGE value="fjernObjekt metode lavet i lager klassen" />
     <MESSAGE value="Test af lager oprettet og gennemført" />
     <MESSAGE value="controller, storage og gui klasser oprettet" />
@@ -262,6 +244,7 @@
     <MESSAGE value="maltBatch enkelterret" />
     <MESSAGE value="maltBatch enkelterrett" />
     <MESSAGE value="Leverandoer toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="Leverandoer toString" />
+    <MESSAGE value="OpretDestillatPane completed (ish)" />
+    <option name="LAST_COMMIT_MESSAGE" value="OpretDestillatPane completed (ish)" />
   </component>
 </project>

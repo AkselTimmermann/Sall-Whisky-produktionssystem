@@ -8,6 +8,8 @@ import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import model.MaltBatch;
+import model.Medarbejder;
 
 public class OpretDestilleringPane extends BorderPane {
 
@@ -22,8 +24,8 @@ public class OpretDestilleringPane extends BorderPane {
     private DoubleField dfMaengdeVaeske = new DoubleField();
     private DoubleField dfAlkoholProcent = new DoubleField();
 
-    private ComboBox maltBatchCb = new ComboBox();
-    private ComboBox medarbejderCb = new ComboBox<>();
+    private ComboBox<MaltBatch> maltBatchCb = new ComboBox<>();
+    private ComboBox<Medarbejder> medarbejderCb = new ComboBox<>();
 
     private DatePicker dpStartDato = new DatePicker();
     private DatePicker dpSlutDato = new DatePicker();

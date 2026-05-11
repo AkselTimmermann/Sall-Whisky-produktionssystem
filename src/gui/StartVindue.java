@@ -130,10 +130,12 @@ public class StartVindue extends BorderPane {
 
     private void showRegistrerPaafyldning() {
         markSelected(btnRegistrerPaafyldning);
+        this.setCenter(new RegistrerPaafyldningPane(controller));
     }
 
     private void showRegistrerModning() {
         markSelected(btnRegistrerModning);
+        this.setCenter(new RegistrerModningPane(controller));
     }
 
 
