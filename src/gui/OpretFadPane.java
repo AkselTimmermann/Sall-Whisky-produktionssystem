@@ -61,6 +61,7 @@ public class OpretFadPane extends BorderPane {
         fadIdTxf.setPrefWidth(350);
         stoerrelseTxf.setPrefWidth(350);
         traaTypeTxf.setPrefWidth(350);
+        leverandoerCb.setPrefWidth(350);
 
         pane.add(fadIdLbl, 0, 1);
         pane.add(fadIdTxf, 1, 1);
