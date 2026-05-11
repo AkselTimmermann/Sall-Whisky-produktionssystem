@@ -20,13 +20,15 @@ public class OpretFadPane extends BorderPane {
     Label fadId = new Label("FadId:");
     Label traaType = new Label("Træ Type:");
     Label stoerrelse = new Label("Størrelse:");
-    Label beskrivelse = new Label("Beskrivelse");
+    Label beskrivelse = new Label("Beskrivelse:");
+    Label leverandoer = new Label("Leverandør:");
     TextField fadIdTxf = new TextField();
     TextField traaTypeTxf = new TextField();
     TextField stoerrelseTxf = new TextField();
     TextArea beskriveseTa = new TextArea();
     Button btnOpret = new Button("Opret fad");
     Button btnRyd = new Button("Ryd felter");
+    ComboBox leverandoerCb = new ComboBox<>();
 
     private void initContent() {
         VBox root = new VBox(10);
@@ -65,11 +67,18 @@ public class OpretFadPane extends BorderPane {
         pane.add(stoerrelse, 0, 3);
         pane.add(stoerrelseTxf, 1, 3);
 
-        pane.add(beskrivelse, 0, 4);
-        pane.add(beskriveseTa, 1, 4);
+        pane.add(leverandoer, 0,4);
+        pane.add(leverandoerCb,1,4);
+
+        pane.add(beskrivelse, 0, 5);
+        pane.add(beskriveseTa, 1, 5);
 
         HBox buttons = new HBox(btnOpret, btnRyd);
-        pane.add(buttons, 1, 5);
+        pane.add(buttons, 1, 6);
+
+        buttons.setSpacing(10);
+
+        leverandoerCb.getItems().addAll(controller.getLeverandoer());
 
         btnOpret.setOnAction(actionEvent -> opretFadAction());
         btnRyd.setOnAction(actionEvent -> rydFelterAction());

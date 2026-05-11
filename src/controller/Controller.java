@@ -79,5 +79,11 @@ public class Controller {
         return destillat;
     }
 
+    public ArrayList<Leverandoer> getLeverandoer() {
+        return storage.getLeverandoer();
+    }
 
+    public ArrayList<Destillering> getDestilleringer() {
+        return storage.getDestilleringer();
+    }
 }
