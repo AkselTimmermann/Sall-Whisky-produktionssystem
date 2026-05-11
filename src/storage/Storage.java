@@ -1,8 +1,6 @@
 package storage;
 
-import model.Destillering;
-import model.Fad;
-import model.Lager;
+import model.*;
 
 import java.util.ArrayList;
 
@@ -10,6 +8,10 @@ public class Storage implements StorageInterface {
     private ArrayList<Destillering> destilleringer = new ArrayList<>();
     private ArrayList<Fad> fade = new ArrayList<>();
     private ArrayList<Lager> lagre = new ArrayList<>();
+    private ArrayList<Leverandoer> leverandoerer = new ArrayList<>();
+    private ArrayList<MaltBatch> maltBatches = new ArrayList<>();
+    private ArrayList<Medarbejder> medarbejderer = new ArrayList<>();
+    private ArrayList<Destillat> destillater = new ArrayList<>();
 
 
     public void addDestillering(Destillering destillering) {
@@ -30,6 +32,27 @@ public class Storage implements StorageInterface {
         }
     }
 
+    public void addLeverandoer(Leverandoer leverandoer) {
+        if (!leverandoerer.contains(leverandoer)) {
+            leverandoerer.add(leverandoer);
+        }
+    }
+    public void addMaltBatch(MaltBatch maltBatch) {
+        if (!maltBatches.contains(maltBatch)) {
+            maltBatches.add(maltBatch);
+        }
+    }
+    public void addMedarbejder(Medarbejder medarbejder) {
+        if (!medarbejderer.contains(medarbejder)) {
+            medarbejderer.add(medarbejder);
+        }
+    }
+    public void addDestillat(Destillat destillat) {
+        if (!destillater.contains(destillat)) {
+            destillater.add(destillat);
+        }
+    }
+
     public ArrayList<Destillering> getDestilleringer() {
         return new ArrayList<Destillering>(destilleringer);
     }
@@ -40,5 +63,25 @@ public class Storage implements StorageInterface {
 
     public ArrayList<Lager> getLagre() {
         return new ArrayList<Lager>(lagre);
+    }
+
+    @Override
+    public ArrayList<Leverandoer> getLeverandoer() {
+        return new ArrayList<>(leverandoerer);
+    }
+
+    @Override
+    public ArrayList<Medarbejder> getMedarbejder() {
+        return new ArrayList<>(medarbejderer);
+    }
+
+    @Override
+    public ArrayList<MaltBatch> getMaltBatch() {
+        return new ArrayList<>(maltBatches);
+    }
+
+    @Override
+    public ArrayList<Destillat> getDestillat() {
+        return new ArrayList<>(destillater);
     }
 }
