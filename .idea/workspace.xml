@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="associeringer rettet">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Destillat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Destillering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/StorageInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/StorageInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Fad.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/PaafyldningsRegistrering.class" beforeDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="controller og storage opdateret">
+      <change beforePath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,6 +215,7 @@
     <MESSAGE value="a" />
     <MESSAGE value="Oprettet nye klasser til iteration5 og lavet automatisk udregning af alkoholProcent i Destillatklassen" />
     <MESSAGE value="associeringer rettet" />
-    <option name="LAST_COMMIT_MESSAGE" value="associeringer rettet" />
+    <MESSAGE value="controller og storage opdateret" />
+    <option name="LAST_COMMIT_MESSAGE" value="controller og storage opdateret" />
   </component>
 </project>
