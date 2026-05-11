@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Test navne opdateret" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Oprettet nye klasser til iteration5 og lavet automatisk udregning af alkoholProcent i Destillatklassen">
+      <change beforePath="$PROJECT_DIR$/src/model/Destillat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +35,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,
-    &quot;accountId&quot;: &quot;243a52f7-dc64-4338-89d3-b4e43ed51bf1&quot;
+    &quot;accountId&quot;: &quot;48052c54-ad71-490d-957e-0f0b68768a0e&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -157,8 +159,8 @@
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
       <item itemvalue="JUnit.Test_Lager_Metoder" />
-      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
       <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
@@ -210,6 +212,8 @@
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerr" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerrr" />
     <MESSAGE value="Test navne opdateret" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test navne opdateret" />
+    <MESSAGE value="a" />
+    <MESSAGE value="Oprettet nye klasser til iteration5 og lavet automatisk udregning af alkoholProcent i Destillatklassen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Oprettet nye klasser til iteration5 og lavet automatisk udregning af alkoholProcent i Destillatklassen" />
   </component>
 </project>

@@ -7,12 +7,13 @@ public class PaafyldningsRegistrering {
     private LocalDate dato;
     private Destillering destillering;
     private Fad fad;
+    private Medarbejder medarbejder;
 
-    public PaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Fad fad) {
+    public PaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Fad fad, Medarbejder medarbejder) {
         if (destillering == null) {
             throw new IllegalStateException("Destillering skal være oprettet");
         }
-        if (antalLiter > destillering.getMaengdeVaeske()) {
+        if (antalLiter > destillering.getAntalLiter()) {
             throw new IllegalStateException("Antal liter overstiger mængden af ledig destillering");
         }
         if (fad == null) {
@@ -22,6 +23,7 @@ public class PaafyldningsRegistrering {
         this.dato = dato;
         this.destillering = destillering;
         this.fad = fad;
+        this.medarbejder = medarbejder;
     }
 
     public double getAntalLiter() {

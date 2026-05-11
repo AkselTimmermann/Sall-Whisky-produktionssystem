@@ -17,6 +17,8 @@ public class Test_Lager_Metoder {
     private Fad fad1;
     private Fad fad2;
 
+    private Leverandoer ld1;
+
 
     @BeforeEach
     void setup() {
@@ -28,6 +30,7 @@ public class Test_Lager_Metoder {
         lp2 = new LagerPlads(2);
         lp3 = new LagerPlads(3);
         lp4 = new LagerPlads(4);
+        ld1 = new Leverandoer("Whiskyens fadImport", "Fadvej1000");
 
         l1.addReol(r1);
         r1.addHylde(h1);
@@ -37,8 +40,8 @@ public class Test_Lager_Metoder {
         h2.addPlads(lp3);
         h2.addPlads(lp4);
 
-        fad1 = new Fad("eg1", "Eg", "2 år gammelt", 50);
-        fad2 = new Fad("Eg2", "eg", "2 år gammelt", 50);
+        fad1 = new Fad("eg1", "Eg", "2 år gammelt", 50, ld1);
+        fad2 = new Fad("Eg2", "eg", "2 år gammelt", 50, ld1);
 
 
     }

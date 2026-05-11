@@ -11,13 +11,15 @@ public class Fad implements LagerObjekt {
     private FadStatus status;
     private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
     private ArrayList<ModningsRegistrering> modningsRegistreringer = new ArrayList<>();
+    private Leverandoer leverandoer;
 
-    public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse) {
+    public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse, Leverandoer leverandoer) {
         this.fadId = fadId;
         this.traaType = traaType;
         this.beskrivelse = beskrivelse;
         this.stoerrelse = stoerrelse;
         this.status = FadStatus.DEAKTIVERET;
+        setLeverandoer(leverandoer);
     }
 
 
@@ -44,8 +46,8 @@ public class Fad implements LagerObjekt {
         return fadId;
     }
 
-    public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering) {
-        PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillering, this);
+    public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Medarbejder medarbejder) {
+        PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillering, this, medarbejder);
         paafyldningsRegistreringer.add(paafyldningsRegistrering);
         return paafyldningsRegistrering;
     }
@@ -76,4 +78,10 @@ public class Fad implements LagerObjekt {
         return new ArrayList<>(modningsRegistreringer);
     }
 
+    public void setLeverandoer(Leverandoer leverandoer) {
+        if (this.leverandoer == null){
+            this.leverandoer=leverandoer;
+            leverandoer.addFad(this);
+        }
+    }
 }
