@@ -86,4 +86,24 @@ public class Controller {
     public ArrayList<Destillering> getDestilleringer() {
         return storage.getDestilleringer();
     }
+
+    public ArrayList<Fad> getFade() {
+        return storage.getFade();
+    }
+
+    public ArrayList<Lager> getLagre() {
+        return storage.getLagre();
+    }
+
+    public ArrayList<Destillat> getDestillater() {
+        return storage.getDestillat();
+    }
+
+    public ArrayList<Medarbejder> getMedarbejdere() {
+        return storage.getMedarbejder();
+    }
+
+    public ArrayList<MaltBatch> getMaltBatches() {
+        return storage.getMaltBatch();
+    }
 }
