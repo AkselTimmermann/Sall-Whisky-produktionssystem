@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="OpretFadPane færdig">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretDestillatPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestillatPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Destillering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestillatPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretDestillatPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Destillering.class" afterDir="false" />
-    </list>
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="maltBatch enkelterret" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -199,7 +193,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fad og lager klasse oprettet" />
     <MESSAGE value="Fad og lager klasse skeletet færdigt." />
     <MESSAGE value="Fad og lager klasse associering færdig" />
     <MESSAGE value="Opdateret version af lager delen af systemet" />
@@ -224,6 +217,7 @@
     <MESSAGE value="getters tilføjet til controller" />
     <MESSAGE value="Alle getters tilføjet til controller" />
     <MESSAGE value="OpretFadPane færdig" />
-    <option name="LAST_COMMIT_MESSAGE" value="OpretFadPane færdig" />
+    <MESSAGE value="maltBatch enkelterret" />
+    <option name="LAST_COMMIT_MESSAGE" value="maltBatch enkelterret" />
   </component>
 </project>
