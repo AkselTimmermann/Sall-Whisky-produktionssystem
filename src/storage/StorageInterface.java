@@ -1,8 +1,6 @@
 package storage;
 
-import model.Destillering;
-import model.Fad;
-import model.Lager;
+import model.*;
 
 import java.util.ArrayList;
 
@@ -13,9 +11,25 @@ public interface StorageInterface {
 
     public void addLager(Lager lager);
 
+    public void addLeverandoer(Leverandoer leverandoer);
+
+    public void addMedarbejder (Medarbejder medarbejder);
+
+    public void addMaltBatch(MaltBatch maltBatch);
+
+    public void addDestillat(Destillat destillat);
+
     public ArrayList<Destillering> getDestilleringer();
 
     public ArrayList<Fad> getFade();
 
     public ArrayList<Lager> getLagre();
+
+    public ArrayList<Leverandoer> getLeverandoer();
+
+    public ArrayList<Medarbejder> getMedarbejder();
+
+    public ArrayList<MaltBatch> getMaltBatch();
+
+    public ArrayList<Destillat> getDestillat();
 }

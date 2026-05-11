@@ -5,6 +5,7 @@ import storage.Storage;
 import storage.StorageInterface;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Controller {
     private StorageInterface storage;
@@ -41,9 +42,8 @@ public class Controller {
     }
 
 
-    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Fad fad, Medarbejder medarbejder) {
-        PaafyldningsRegistrering paafyldningsRegistrering = fad.opretPaafyldningsRegistrering(antalLiter, dato, destillering, medarbejder);
-        destillering.reducerResterendeLiter(antalLiter);
+    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Fad fad, Medarbejder medarbejder) {
+        PaafyldningsRegistrering paafyldningsRegistrering = fad.opretPaafyldningsRegistrering(antalLiter, dato, destillat, medarbejder);
         return paafyldningsRegistrering;
     }
 
@@ -56,6 +56,27 @@ public class Controller {
         Destillering destillering = new Destillering(newMakeNr, startDato, slutDato, maengdeVaeske, alkoholProcent, rygeMateriale, kommentar, maltBatch, medarbejder);
         storage.addDestillering(destillering);
         return destillering;
+    }
+
+    public Leverandoer createLeverandoer(String navn, String lokation) {
+        Leverandoer leverandoer = new Leverandoer(navn, lokation);
+        storage.addLeverandoer(leverandoer);
+        return leverandoer;
+    }
+    public MaltBatch createMaltBatch(String kornMark, String bygSort, String batchNr) {
+        MaltBatch maltBatch = new MaltBatch(kornMark, bygSort, batchNr);
+        storage.addMaltBatch(maltBatch);
+        return maltBatch;
+    }
+    public Medarbejder createMedarbejder(String navn, int medArbejderNr) {
+        Medarbejder medarbejder = new Medarbejder(navn, medArbejderNr);
+        storage.addMedarbejder(medarbejder);
+        return medarbejder;
+    }
+    public Destillat createDestillat(String destillatNr, ArrayList<Destillering> destilleringer, int[] antalLiterAfHverDestillering) {
+        Destillat destillat = new Destillat(destillatNr, destilleringer, antalLiterAfHverDestillering);
+        storage.addDestillat(destillat);
+        return destillat;
     }
 
 

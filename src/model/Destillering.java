@@ -79,4 +79,16 @@ public class Destillering {
             destillat.addDestillering(this);
         }
     }
+
+    public MaltBatch getMaltBatch() {
+        return maltBatch;
+    }
+
+    public Medarbejder getMedarbejder() {
+        return medarbejder;
+    }
+
+    public ArrayList<Destillat> getDestillater() {
+        return new ArrayList<>(destillater);
+    }
 }
