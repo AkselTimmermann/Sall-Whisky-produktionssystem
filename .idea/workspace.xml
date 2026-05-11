@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="maltBatch enkelterret" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Leverandoer toString">
+      <change beforePath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Leverandoer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Leverandoer.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,8 +197,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fad og lager klasse skeletet færdigt." />
-    <MESSAGE value="Fad og lager klasse associering færdig" />
     <MESSAGE value="Opdateret version af lager delen af systemet" />
     <MESSAGE value="fjernObjekt metode lavet i lager klassen" />
     <MESSAGE value="Test af lager oprettet og gennemført" />
@@ -218,6 +220,8 @@
     <MESSAGE value="Alle getters tilføjet til controller" />
     <MESSAGE value="OpretFadPane færdig" />
     <MESSAGE value="maltBatch enkelterret" />
-    <option name="LAST_COMMIT_MESSAGE" value="maltBatch enkelterret" />
+    <MESSAGE value="maltBatch enkelterrett" />
+    <MESSAGE value="Leverandoer toString" />
+    <option name="LAST_COMMIT_MESSAGE" value="Leverandoer toString" />
   </component>
 </project>
