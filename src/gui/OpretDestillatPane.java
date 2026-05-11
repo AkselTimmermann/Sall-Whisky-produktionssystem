@@ -32,6 +32,7 @@ public class OpretDestillatPane extends BorderPane {
         updateDestilleringer();
     }
 
+    // initContent Opretter en stor VBox og indsætter heri én VBox (Overskrifter) og en GridPane (indholdet)
     private void initContent() {
         VBox root = new VBox(10);
         root.setPadding(new Insets(30, 60, 30, 60));
@@ -44,6 +45,7 @@ public class OpretDestillatPane extends BorderPane {
         this.setCenter(root);
     }
 
+    // Metode der opretter header-VBox (overskrifter)
     private VBox createHeader() {
         Label title = new Label("Opret destillat");
         title.setStyle("-fx-font-size: 26px; -fx-font-weight: bold;");
@@ -55,6 +57,7 @@ public class OpretDestillatPane extends BorderPane {
         return new VBox(5, title, subtitle);
     }
 
+    // Metode der opretter Gridpane (alt resterende indhold)
     private GridPane createFormat() {
         GridPane pane = new GridPane();
         pane.setPadding(new Insets(30));
@@ -75,8 +78,8 @@ public class OpretDestillatPane extends BorderPane {
         lvwValgteDestilleringer = new ListView<>();
         lvwValgteDestilleringer.setPrefSize(500, 180);
 
-        lblSamletLiter = new Label("Samlet antal liter:");
-        lblGennemsnitAlk = new Label("Gennemsnitlig alkoholprocent:");
+        lblSamletLiter = new Label("Samlet antal liter: 0");
+        lblGennemsnitAlk = new Label("Gennemsnitlig alkoholprocent: 0.00%");
 
         Label lblInfo = new Label("Destillatoplysninger");
         lblInfo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
@@ -85,7 +88,7 @@ public class OpretDestillatPane extends BorderPane {
         pane.add(new Label("Destillat nr.:"), 0, 1);
         pane.add(txfDestillatNr, 1, 1);
 
-        Label lblDestillering = new Label("Tilføje destillering");
+        Label lblDestillering = new Label("Tilføj destillering");
         lblDestillering.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
         pane.add(lblDestillering, 0, 3, 2, 1);
 
@@ -124,6 +127,7 @@ public class OpretDestillatPane extends BorderPane {
         return pane;
     }
 
+    // Metode der kaldes hver gang indholdet i de viste destilleringer skal opdateres
     private void updateDestilleringer() {
         cmbDestillering.getItems().clear();
         cmbDestillering.getItems().addAll(controller.getDestilleringer());
@@ -133,7 +137,7 @@ public class OpretDestillatPane extends BorderPane {
 
 
 
-
+    // setOnAction for "Opret destillat"-knap
     private void opretDestillatAction() {
         String destillatNr = txfDestillatNr.getText().trim();
 
@@ -148,16 +152,18 @@ public class OpretDestillatPane extends BorderPane {
 
         int[] literArray = new int[valgteLiter.size()];
         for (int i = 0; i < valgteLiter.size(); i++) {
-            literArray[i] = valgteLiter.size();
+            literArray[i] = valgteLiter.get(i);
         }
 
         try {
-            Destillat destillat = controller.createDestillat(destillatNr,
+            Destillat destillat = controller.createDestillat(
+                    destillatNr,
                     new ArrayList<>(valgteDestilleringer),
                     literArray);
 
 
             visInfo("Destillat oprettet: " + destillat.getDestillatNr());
+
             rydFelter();
             updateDestilleringer();
 
@@ -166,6 +172,7 @@ public class OpretDestillatPane extends BorderPane {
         }
     }
 
+    // setOnAction for "Fjern destillering"-knap
     private void fjernValgtDestilleringAction() {
         int index = lvwValgteDestilleringer.getSelectionModel().getSelectedIndex();
 
@@ -179,11 +186,12 @@ public class OpretDestillatPane extends BorderPane {
         updateValgteListe();
     }
 
+    // setOnAction for "Tilføj destillering"-knap
     private void tilfoejDestilleringAction() {
         Destillering destillering = cmbDestillering.getValue();
 
         if (destillering == null) {
-            visFejl("Vælg mindst en destillering.");
+            visFejl("Vælg en destillering for at tilføje den.");
             return;
         }
 
@@ -194,11 +202,22 @@ public class OpretDestillatPane extends BorderPane {
 
         int antalLiter;
         try {
-            antalLiter = Integer.parseInt(txfAntalLiter.getText());
+            antalLiter = Integer.parseInt(txfAntalLiter.getText().trim());
         } catch (NumberFormatException e) {
-            visFejl(e.getMessage());
+            visFejl("Antal liter skal være et heltal.");
             return;
         }
+
+        if (antalLiter <= 0) {
+            visFejl("Antal liter skal være større end 0.");
+            return;
+        }
+
+        if (antalLiter > destillering.getAntalLiter()) {
+            visFejl("Der er ikke nok resterende liter tilbage på den valgte destillering.");
+            return;
+        }
+
 
         valgteDestilleringer.add(destillering);
         valgteLiter.add(antalLiter);
@@ -210,6 +229,7 @@ public class OpretDestillatPane extends BorderPane {
 
     }
 
+    // Metode der kaldes hver gang valgte destilleringer skal opdateres (fjernes eller tilføjes)
     private void updateValgteListe() {
         lvwValgteDestilleringer.getItems().clear();
 
@@ -225,6 +245,7 @@ public class OpretDestillatPane extends BorderPane {
         updateOpsummering();
     }
 
+    // Metode der kaldes hver gang valgte destilleringer skal opdateres, og opsummeringen dermed ændres
     private void updateOpsummering() {
         double samletLiter = 0;
         double samletAlkohol = 0;
@@ -236,9 +257,17 @@ public class OpretDestillatPane extends BorderPane {
             samletLiter += liter;
             samletAlkohol += liter * alkoholProcent;
         }
+
+        double gennemsnitligAlkohol = 0;
+        if (samletLiter > 0) {
+            gennemsnitligAlkohol = samletAlkohol / samletLiter;
+        }
+        lblSamletLiter.setText("Samlet antal liter: " + samletLiter);
+        lblGennemsnitAlk.setText("Gennemsnitlig alkoholprocent: " +
+                String.format("%.2f",gennemsnitligAlkohol) + "%");
     }
 
-
+    // setOnAction for "Ryd felter"-knap
     private void rydFelter() {
         txfDestillatNr.clear();
         cmbDestillering.getSelectionModel().clearSelection();
@@ -246,8 +275,11 @@ public class OpretDestillatPane extends BorderPane {
 
         valgteDestilleringer.clear();
         valgteLiter.clear();
+
+        updateValgteListe();
     }
 
+    // Metode der kan kaldes til fejlhåndtering
     private  void visFejl(String besked) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Fejl");
@@ -256,6 +288,7 @@ public class OpretDestillatPane extends BorderPane {
         alert.showAndWait();
     }
 
+    // Metode der kaldes når et destillat oprettes
     private void visInfo(String besked) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Oprettet");
