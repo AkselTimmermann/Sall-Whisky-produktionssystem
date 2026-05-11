@@ -84,4 +84,10 @@ public class Destillering {
     public ArrayList<Destillat> getDestillater() {
         return new ArrayList<>(destillater);
     }
+
+
+    @Override
+    public String toString() {
+        return newMakeNr + " (" + alkoholProcent + "%, resterende liter: " + antalLiter + ")";
+    }
 }

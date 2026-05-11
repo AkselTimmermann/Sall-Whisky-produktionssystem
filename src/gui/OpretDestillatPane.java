@@ -7,6 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import model.Destillat;
 import model.Destillering;
 
 import java.util.ArrayList;
@@ -134,9 +135,48 @@ public class OpretDestillatPane extends BorderPane {
 
 
     private void opretDestillatAction() {
+        String destillatNr = txfDestillatNr.getText().trim();
+
+        if (destillatNr.isEmpty()) {
+            visFejl("Destillat nr. skal udfyldes.");
+            return;
+        }
+        if (valgteDestilleringer.isEmpty()) {
+            visFejl("Destillatet skal bestå af mindst én destillering.");
+            return;
+        }
+
+        int[] literArray = new int[valgteLiter.size()];
+        for (int i = 0; i < valgteLiter.size(); i++) {
+            literArray[i] = valgteLiter.size();
+        }
+
+        try {
+            Destillat destillat = controller.createDestillat(destillatNr,
+                    new ArrayList<>(valgteDestilleringer),
+                    literArray);
+
+
+            visInfo("Destillat oprettet: " + destillat.getDestillatNr());
+            rydFelter();
+            updateDestilleringer();
+
+        } catch (Exception e) {
+            visFejl(e.getMessage());
+        }
     }
 
     private void fjernValgtDestilleringAction() {
+        int index = lvwValgteDestilleringer.getSelectionModel().getSelectedIndex();
+
+        if (index < 0) {
+            visFejl("Vælg en destillering der skal fjernes");
+            return;
+        }
+        valgteDestilleringer.remove(index);
+        valgteLiter.remove(index);
+
+        updateValgteListe();
     }
 
     private void tilfoejDestilleringAction() {
@@ -178,10 +218,11 @@ public class OpretDestillatPane extends BorderPane {
             int liter = valgteLiter.get(i);
 
             String tekst = d.getNewMakeNr() +
-                    " (" + liter + " liter" + ", " + d.getAlkoholProcent() + "&)";
+                    " (" + liter + " liter" + ", " + d.getAlkoholProcent() + "%)";
 
             lvwValgteDestilleringer.getItems().add(tekst);
         }
+        updateOpsummering();
     }
 
     private void updateOpsummering() {
@@ -210,7 +251,7 @@ public class OpretDestillatPane extends BorderPane {
     private  void visFejl(String besked) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Fejl");
-        alert.setHeaderText("Destillat kunne ikke oprettes");
+        alert.setHeaderText(null);
         alert.setContentText(besked);
         alert.showAndWait();
     }
