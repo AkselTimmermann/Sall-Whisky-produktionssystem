@@ -33,10 +33,28 @@ public class Destillat {
         }
     }
 
-
-
     private void updateAntalLiterAndAlkoholprocent(int maengde, double alkoholProcent){
         this.alkoholProcent = (this.antalLiter*this.alkoholProcent+maengde*alkoholProcent)/(this.antalLiter+maengde);
         this.antalLiter+=maengde;
+    }
+
+    public int getAntalLiter() {
+        return antalLiter;
+    }
+
+    public double getAlkoholProcent() {
+        return alkoholProcent;
+    }
+
+    public String getDestillatNr() {
+        return destillatNr;
+    }
+
+    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
+        return new ArrayList<>(paafyldningsRegistreringer);
+    }
+
+    public ArrayList<Destillering> getDestilleringer() {
+        return new ArrayList<>(destilleringer);
     }
 }

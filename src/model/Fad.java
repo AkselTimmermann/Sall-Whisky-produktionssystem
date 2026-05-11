@@ -46,8 +46,8 @@ public class Fad implements LagerObjekt {
         return fadId;
     }
 
-    public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillering destillering, Medarbejder medarbejder) {
-        PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillering, this, medarbejder);
+    public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Medarbejder medarbejder) {
+        PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillat, this, medarbejder);
         paafyldningsRegistreringer.add(paafyldningsRegistrering);
         return paafyldningsRegistrering;
     }
