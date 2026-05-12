@@ -56,4 +56,10 @@ public class Destillat {
     public ArrayList<Destillering> getDestilleringer() {
         return new ArrayList<>(destilleringer);
     }
+
+
+    @Override
+    public String toString() {
+        return destillatNr + " (" + antalLiter + " liter, " + String.format("%.2f", alkoholProcent) + "%)";
+    }
 }
