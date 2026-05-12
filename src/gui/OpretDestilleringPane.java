@@ -127,7 +127,7 @@ public class OpretDestilleringPane extends BorderPane {
         btnRyd.setOnAction(actionEvent -> rydFelterAction());
 
         medarbejderCb.getItems().addAll(controller.getMedarbejdere());
-        maltBatchCb.getItems().add(controller.getMaltBatches());
+        maltBatchCb.getItems().addAll(controller.getMaltBatches());
 
         return pane;
     }
