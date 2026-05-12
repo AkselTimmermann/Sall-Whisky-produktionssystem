@@ -10,4 +10,8 @@ public class Medarbejder {
     }
 
 
+    @Override
+    public String toString() {
+        return navn + " (medarbejdernr.: " + medArbejderNr + ")";
+    }
 }

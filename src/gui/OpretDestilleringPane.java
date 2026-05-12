@@ -4,25 +4,28 @@ import com.sun.javafx.scene.control.DoubleField;
 import controller.Controller;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import model.MaltBatch;
+import model.Medarbejder;
 
 public class OpretDestilleringPane extends BorderPane {
 
     private final Controller controller;
 
+
     private TextField txfNewMakeNr = new TextField();
-    private TextField txfMaltBatch = new TextField();
     private TextField txfKornSort = new TextField();
     private TextField txfRygemateriale = new TextField();
     private TextField txfKommentar = new TextField();
 
     private DoubleField dfMaengdeVaeske = new DoubleField();
     private DoubleField dfAlkoholProcent = new DoubleField();
+
+    private ComboBox<MaltBatch> maltBatchCb = new ComboBox<>();
+    private ComboBox<Medarbejder> medarbejderCb = new ComboBox<>();
 
     private DatePicker dpStartDato = new DatePicker();
     private DatePicker dpSlutDato = new DatePicker();
@@ -61,13 +64,30 @@ public class OpretDestilleringPane extends BorderPane {
         pane.setVgap(15);
         pane.setStyle("-fx-border-color: black; -fx-border-width: 1;");
 
-        Label lblKommentar = new Label("Kommentar");
-        lblKommentar.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
-
-        VBox vBoxKommentar = new VBox(lblKommentar,txfKommentar);
-        vBoxKommentar.setAlignment(Pos.CENTER);
-        pane.add(vBoxKommentar, 0, 0, 4, 1);
         return pane;
 
+    }
+
+    private void opretDestilleringAction() {
+
+    }
+
+    private void rydFelterAction() {
+
+    }
+    private void visFejl(String besked) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Fejl");
+        alert.setHeaderText("Destillering kunne ikke oprettes");
+        alert.setContentText(besked);
+        alert.showAndWait();
+    }
+
+    private void visInfo(String besked) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Oprettet");
+        alert.setHeaderText(null);
+        alert.setContentText(besked);
+        alert.showAndWait();
     }
 }
