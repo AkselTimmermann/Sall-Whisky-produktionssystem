@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Cant remember">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="OpretDestilleringPane igang">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretFadPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretFadPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretFadPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretFadPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Destillering.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +197,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fjernObjekt metode lavet i lager klassen" />
     <MESSAGE value="Test af lager oprettet og gennemført" />
     <MESSAGE value="controller, storage og gui klasser oprettet" />
     <MESSAGE value="controller, storage og gui klasser oprettet..." />
@@ -224,6 +221,7 @@
     <MESSAGE value="maltBatch enkelterrett" />
     <MESSAGE value="Leverandoer toString" />
     <MESSAGE value="Cant remember" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cant remember" />
+    <MESSAGE value="OpretDestilleringPane igang" />
+    <option name="LAST_COMMIT_MESSAGE" value="OpretDestilleringPane igang" />
   </component>
 </project>
