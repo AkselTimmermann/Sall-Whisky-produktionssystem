@@ -13,6 +13,16 @@ public class Controller {
     this.storage = storage;
     }
 
+    public void placerObjekt(LagerObjekt objekt, LagerPlads plads) {
+        if (objekt == null) {
+            throw new IllegalArgumentException("Vælg et lagerobjekt");
+        }
+        if (plads == null) {
+            throw new IllegalArgumentException("Vælg en lagerplads");
+        }
+        plads.placerIndhold(objekt);
+    }
+
     public Lager createLager(String navn, String lokation, int stoerrelse){
         Lager lager = new Lager(navn, lokation, stoerrelse);
         storage.addLager(lager);

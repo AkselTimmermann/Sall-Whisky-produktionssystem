@@ -14,7 +14,7 @@ public class Lager {
         this.lokation = lokation;
         this.stoerrelse = kapacitet;
     }
-
+    /*
     //metode til at placere objekt på en lagerPlads
     //Metoden kalder først findPlads for at sikre, at pladsen findes
     //Derefter kalder den placerIndhold, der tjekker om pladsen er optaget, hvis ikke, placeres objektet.
@@ -72,10 +72,18 @@ public class Lager {
         }
         return "Placering ikke fundet";
     }
+     */
 
     public void addReol(Reol reol) {
         if (!reoler.contains(reol)) {
             reoler.add(reol);
+            reol.setLager(this);
+        }
+    }
+    public void removeReol(Reol reol) {
+        if (reoler.contains(reol)) {
+            reoler.remove(reol);
+            reol.setLager(null);
         }
     }
 
