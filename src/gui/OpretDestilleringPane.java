@@ -10,6 +10,8 @@ import javafx.scene.layout.VBox;
 import model.MaltBatch;
 import model.Medarbejder;
 
+import java.time.LocalDate;
+
 public class OpretDestilleringPane extends BorderPane {
 
     private final Controller controller;
@@ -133,10 +135,83 @@ public class OpretDestilleringPane extends BorderPane {
     }
 
     private void opretDestilleringAction() {
+        try {
+            String newMakeNr = txfNewMakeNr.getText().trim();
+            String rygeMateriale = txfRygemateriale.getText().trim();
+            String alkoholProcentText = txfAlkoholProcent.getText().trim();
+            String antalLitterText = txfAntalLiter.getText().trim();
+            String kommentar = txtAreaKommentar.getText().trim();
+            Medarbejder medarbejder = medarbejderCb.getSelectionModel().getSelectedItem();
+            MaltBatch maltBatch = maltBatchCb.getSelectionModel().getSelectedItem();
+            LocalDate startdato = dpStartDato.getValue();
+            LocalDate slutDato = dpSlutDato.getValue();
 
+            if (newMakeNr.isEmpty()) {
+                visFejl("Indtast newMakeNr");
+                return;
+            }
+            if (rygeMateriale.isEmpty()) {
+                visFejl("Indtast rygemateriale");
+                return;
+            }
+            if (alkoholProcentText.isEmpty()) {
+                visFejl("Indtast alkoholprocent");
+                return;
+            }
+            if (antalLitterText.isEmpty()) {
+                visFejl("Indtast antal liter");
+                return;
+            }
+            if (kommentar.isEmpty()) {
+                visFejl("Indtast kommentar");
+                return;
+            }
+            if (medarbejder == null) {
+                visFejl("Vælg medarbejder");
+                return;
+            }
+            if (maltBatch == null) {
+                visFejl("Vælg malt batch");
+                return;
+            }
+            if (startdato == null) {
+                visFejl("Vælg start dato");
+                return;
+            }
+            if (slutDato == null) {
+                visFejl("Vælg slut dato");
+                return;
+            }
+            double antalLiter = Double.parseDouble(antalLitterText);
+            double alkoholProcent = Double.parseDouble(alkoholProcentText);
+            if (antalLiter <= 0) {
+                visFejl("Antal liter skal være større end 0");
+                return;
+            }
+            if (alkoholProcent <= 0) {
+                visFejl("Alkoholprocent skal være større end 0");
+                return;
+            }
+            controller.createDestillering(newMakeNr,startdato,slutDato,antalLiter,alkoholProcent,rygeMateriale,kommentar,maltBatch,medarbejder);
+            visInfo("Destillering oprettet");
+
+            rydFelterAction();
+
+        } catch (Exception e) {
+            visFejl(e.getMessage());
+        }
     }
 
     private void rydFelterAction() {
+        txfNewMakeNr.clear();
+        txfRygemateriale.clear();
+        txfAlkoholProcent.clear();
+        txfAntalLiter.clear();
+        maltBatchCb.getSelectionModel().clearSelection();
+        medarbejderCb.getSelectionModel().clearSelection();
+        txtAreaKommentar.clear();
+        dpStartDato.setValue(null);
+        dpSlutDato.setValue(null);
 
     }
     private void visFejl(String besked) {
