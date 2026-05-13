@@ -19,6 +19,10 @@ public interface StorageInterface {
 
     public void addDestillat(Destillat destillat);
 
+    public void addFadIndhold(FadIndhold fadIndhold);
+
+    public void addPaafyldningsRegistrering(PaafyldningsRegistrering paafyldningsRegistrering);
+
     public ArrayList<Destillering> getDestilleringer();
 
     public ArrayList<Fad> getFade();
@@ -32,4 +36,8 @@ public interface StorageInterface {
     public ArrayList<MaltBatch> getMaltBatch();
 
     public ArrayList<Destillat> getDestillat();
+
+    public ArrayList<FadIndhold> getFadIndholdListe();
+
+    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer();
 }

@@ -13,6 +13,9 @@ public class Storage implements StorageInterface {
     private ArrayList<Medarbejder> medarbejderer = new ArrayList<>();
     private ArrayList<Destillat> destillater = new ArrayList<>();
 
+    private ArrayList<FadIndhold> fadIndholdListe = new ArrayList<>();
+    private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
+
 
     public void addDestillering(Destillering destillering) {
         if (!destilleringer.contains(destillering)) {
@@ -53,6 +56,18 @@ public class Storage implements StorageInterface {
         }
     }
 
+    public void addFadIndhold(FadIndhold fadIndhold) {
+        if (!fadIndholdListe.contains(fadIndhold)) {
+            fadIndholdListe.add(fadIndhold);
+        }
+    }
+
+    public void addPaafyldningsRegistrering(PaafyldningsRegistrering paafyldningsRegistrering) {
+        if (!paafyldningsRegistreringer.contains(paafyldningsRegistrering)) {
+            paafyldningsRegistreringer.add(paafyldningsRegistrering);
+        }
+    }
+
     public ArrayList<Destillering> getDestilleringer() {
         return new ArrayList<Destillering>(destilleringer);
     }
@@ -83,5 +98,13 @@ public class Storage implements StorageInterface {
     @Override
     public ArrayList<Destillat> getDestillat() {
         return new ArrayList<>(destillater);
+    }
+
+    public ArrayList<FadIndhold> getFadIndholdListe() {
+        return new ArrayList<>(fadIndholdListe);
+    }
+
+    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
+        return new ArrayList<>(paafyldningsRegistreringer);
     }
 }

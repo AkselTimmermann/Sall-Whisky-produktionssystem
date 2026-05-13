@@ -12,6 +12,8 @@ public class Fad implements LagerObjekt {
     private Leverandoer leverandoer;
     private LagerPlads lagerPlads;
 
+    private ArrayList<FadIndhold> fadIndholdListe = new ArrayList<>();
+
     public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse, Leverandoer leverandoer) {
         this.fadId = fadId;
         this.traaType = traaType;
@@ -21,6 +23,22 @@ public class Fad implements LagerObjekt {
         this.leverandoer = leverandoer;
     }
 
+    public void addFadIndhold(FadIndhold fadIndhold) {
+        if (!fadIndholdListe.contains(fadIndhold)) {
+            fadIndholdListe.add(fadIndhold);
+        }
+    }
+
+    public FadIndhold getAktivtFadIndhold() {
+        if (fadIndholdListe.isEmpty()) {
+            return null;
+        }
+        return fadIndholdListe.getLast();
+    }
+
+    public ArrayList<FadIndhold> getFadIndholdListe() {
+        return new ArrayList<>(fadIndholdListe);
+    }
 
 
     public FadStatus getStatus() {
@@ -69,5 +87,28 @@ public class Fad implements LagerObjekt {
     @Override
     public String getId() {
         return fadId;
+    }
+
+    public double getLedigKapacitet() {
+        FadIndhold aktivtIndhold = getAktivtFadIndhold();
+
+        if (aktivtIndhold == null) {
+            return stoerrelse;
+        }
+
+        return stoerrelse - aktivtIndhold.beregnStartAntalLiter();
+    }
+
+    public void setStatus(FadStatus status) {
+        this.status = status;
+    }
+
+
+    @Override
+    public String toString() {
+        return "FadID: " + fadId + " | " +
+                "Trætype: " + traaType + " | " +
+                "Størrelse: " + stoerrelse + " | " +
+                "Status: " + status;
     }
 }
