@@ -26,13 +26,13 @@ public class OpretFadPane extends BorderPane {
     Label stoerrelseLbl = new Label("Størrelse:");
     Label beskrivelseLbl = new Label("Beskrivelse:");
     Label leverandoerLbl = new Label("Leverandør:");
-    TextField fadIdTxf = new TextField();
-    TextField traaTypeTxf = new TextField();
-    TextField stoerrelseTxf = new TextField();
-    TextArea beskriveseTa = new TextArea();
-    Button btnOpret = new Button("Opret fad");
-    Button btnRyd = new Button("Ryd felter");
-    ComboBox leverandoerCb = new ComboBox<>();
+    private TextField fadIdTxf = new TextField();
+    private TextField traaTypeTxf = new TextField();
+    private TextField stoerrelseTxf = new TextField();
+    private TextArea beskriveseTa = new TextArea();
+    private Button btnOpret = new Button("Opret fad");
+    private Button btnRyd = new Button("Ryd felter");
+    private ComboBox<Leverandoer> leverandoerCb = new ComboBox<>();
 
     private void initContent() {
         VBox root = new VBox(10);
@@ -61,6 +61,7 @@ public class OpretFadPane extends BorderPane {
         fadIdTxf.setPrefWidth(350);
         stoerrelseTxf.setPrefWidth(350);
         traaTypeTxf.setPrefWidth(350);
+        leverandoerCb.setPrefWidth(350);
 
         pane.add(fadIdLbl, 0, 1);
         pane.add(fadIdTxf, 1, 1);
@@ -106,7 +107,7 @@ public class OpretFadPane extends BorderPane {
             String fadId = fadIdTxf.getText().trim();
             String traaType = traaTypeTxf.getText().trim();
             String stoerrelseTxt = stoerrelseTxf.getText().trim();
-            Leverandoer leverandoer = (Leverandoer) leverandoerCb.getSelectionModel().getSelectedItem();
+            Leverandoer leverandoer = leverandoerCb.getSelectionModel().getSelectedItem();
             String beskrivelse = beskriveseTa.getText();
 
             if (fadId.isEmpty()) {
