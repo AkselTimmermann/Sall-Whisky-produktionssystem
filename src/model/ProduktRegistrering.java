@@ -10,4 +10,16 @@ public class ProduktRegistrering {
         this.fadIndhold = fadIndhold;
         this.whiskyProdukt = whiskyProdukt;
     }
+
+    public WhiskyProdukt getWhiskyProdukt() {
+        return whiskyProdukt;
+    }
+
+    public FadIndhold getFadIndhold() {
+        return fadIndhold;
+    }
+
+    public double getAntalLiter() {
+        return antalLiter;
+    }
 }
