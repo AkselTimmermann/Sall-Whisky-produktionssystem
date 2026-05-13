@@ -27,7 +27,7 @@ public class Destillering {
         this.alkoholProcent = alkoholProcent;
         this.rygeMateriale = rygeMateriale;
         this.kommentar = kommentar;
-        setMaltBatch(maltBatch);
+        this.maltBatch = maltBatch;
         this.medarbejder = medarbejder;
     }
 
@@ -66,17 +66,28 @@ public class Destillering {
         return kommentar;
     }
 
-    public void setMaltBatch(MaltBatch maltBatch) {
-        if (this.maltBatch==null){
-            this.maltBatch = maltBatch;
-            maltBatch.addDestillering(this);
-        }
-    }
-
     public void addDestillat(Destillat destillat) {
         if (!destillater.contains(destillat)){
             destillater.add(destillat);
             destillat.addDestillering(this);
         }
+    }
+
+    public MaltBatch getMaltBatch() {
+        return maltBatch;
+    }
+
+    public Medarbejder getMedarbejder() {
+        return medarbejder;
+    }
+
+    public ArrayList<Destillat> getDestillater() {
+        return new ArrayList<>(destillater);
+    }
+
+
+    @Override
+    public String toString() {
+        return newMakeNr + " (" + alkoholProcent + "%, resterende liter: " + antalLiter + ")";
     }
 }

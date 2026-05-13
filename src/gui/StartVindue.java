@@ -5,6 +5,7 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Separator;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
@@ -14,9 +15,15 @@ public class StartVindue extends BorderPane {
     private final Controller controller;
 
     private Button btnForside;
+
     private Button btnOpretLager;
     private Button btnOpretFad;
+
     private Button btnOpretDestillering;
+    private Button btnOpretDestillat;
+
+    private Button btnRegistrerPaafyldning;
+    private Button btnRegistrerModning;
 
 
     public StartVindue(Controller controller) {
@@ -33,7 +40,7 @@ public class StartVindue extends BorderPane {
 
     private VBox createSideMenu() {
         VBox sideMenu = new VBox();
-        sideMenu.setPrefWidth(200);
+        sideMenu.setPrefWidth(280);
         sideMenu.setPadding(new Insets(0));
         sideMenu.setStyle(
                 "-fx-border-color: black;" +
@@ -52,19 +59,34 @@ public class StartVindue extends BorderPane {
         btnOpretLager = createButtonMenu("Opret lager");
         btnOpretFad = createButtonMenu("Opret fad");
         btnOpretDestillering = createButtonMenu("Opret destillering");
+        btnOpretDestillat = createButtonMenu("Opret destillat");
+
+        btnRegistrerPaafyldning = createButtonMenu("Registrer påfyldning");
+        btnRegistrerModning = createButtonMenu("Registrer modning");
 
         btnForside.setOnAction(event -> showForside());
+
         btnOpretLager.setOnAction(event -> showOpretLager());
         btnOpretFad.setOnAction(event -> showOpretFad());
         btnOpretDestillering.setOnAction(event -> showOpretDestillering());
+        btnOpretDestillat.setOnAction(event -> showOpretDestillat());
+
+        btnRegistrerPaafyldning.setOnAction(event -> showRegistrerPaafyldning());
+        btnRegistrerModning.setOnAction(event -> showRegistrerModning());
 
         VBox buttons = new VBox(12);
         buttons.setPadding(new Insets(35, 25, 0, 25));
+        Separator separator = new Separator();
+        separator.setPadding(new Insets(10, 0, 10, 0));
         buttons.getChildren().addAll(
                 btnForside,
                 btnOpretLager,
                 btnOpretFad,
-                btnOpretDestillering);
+                btnOpretDestillering,
+                btnOpretDestillat,
+                separator,
+                btnRegistrerPaafyldning,
+                btnRegistrerModning);
 
         sideMenu.getChildren().addAll(title, buttons);
 
@@ -101,11 +123,31 @@ public class StartVindue extends BorderPane {
         this.setCenter(new OpretDestilleringPane(controller));
     }
 
+    private void showOpretDestillat() {
+        markSelected(btnOpretDestillat);
+        this.setCenter(new OpretDestillatPane(controller));
+    }
+
+    private void showRegistrerPaafyldning() {
+        markSelected(btnRegistrerPaafyldning);
+        this.setCenter(new RegistrerPaafyldningPane(controller));
+    }
+
+    private void showRegistrerModning() {
+        markSelected(btnRegistrerModning);
+        this.setCenter(new RegistrerModningPane(controller));
+    }
+
+
     private void markSelected(Button selectedButton) {
         btnForside.setStyle(menuButtonStyle(false));
         btnOpretLager.setStyle(menuButtonStyle(false));
         btnOpretFad.setStyle(menuButtonStyle(false));
         btnOpretDestillering.setStyle(menuButtonStyle(false));
+        btnOpretDestillat.setStyle(menuButtonStyle(false));
+        btnRegistrerPaafyldning.setStyle(menuButtonStyle(false));
+        btnRegistrerModning.setStyle(menuButtonStyle(false));
+
 
         selectedButton.setStyle(menuButtonStyle(true));
     }

@@ -1,0 +1,11 @@
+model\PaafyldningsRegistrering.class
+controller\Controller.class
+gui\OpretDestillatPane.class
+storage\Storage.class
+model\Leverandoer.class
+model\Fad.class
+gui\InitialData.class
+model\Destillering.class
+model\Destillat.class
+gui\RegistrerModningPane.class
+gui\RegistrerPaafyldningPane.class
