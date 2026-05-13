@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="a">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProduktRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProduktRegistrering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Fad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Fad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,12 +40,12 @@
     &quot;assignee&quot;: &quot;AkselTimmermann&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,
-    &quot;accountId&quot;: &quot;88d76782-f8ab-4215-8ee7-39a62216925d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git",
+    "accountId": "48052c54-ad71-490d-957e-0f0b68768a0e"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -206,7 +216,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test af lager oprettet og gennemført" />
     <MESSAGE value="controller, storage og gui klasser oprettet" />
     <MESSAGE value="controller, storage og gui klasser oprettet..." />
     <MESSAGE value="storage opdateret" />
@@ -230,7 +239,8 @@
     <MESSAGE value="maltBatch enkelterrett" />
     <MESSAGE value="Leverandoer toString" />
     <MESSAGE value="OpretDestillatPane completed (ish)" />
-    <MESSAGE value="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane" />
+    <MESSAGE value="OpretDestilleringPane igang part 3" />
+    <MESSAGE value="RegistrerModningPane tæt på færdigt" />
+    <option name="LAST_COMMIT_MESSAGE" value="RegistrerModningPane tæt på færdigt" />
   </component>
 </project>

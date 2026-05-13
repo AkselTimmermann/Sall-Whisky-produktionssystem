@@ -25,6 +25,9 @@ public class StartVindue extends BorderPane {
     private Button btnRegistrerPaafyldning;
     private Button btnRegistrerModning;
 
+    private Button btnOpretWhiskyProdukt;
+    private Button btnRegistrerFlaskning;
+
 
     public StartVindue(Controller controller) {
         this.controller = controller;
@@ -64,6 +67,9 @@ public class StartVindue extends BorderPane {
         btnRegistrerPaafyldning = createButtonMenu("Registrer påfyldning");
         btnRegistrerModning = createButtonMenu("Registrer modning");
 
+        btnOpretWhiskyProdukt = createButtonMenu("Opret whiskyprodukt");
+        btnRegistrerFlaskning = createButtonMenu("Registrer flaskning");
+
         btnForside.setOnAction(event -> showForside());
 
         btnOpretLager.setOnAction(event -> showOpretLager());
@@ -73,6 +79,9 @@ public class StartVindue extends BorderPane {
 
         btnRegistrerPaafyldning.setOnAction(event -> showRegistrerPaafyldning());
         btnRegistrerModning.setOnAction(event -> showRegistrerModning());
+
+        btnOpretWhiskyProdukt.setOnAction(event -> showOpretWhiskyProdukt());
+        btnRegistrerFlaskning.setOnAction(event -> showRegistrerFlaskning());
 
         VBox buttons = new VBox(12);
         buttons.setPadding(new Insets(35, 25, 0, 25));
@@ -84,14 +93,18 @@ public class StartVindue extends BorderPane {
                 btnOpretFad,
                 btnOpretDestillering,
                 btnOpretDestillat,
+                btnOpretWhiskyProdukt,
                 separator,
                 btnRegistrerPaafyldning,
-                btnRegistrerModning);
+                btnRegistrerModning,
+                btnRegistrerFlaskning);
 
         sideMenu.getChildren().addAll(title, buttons);
 
         return sideMenu;
     }
+
+
 
     // Metode der bruges til at oprette og placere menu-knapper
     private Button createButtonMenu(String text) {
@@ -139,6 +152,19 @@ public class StartVindue extends BorderPane {
     }
 
 
+
+    private void showOpretWhiskyProdukt() {
+        markSelected(btnOpretWhiskyProdukt);
+        this.setCenter(new OpretWhiskyProduktPane(controller));
+    }
+
+    private void showRegistrerFlaskning() {
+        markSelected(btnRegistrerFlaskning);
+        this.setCenter(new RegistrerFlaskningPane(controller));
+    }
+
+
+
     private void markSelected(Button selectedButton) {
         btnForside.setStyle(menuButtonStyle(false));
         btnOpretLager.setStyle(menuButtonStyle(false));
@@ -147,7 +173,8 @@ public class StartVindue extends BorderPane {
         btnOpretDestillat.setStyle(menuButtonStyle(false));
         btnRegistrerPaafyldning.setStyle(menuButtonStyle(false));
         btnRegistrerModning.setStyle(menuButtonStyle(false));
-
+        btnRegistrerFlaskning.setStyle(menuButtonStyle(false));
+        btnOpretWhiskyProdukt.setStyle(menuButtonStyle(false));
 
         selectedButton.setStyle(menuButtonStyle(true));
     }

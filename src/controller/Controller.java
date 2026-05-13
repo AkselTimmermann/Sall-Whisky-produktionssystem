@@ -1,7 +1,6 @@
 package controller;
 
 import model.*;
-import storage.Storage;
 import storage.StorageInterface;
 
 import java.time.LocalDate;
@@ -12,6 +11,16 @@ public class Controller {
 
     public Controller(StorageInterface storage){
     this.storage = storage;
+    }
+
+    public void placerObjekt(LagerObjekt objekt, LagerPlads plads) {
+        if (objekt == null) {
+            throw new IllegalArgumentException("Vælg et lagerobjekt");
+        }
+        if (plads == null) {
+            throw new IllegalArgumentException("Vælg en lagerplads");
+        }
+        plads.placerIndhold(objekt);
     }
 
     public Lager createLager(String navn, String lokation, int stoerrelse){
@@ -42,13 +51,13 @@ public class Controller {
     }
 
 
-    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Fad fad, Medarbejder medarbejder) {
-        PaafyldningsRegistrering paafyldningsRegistrering = fad.opretPaafyldningsRegistrering(antalLiter, dato, destillat, medarbejder);
+    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, FadIndhold fadIndhold, Medarbejder medarbejder) {
+        PaafyldningsRegistrering paafyldningsRegistrering = fadIndhold.opretPaafyldningsRegistrering(antalLiter, dato, destillat, medarbejder);
         return paafyldningsRegistrering;
     }
 
-    public ModningsRegistrering createModningsRegistrering(double alkoholProcent, LocalDate dato, double antalLiter, String note, String titel, Fad fad) {
-        ModningsRegistrering modningsRegistrering = fad.opretModningsRegistrering(alkoholProcent, dato, antalLiter, note, titel);
+    public ModningsRegistrering createModningsRegistrering(double alkoholProcent, LocalDate dato, double antalLiter, String note, String titel, FadIndhold fadIndhold) {
+        ModningsRegistrering modningsRegistrering = fadIndhold.opretModningsRegistrering(alkoholProcent, dato, antalLiter, note, titel);
         return modningsRegistrering;
     }
 

@@ -1,34 +1,57 @@
 package model;
 
+import java.util.ArrayList;
+
 public class LagerPlads {
     private int pladsNr;
-    private LagerObjekt indhold;
+    private Hylde hylde;
+    private ArrayList<LagerObjekt> lagerObjekter = new ArrayList<>();
 
     public LagerPlads(int pladsNr) {
         this.pladsNr = pladsNr;
     }
 
     public boolean erOptaget() {
-        return indhold != null;
+        return !lagerObjekter.isEmpty();
     }
 
-    //Metode der står får den faktiske placering af objektet + tjek om pladsen allerede er optaget.
+    //Metode der står får den faktiske placering af objektet
     public void placerIndhold(LagerObjekt objekt) {
-        if (erOptaget()) {
-            throw new IllegalStateException("Pladsen er allerede optaget");
+        if (!lagerObjekter.contains(objekt)) {
+            lagerObjekter.add(objekt);
+            objekt.setlagerPLads(this);
         }
-        this.indhold = objekt;
     }
 
-    public void fjernIndhold() {
-        this.indhold = null;
+    public void fjernIndhold(LagerObjekt lagerObjekt) {
+        if (lagerObjekter.contains(lagerObjekt)) {
+            lagerObjekter.remove(lagerObjekt);
+            lagerObjekt.setlagerPLads(null);
+        }
     }
 
     public int getPladsNr() {
         return pladsNr;
     }
 
-    public LagerObjekt getIndhold() {
-        return indhold;
+    public ArrayList<LagerObjekt> getLagerObjekter() {
+        return new ArrayList<>(lagerObjekter);
+    }
+
+    public void setHylde(Hylde hylde) {
+        if (this.hylde != hylde) {
+            Hylde oldHylde = this.hylde;
+            if (oldHylde != null) {
+                oldHylde.removePlads(this);
+            }
+            this.hylde = hylde;
+            if (hylde != null) {
+                hylde.addPlads(this);
+            }
+        }
+    }
+
+    public Hylde getHylde() {
+        return hylde;
     }
 }

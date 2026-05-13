@@ -1,0 +1,360 @@
+Index: .idea/modules.xml
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision f5d38d229ec19693f8094a2ff1aa96b6fb87d450)
++++ /dev/null	(revision f5d38d229ec19693f8094a2ff1aa96b6fb87d450)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/Sall-Whisky-produktionssystem.iml" filepath="$PROJECT_DIR$/.idea/Sall-Whisky-produktionssystem.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/gui/OpretFadPane.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/gui/OpretFadPane.java b/src/gui/OpretFadPane.java
+new file mode 100644
+--- /dev/null	(date 1778148576507)
++++ b/src/gui/OpretFadPane.java	(date 1778148576507)
+@@ -0,0 +1,18 @@
++package gui;
++
++import controller.Controller;
++import javafx.scene.layout.BorderPane;
++
++public class OpretFadPane extends BorderPane {
++
++    private final Controller controller;
++
++    public OpretFadPane(Controller controller) {
++        this.controller = controller;
++        initContent();
++    }
++
++    private void initContent() {
++
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"958af90f-d980-4a57-96aa-3356086db14e\" name=\"Changes\" comment=\"intet\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CompilerWorkspaceConfiguration\">\r\n    <option name=\"MAKE_PROJECT_ON_SAVE\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;AkselTimmermann&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,\r\n    &quot;accountId&quot;: &quot;243a52f7-dc64-4338-89d3-b4e43ed51bf1&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 4\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"3D4ll79KBDesCMivrDAao2c1ssx\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.App.executor&quot;: &quot;Run&quot;,\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder (1).executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.findPlads_HyldeFindesIkke_CastException.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.findPlads_ReolFindesIkke_CastException.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.findPlads_gyldigplads_returnererPlads.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.placerObjekt_GyldigPlads_objektPlaceres.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.placerObjekt_PlaceringFindesIkke_CastException.executor&quot;: &quot;Run&quot;,\r\n    &quot;JUnit.Test_Lager_Metoder.placerObjekt_UgyldigPlads_PladsOptaget.executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.sall-whisky-produktionssystem [javafx:run].executor&quot;: &quot;Run&quot;,\r\n    &quot;Maven.sall-whisky-produktionssystem [test].executor&quot;: &quot;Run&quot;,\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Maven.sall-whisky-produktionssystem [javafx:run]\">\r\n    <configuration name=\"App\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"gui.App\" />\r\n      <module name=\"sall-whisky-produktionssystem\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Test_Lager_Metoder (1)\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"sall-whisky-produktionssystem\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"lagerTests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lagerTests.Test_Lager_Metoder\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Test_Lager_Metoder\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Sall-Whisky-produktionssystem\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"lagerTests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lagerTests.Test_Lager_Metoder\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Sall-Whisky-produktionssystem\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"lagerTests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lagerTests.Test_Lager_Metoder\" />\r\n      <option name=\"METHOD_NAME\" value=\"findPlacering_ObjektFindes_Placeringprintes\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"Sall-Whisky-produktionssystem\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"lagerTests\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"lagerTests.Test_Lager_Metoder\" />\r\n      <option name=\"METHOD_NAME\" value=\"findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet\" />\r\n      <option name=\"TEST_OBJECT\" value=\"method\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"sall-whisky-produktionssystem [javafx:run]\" type=\"MavenRunConfiguration\" factoryName=\"Maven\" nameIsGenerated=\"true\">\r\n      <MavenSettings>\r\n        <option name=\"myGeneralSettings\" />\r\n        <option name=\"myRunnerSettings\" />\r\n        <option name=\"myRunnerParameters\">\r\n          <MavenRunnerParameters>\r\n            <option name=\"cmdOptions\" />\r\n            <option name=\"profiles\">\r\n              <set />\r\n            </option>\r\n            <option name=\"goals\">\r\n              <list>\r\n                <option value=\"javafx:run\" />\r\n              </list>\r\n            </option>\r\n            <option name=\"multimoduleDir\" />\r\n            <option name=\"pomFileName\" />\r\n            <option name=\"profilesMap\">\r\n              <map />\r\n            </option>\r\n            <option name=\"projectsCmdOptionValues\">\r\n              <list />\r\n            </option>\r\n            <option name=\"resolveToWorkspace\" value=\"false\" />\r\n            <option name=\"workingDirPath\" value=\"$PROJECT_DIR$\" />\r\n          </MavenRunnerParameters>\r\n        </option>\r\n      </MavenSettings>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.App\" />\r\n      <item itemvalue=\"JUnit.Test_Lager_Metoder (1)\" />\r\n      <item itemvalue=\"JUnit.Test_Lager_Metoder\" />\r\n      <item itemvalue=\"JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet\" />\r\n      <item itemvalue=\"JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes\" />\r\n      <item itemvalue=\"Maven.sall-whisky-produktionssystem [javafx:run]\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.Test_Lager_Metoder (1)\" />\r\n        <item itemvalue=\"Application.App\" />\r\n        <item itemvalue=\"JUnit.Test_Lager_Metoder\" />\r\n        <item itemvalue=\"JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet\" />\r\n        <item itemvalue=\"JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"958af90f-d980-4a57-96aa-3356086db14e\" name=\"Changes\" comment=\"\" />\r\n      <created>1777549370612</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1777549370612</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Fad og lager klasse oprettet\" />\r\n    <MESSAGE value=\"Fad og lager klasse skeletet færdigt.\" />\r\n    <MESSAGE value=\"Fad og lager klasse associering færdig\" />\r\n    <MESSAGE value=\"Opdateret version af lager delen af systemet\" />\r\n    <MESSAGE value=\"fjernObjekt metode lavet i lager klassen\" />\r\n    <MESSAGE value=\"Test af lager oprettet og gennemført\" />\r\n    <MESSAGE value=\"controller, storage og gui klasser oprettet\" />\r\n    <MESSAGE value=\"controller, storage og gui klasser oprettet...\" />\r\n    <MESSAGE value=\"storage opdateret\" />\r\n    <MESSAGE value=\"storage opdaterett\" />\r\n    <MESSAGE value=\"PaafyldningsRegistrering oprettet\" />\r\n    <MESSAGE value=\"PaafyldningsRegistrering oprettett\" />\r\n    <MESSAGE value=\"Modnings- og paafyldnings registreringer opdateret\" />\r\n    <MESSAGE value=\"paafyldningsRegistrering lavet i Controller\" />\r\n    <MESSAGE value=\"paafyldningsRegistrering lavet i Controllerr\" />\r\n    <MESSAGE value=\"paafyldningsRegistrering lavet i Controllerrr\" />\r\n    <MESSAGE value=\"Test navne opdateret\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Test navne opdateret\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision f5d38d229ec19693f8094a2ff1aa96b6fb87d450)
++++ b/.idea/workspace.xml	(date 1778148782342)
+@@ -4,7 +4,17 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="intet" />
++    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="a">
++      <change afterPath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/gui/OpretFadPane.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/gui/OpretFadPane.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/gui/OpretLagerPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretLagerPane.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/gui/StartVindue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/StartVindue.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretLagerPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretLagerPane.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -69,7 +79,7 @@
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;Merging main&quot;,
+     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+@@ -210,6 +220,7 @@
+     <MESSAGE value="paafyldningsRegistrering lavet i Controllerr" />
+     <MESSAGE value="paafyldningsRegistrering lavet i Controllerrr" />
+     <MESSAGE value="Test navne opdateret" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Test navne opdateret" />
++    <MESSAGE value="a" />
++    <option name="LAST_COMMIT_MESSAGE" value="a" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/gui/OpretDestilleringPane.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/gui/OpretDestilleringPane.java b/src/gui/OpretDestilleringPane.java
+new file mode 100644
+--- /dev/null	(date 1778148576506)
++++ b/src/gui/OpretDestilleringPane.java	(date 1778148576506)
+@@ -0,0 +1,18 @@
++package gui;
++
++import controller.Controller;
++import javafx.scene.layout.BorderPane;
++
++public class OpretDestilleringPane extends BorderPane {
++
++    private final Controller controller;
++
++    public OpretDestilleringPane(Controller controller) {
++        this.controller = controller;
++        initContent();
++    }
++
++    private void initContent() {
++
++    }
++}
+Index: src/gui/StartVindue.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package gui;\r\n\r\nimport controller.Controller;\r\nimport javafx.geometry.Insets;\r\nimport javafx.geometry.Pos;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.layout.BorderPane;\r\nimport javafx.scene.layout.VBox;\r\n\r\n\r\npublic class StartVindue extends BorderPane {\r\n\r\n    private final Controller controller;\r\n\r\n    private Button btnForside;\r\n    private Button btnOpretLager;\r\n    private Button btnOpretFad;\r\n    private Button btnOpretDestillering;\r\n\r\n\r\n    public StartVindue(Controller controller) {\r\n        this.controller = controller;\r\n        initContent();\r\n    }\r\n\r\n    private void initContent() {\r\n        this.setLeft(createSideMenu());\r\n\r\n        // Startside når progammet åbnes\r\n        showForside();\r\n    }\r\n\r\n    private VBox createSideMenu() {\r\n        VBox sideMenu = new VBox();\r\n        sideMenu.setPrefWidth(200);\r\n        sideMenu.setPadding(new Insets(0));\r\n        sideMenu.setStyle(\r\n                \"-fx-border-color: black;\" +\r\n                \"-fx-border-width: 0 1 0 0;\");\r\n\r\n        Label title = new Label(\"Sall Whisky \\nDistillery\");\r\n        title.setMaxWidth(Double.MAX_VALUE);\r\n        title.setPadding(new Insets(16));\r\n        title.setStyle(\r\n                \"-fx-font-size: 24px;\" +\r\n                \"-fx-font-weight: bold;\" +\r\n                \"-fx-border-color: black;\" +\r\n                \"-fx-border-width: 0 0 1 0;\");\r\n\r\n        btnForside = createButtonMenu(\"Forside\");\r\n        btnOpretLager = createButtonMenu(\"Opret lager\");\r\n        btnOpretFad = createButtonMenu(\"Opret fad\");\r\n        btnOpretDestillering = createButtonMenu(\"Opret destillering\");\r\n\r\n        btnForside.setOnAction(event -> showForside());\r\n        btnOpretLager.setOnAction(event -> showOpretLager());\r\n        btnOpretFad.setOnAction(event -> showOpretFad());\r\n        btnOpretDestillering.setOnAction(event -> showOpretDestillering());\r\n\r\n        VBox buttons = new VBox(12);\r\n        buttons.setPadding(new Insets(35, 25, 0, 25));\r\n        buttons.getChildren().addAll(\r\n                btnForside,\r\n                btnOpretLager,\r\n                btnOpretFad,\r\n                btnOpretDestillering);\r\n\r\n        sideMenu.getChildren().addAll(title, buttons);\r\n\r\n        return sideMenu;\r\n    }\r\n\r\n    // Metode der bruges til at oprette og placere menu-knapper\r\n    private Button createButtonMenu(String text) {\r\n        Button button = new Button(text);\r\n        button.setPrefWidth(230);\r\n        button.setPrefHeight(48);\r\n        button.setAlignment(Pos.CENTER_LEFT);\r\n        button.setStyle(menuButtonStyle(false));\r\n        return button;\r\n    }\r\n\r\n    private void showForside() {\r\n        markSelected(btnForside);\r\n        this.setCenter(new ForsidePane(controller));\r\n    }\r\n\r\n    private void showOpretLager() {\r\n        markSelected(btnOpretLager);\r\n        this.setCenter(new OpretLagerPane(controller));\r\n    }\r\n\r\n    private void showOpretFad() {\r\n        markSelected(btnOpretFad);\r\n    }\r\n\r\n    private void showOpretDestillering() {\r\n        markSelected(btnOpretDestillering);\r\n    }\r\n\r\n    private void markSelected(Button selectedButton) {\r\n        btnForside.setStyle(menuButtonStyle(false));\r\n        btnOpretLager.setStyle(menuButtonStyle(false));\r\n        btnOpretFad.setStyle(menuButtonStyle(false));\r\n        btnOpretDestillering.setStyle(menuButtonStyle(false));\r\n\r\n        selectedButton.setStyle(menuButtonStyle(true));\r\n    }\r\n\r\n    // Metode der markerer valgt knap\r\n    private String menuButtonStyle(boolean selected) {\r\n        if (selected) {\r\n            return \"-fx-font-size: 17px;\" +\r\n                    \"-fx-background-color: #8c8c8c;\" +\r\n                    \"-fx-text-fill: black;\" +\r\n                    \"-fx-alignment: center-left;\" +\r\n                    \"-fx-padding: 0 0 0 14;\";\r\n        }\r\n        return \"-fx-font-size: 17px;\" +\r\n                \"-fx-background-color: transparent;\" +\r\n                \"-fx-text-fill: black;\" +\r\n                \"-fx-border-color: transparent;\" +\r\n                \"-fx-alignment: center-left;\" +\r\n                \"-fx-padding: 0 0 0 14;\";\r\n    }\r\n\r\n}\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/gui/StartVindue.java b/src/gui/StartVindue.java
+--- a/src/gui/StartVindue.java	(revision f5d38d229ec19693f8094a2ff1aa96b6fb87d450)
++++ b/src/gui/StartVindue.java	(date 1778148576510)
+@@ -93,10 +93,12 @@
+ 
+     private void showOpretFad() {
+         markSelected(btnOpretFad);
++        this.setCenter(new OpretFadPane(controller));
+     }
+ 
+     private void showOpretDestillering() {
+         markSelected(btnOpretDestillering);
++        this.setCenter(new OpretDestilleringPane(controller));
+     }
+ 
+     private void markSelected(Button selectedButton) {
+Index: src/gui/OpretLagerPane.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package gui;\r\n\r\nimport controller.Controller;\r\nimport javafx.geometry.Insets;\r\nimport javafx.scene.control.Button;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.control.TextField;\r\nimport javafx.scene.layout.BorderPane;\r\nimport javafx.scene.layout.GridPane;\r\nimport javafx.scene.layout.HBox;\r\nimport javafx.scene.layout.VBox;\r\n\r\npublic class OpretLagerPane extends BorderPane {\r\n\r\n    private final Controller controller;\r\n\r\n    public OpretLagerPane(Controller controller) {\r\n        this.controller = controller;\r\n        initContent();\r\n    }\r\n\r\n    private void initContent() {\r\n        VBox root = new VBox(10);\r\n        root.setPadding(new Insets(30, 60, 30, 60));\r\n\r\n        Label title = new Label(\"Opret lager\");\r\n        title.setStyle(\"-fx-font-size: 26px; -fx-font-weight: bold;\");\r\n\r\n        Label subTitle = new Label(\"Kommer senere\");\r\n\r\n        root.getChildren().addAll(title, subTitle);\r\n        this.setCenter(root);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/gui/OpretLagerPane.java b/src/gui/OpretLagerPane.java
+--- a/src/gui/OpretLagerPane.java	(revision f5d38d229ec19693f8094a2ff1aa96b6fb87d450)
++++ b/src/gui/OpretLagerPane.java	(date 1778148576509)
+@@ -2,6 +2,7 @@
+ 
+ import controller.Controller;
+ import javafx.geometry.Insets;
++import javafx.scene.control.Alert;
+ import javafx.scene.control.Button;
+ import javafx.scene.control.Label;
+ import javafx.scene.control.TextField;
+@@ -9,11 +10,25 @@
+ import javafx.scene.layout.GridPane;
+ import javafx.scene.layout.HBox;
+ import javafx.scene.layout.VBox;
++import model.Hylde;
++import model.Lager;
++import model.LagerPlads;
++import model.Reol;
++
++import static java.lang.Integer.parseInt;
+ 
+ public class OpretLagerPane extends BorderPane {
+ 
+     private final Controller controller;
+ 
++    private TextField txfNavn;
++    private TextField txfLokation;
++    private TextField txfStoerrelse;
++
++    private TextField txfAntalReoler;
++    private TextField txfAntalHylder;
++    private TextField txfPladserPrHylde;
++
+     public OpretLagerPane(Controller controller) {
+         this.controller = controller;
+         initContent();
+@@ -23,12 +38,169 @@
+         VBox root = new VBox(10);
+         root.setPadding(new Insets(30, 60, 30, 60));
+ 
++        VBox header = createHeader();
++        GridPane format = createFormat();
++
++        root.getChildren().addAll(header, format);
++        this.setCenter(root);
++
++
++
++
++    }
++
++    private VBox createHeader() {
++
+         Label title = new Label("Opret lager");
+         title.setStyle("-fx-font-size: 26px; -fx-font-weight: bold;");
+ 
+-        Label subTitle = new Label("Kommer senere");
++        Label subTitle = new Label("Opret et nyt lager");
++        subTitle.setStyle("-fx-font-size: 16px;");
++
++        return new VBox(5, title, subTitle);
++    }
++
++    private GridPane createFormat() {
++        GridPane pane = new GridPane();
++        pane.setPadding(new Insets(30));
++        pane.setHgap(15);
++        pane.setVgap(15);
++        pane.setStyle("-fx-border-color: black; -fx-border-width: 1;");
++
++        txfNavn = new TextField();
++        txfLokation = new TextField();
++        txfStoerrelse = new TextField();
++
++        txfAntalReoler = new TextField();
++        txfAntalHylder = new TextField();
++        txfPladserPrHylde = new TextField();
++
++        txfNavn.setPrefWidth(350);
++        txfLokation.setPrefWidth(350);
++        txfStoerrelse.setPrefWidth(350);
++
++        int row = 0;
++
++        Label lblLagerInfo = new Label("Lageroplysninger");
++        lblLagerInfo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
++        pane.add(lblLagerInfo, 0, 0, 2, 1);
++
++        pane.add(new Label("Navn:"), 0, 1);
++        pane.add(txfNavn, 1, 1);
++
++        pane.add(new Label("Lokation"), 0, 2);
++        pane.add(txfLokation, 1, 2);
++
++        pane.add(new Label("Størrelse (m3)"), 0, 3);
++        pane.add(txfStoerrelse, 1, 3);
++
++        Label lblStruktur = new Label("Lagerstruktur");
++        lblStruktur.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
++        pane.add(lblStruktur, 0, 4, 2, 1);
++
++        pane.add(new Label("Antal reoler:"), 0, 5);
++        pane.add(txfAntalReoler, 1, 5);
++
++        pane.add(new Label("Antal hylder pr. reol:"), 0, 6);
++        pane.add(txfAntalHylder, 1, 6);
++
++        pane.add(new Label("Antal paldser pr. hylde:"), 0, 7);
++        pane.add(txfPladserPrHylde, 1, 7);
++
++        Button btnOpret = new Button("Opret lager");
++        Button btnRyd = new Button("Ryd felter");
++
++        btnOpret.setOnAction(event -> opretLagerAction());
++
++        btnRyd.setOnAction(event -> rydFelter());
++
++        HBox buttons = new HBox(15, btnOpret, btnRyd);
++        pane.add(buttons, 1, 8);
++
++
++        return pane;
++
++    }
++
++    private void opretLagerAction() {
++        try {
++            String navn = txfNavn.getText().trim();
++            String lokation = txfLokation.getText().trim();
++
++            if (navn.isEmpty()) {
++                visFejl("Navn skal udfyldes.");
++                return;
++            }
++            if (lokation.isEmpty()) {
++                visFejl("Lokation skal udfyldes.");
++                return;
++            }
++
++            int stoerrelse = Integer.parseInt(txfStoerrelse.getText());
++            int antalReoler = Integer.parseInt(txfAntalReoler.getText());
++            int antalHylderPrReol = Integer.parseInt(txfAntalHylder.getText());
++            int antalPladserPrHylde = Integer.parseInt(txfPladserPrHylde.getText());
++
++            Lager lager = controller.createLager(navn, lokation, stoerrelse);
++
++            for (int reolNr = 1; reolNr <= antalReoler; reolNr++) {
++                Reol reol = new Reol(reolNr);
++
++                for (int hyldeNr = 1; hyldeNr <= antalHylderPrReol; hyldeNr++) {
++                    Hylde hylde = new Hylde(hyldeNr);
++
++                    for (int pladsNr = 1; pladsNr <= antalPladserPrHylde; pladsNr++) {
++                        LagerPlads lagerPlads = new LagerPlads(pladsNr);
++
++                        hylde.addPlads(lagerPlads);
++                    }
++
++                    reol.addHylde(hylde);
++                }
++
++                lager.addReol(reol);
++
++            }
++
++            visInfo("Lageret blev oprettet med " + antalReoler + " reoler, " +
++                    (antalReoler * antalHylderPrReol) + " hylder og " +
++                    (antalReoler * antalHylderPrReol * antalPladserPrHylde) + " lagerpladser");
++
++            rydFelter();
+ 
+-        root.getChildren().addAll(title, subTitle);
+-        this.setCenter(root);
++            } catch (NumberFormatException e) {
++            visFejl(e.getMessage());
++        } catch (Exception e) {
++            visFejl(e.getMessage());
++        }
+     }
++
++
++    private void rydFelter() {
++        txfNavn.clear();
++        txfLokation.clear();
++        txfStoerrelse.clear();
++
++        txfAntalReoler.clear();
++        txfAntalHylder.clear();
++        txfPladserPrHylde.clear();
++    }
++
++
++    private void visFejl(String besked) {
++        Alert alert = new Alert(Alert.AlertType.ERROR);
++        alert.setTitle("Fejl");
++        alert.setHeaderText("Lager kunne ikke oprettes");
++        alert.setContentText(besked);
++        alert.showAndWait();
++    }
++
++    private void visInfo(String besked) {
++        Alert alert = new Alert(Alert.AlertType.INFORMATION);
++        alert.setTitle("Oprettet");
++        alert.setHeaderText(null);
++        alert.setContentText(besked);
++        alert.showAndWait();
++    }
++
+ }
