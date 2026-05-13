@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="OpretDestillatPane completed (ish)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerModningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerModningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/StartVindue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/StartVindue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Destillat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Medarbejder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Medarbejder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerModningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerModningPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Destillat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Medarbejder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Medarbejder.class" afterDir="false" />
-    </list>
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +206,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fjernObjekt metode lavet i lager klassen" />
     <MESSAGE value="Test af lager oprettet og gennemført" />
     <MESSAGE value="controller, storage og gui klasser oprettet" />
     <MESSAGE value="controller, storage og gui klasser oprettet..." />
@@ -245,6 +230,7 @@
     <MESSAGE value="maltBatch enkelterrett" />
     <MESSAGE value="Leverandoer toString" />
     <MESSAGE value="OpretDestillatPane completed (ish)" />
-    <option name="LAST_COMMIT_MESSAGE" value="OpretDestillatPane completed (ish)" />
+    <MESSAGE value="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane" />
   </component>
 </project>
