@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="OpretDestilleringPane igang part 3">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestilleringPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerModningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerModningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="OpretDestilleringPane igang part 3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,8 +170,8 @@
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
       <item itemvalue="JUnit.Test_Lager_Metoder" />
-      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
       <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
