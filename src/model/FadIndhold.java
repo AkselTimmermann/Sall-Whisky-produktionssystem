@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class FadIndhold {
     private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
     private ArrayList<ModningsRegistrering> modningsRegistreringer = new ArrayList<>();
+    private Fad fad;
 
     public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Medarbejder medarbejder) {
         PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillat, this, medarbejder);
@@ -28,6 +29,31 @@ public class FadIndhold {
     public void fjernModningsRegistrering(ModningsRegistrering modningsRegistrering) {
         if (modningsRegistreringer.contains(modningsRegistrering)) {
             modningsRegistreringer.remove(modningsRegistrering);
+        }
+    }
+
+    public double beregnStartAlkoholProcent(){
+        return beregnStartAlkoholMaengde()/beregnStartAntalLiter();
+    }
+
+    public double beregnStartAntalLiter(){
+        return paafyldningsRegistreringer.stream().mapToDouble(paafyldningsRegistrering->paafyldningsRegistrering.getAntalLiter()).sum();
+    }
+
+    private double beregnStartAlkoholMaengde(){
+        return paafyldningsRegistreringer.stream().mapToDouble(
+                paafyldningsRegistrering
+                        ->paafyldningsRegistrering.getAntalLiter()*paafyldningsRegistrering.getDestillat().getAlkoholProcent()).sum();
+    }
+
+    public Fad getFad() {
+        return fad;
+    }
+
+    public void setFad(Fad fad) {
+        if (this.fad!=fad){
+            fad.setFadIndhold(this);
+            this.fad = fad;
         }
     }
 

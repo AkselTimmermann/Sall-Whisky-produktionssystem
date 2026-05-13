@@ -10,6 +10,7 @@ public class Fad implements LagerObjekt {
     private double stoerrelse;
     private FadStatus status;
     private Leverandoer leverandoer;
+    private FadIndhold fadIndhold;
 
     public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse, Leverandoer leverandoer) {
         this.fadId = fadId;
@@ -44,6 +45,20 @@ public class Fad implements LagerObjekt {
 
     public Leverandoer getLeverandoer() {
         return leverandoer;
+    }
+
+    public FadIndhold getFadIndhold() {
+        return fadIndhold;
+    }
+
+    public void setFadIndhold(FadIndhold fadIndhold) {
+        if (this.fadIndhold!=fadIndhold){
+            if (this.fadIndhold!=null){
+                throw new IllegalArgumentException("Fadet har allerede et fadindhold");
+            }
+            this.fadIndhold=fadIndhold;
+            fadIndhold.setFad(this);
+        }
     }
 
     @Override
