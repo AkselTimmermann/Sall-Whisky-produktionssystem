@@ -29,6 +29,21 @@ public class WhiskyProdukt {
 
 
 
+    public ArrayList<Flaske> createFlasker(double stoerrelse, int antal, FlaskeSamling flaskeSamling){
+        ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
+        int startFlaskenr = this.flasker.getLast().getFlaskeNr() +1;
+        for (int i = startFlaskenr; i < startFlaskenr + antal ; i++) {
+            Flaske flaske = new Flaske(i,stoerrelse,flaskeSamling, this);
+            oprettedeFlasker.add(flaske);
+            flaske.setFlaskeSamling(flaskeSamling);
+            this.flasker.add(flaske);
+
+        }
+        return oprettedeFlasker;
+    }
+
+
+
     public boolean isCaskStrength(){
         return fortynding==0;
     }

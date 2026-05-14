@@ -12,6 +12,7 @@ public class Storage implements StorageInterface {
     private ArrayList<MaltBatch> maltBatches = new ArrayList<>();
     private ArrayList<Medarbejder> medarbejderer = new ArrayList<>();
     private ArrayList<Destillat> destillater = new ArrayList<>();
+    private ArrayList<FlaskeSamling> flaskeSamlinger = new ArrayList<>();
 
     private ArrayList<FadIndhold> fadIndholdListe = new ArrayList<>();
     private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
@@ -68,9 +69,17 @@ public class Storage implements StorageInterface {
         }
     }
 
+    @Override
+    public void addFlaskesamling(FlaskeSamling flaskeSamling) {
+        if (!flaskeSamlinger.contains(flaskeSamling)) {
+            flaskeSamlinger.add(flaskeSamling);
+        }
+    }
+
     public ArrayList<Destillering> getDestilleringer() {
         return new ArrayList<Destillering>(destilleringer);
     }
+
 
     public ArrayList<Fad> getFade() {
         return new ArrayList<Fad>(fade);
@@ -106,5 +115,10 @@ public class Storage implements StorageInterface {
 
     public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
         return new ArrayList<>(paafyldningsRegistreringer);
+    }
+
+    @Override
+    public ArrayList<FlaskeSamling> getFlaskesamling() {
+        return new ArrayList<>(flaskeSamlinger);
     }
 }
