@@ -26,4 +26,9 @@ public class ModningsRegistrering {
     public double getAlkoholProcent() {
         return alkoholProcent;
     }
+
+
+    public double getAntalLiter() {
+        return antalLiter;
+    }
 }

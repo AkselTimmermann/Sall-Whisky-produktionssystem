@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Tilfoejet reoler, hylder og pladser til Lagre i InitialData.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/InitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/InitialData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +212,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="controller, storage og gui klasser oprettet..." />
     <MESSAGE value="storage opdateret" />
     <MESSAGE value="storage opdaterett" />
     <MESSAGE value="PaafyldningsRegistrering oprettet" />
@@ -235,6 +236,7 @@
     <MESSAGE value="OpretDestilleringPane igang part 3" />
     <MESSAGE value="RegistrerModningPane tæt på færdigt" />
     <MESSAGE value=".class files" />
-    <option name="LAST_COMMIT_MESSAGE" value=".class files" />
+    <MESSAGE value="Tilfoejet reoler, hylder og pladser til Lagre i InitialData." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilfoejet reoler, hylder og pladser til Lagre i InitialData." />
   </component>
 </project>

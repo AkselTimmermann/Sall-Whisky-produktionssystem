@@ -11,13 +11,23 @@ public class WhiskyProdukt {
     private ArrayList<Flaske> flasker = new ArrayList<>();
     private ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
 
-    public WhiskyProdukt(int produktNr, String beskrivelse, LocalDate dato, double fortynding, ArrayList<ProduktRegistrering> produktRegistreringer) {
+    public WhiskyProdukt(int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
         this.produktNr = produktNr;
         this.beskrivelse = beskrivelse;
         this.dato = dato;
         this.fortynding = fortynding;
-        this.produktRegistreringer = produktRegistreringer;
     }
+
+    public ProduktRegistrering createProduktRegistrering(double antalLiter, FadIndhold fadIndhold) {
+        ProduktRegistrering produktRegistrering = new ProduktRegistrering(antalLiter, fadIndhold, this);
+
+        produktRegistreringer.add(produktRegistrering);
+
+        return produktRegistrering;
+    }
+
+
+
 
     public boolean isCaskStrength(){
         return fortynding==0;
