@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Lidt rettelser">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretFadPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretFadPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/StartVindue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/StartVindue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/StorageInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/StorageInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretFadPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretFadPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storage/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,8 +172,8 @@
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
       <item itemvalue="JUnit.Test_Lager_Metoder" />
-      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
       <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>

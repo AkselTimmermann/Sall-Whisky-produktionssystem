@@ -20,12 +20,18 @@ public class WhiskyProdukt {
         this.fortynding = fortynding;
     }
 
+
     public ProduktRegistrering createProduktRegistrering(double antalLiter, FadIndhold fadIndhold) {
+        if (antalLiter<=0){
+            throw new IllegalArgumentException("Antal liter skal være positiv");
+        }
+        if (!fadIndhold.isLagretMinimum3Aar(this.dato)){
+            throw new IllegalArgumentException("Alt indhold i produktet skal være mindst 3 år gammelt");
+        }
         ProduktRegistrering produktRegistrering = new ProduktRegistrering(antalLiter, fadIndhold, this);
 
         produktRegistreringer.add(produktRegistrering);
-         double brugtAntalLiter = fadIndhold.getModningsRegistreringer().getLast().getAntalLiter() - antalLiter;
-         fadIndhold.reducerResterendeLiter(brugtAntalLiter);
+        fadIndhold.reducerResterendeLiter(antalLiter);
 
         return produktRegistrering;
     }
@@ -36,6 +42,9 @@ public class WhiskyProdukt {
     public ArrayList<Flaske> createFlasker(double stoerrelse, int antal, FlaskeSamling flaskeSamling){
         if (stoerrelse<=0){
             throw new IllegalArgumentException("Størrelsen på en flaske skal altid være et positivt tal");
+        }
+        if (antal<=0){
+            throw new IllegalArgumentException("Der skal oprettes mindst 1 flaske");
         }
         ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
         int startFlaskenr = this.flasker.getLast().getFlaskeNr() +1;
@@ -72,6 +81,9 @@ public class WhiskyProdukt {
     }
 
     public int maksAntalFlasker(double stoerrelse){
+        if (stoerrelse<=0){
+            throw new IllegalArgumentException("Størrelsen på en flaske skal altid være et positivt tal");
+        }
         return (int) ((samletAntalLiter()-antalLiterIFlasker())/stoerrelse);
     }
 
