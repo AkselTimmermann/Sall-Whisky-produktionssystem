@@ -14,7 +14,10 @@ C:\Users\rasjo\Sall-Whisky-produktionssystem\src\gui\StartVindue.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\Destillat.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\Destillering.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\Fad.java
+C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\FadIndhold.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\FadStatus.java
+C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\Flaske.java
+C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\FlaskeSamling.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\Hylde.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\Lager.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\LagerObjekt.java
@@ -24,6 +27,9 @@ C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\MaltBatch.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\Medarbejder.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\ModningsRegistrering.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\PaafyldningsRegistrering.java
+C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\ProduktRegistrering.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\Reol.java
+C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\WhiskyProdukt.java
+C:\Users\rasjo\Sall-Whisky-produktionssystem\src\model\WhiskyType.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\storage\Storage.java
 C:\Users\rasjo\Sall-Whisky-produktionssystem\src\storage\StorageInterface.java

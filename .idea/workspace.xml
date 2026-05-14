@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Metoder i WhiskyProdukt og FadIndhold">
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_beregnAlkoholProcent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_isCaskStrength.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_isWhiskyType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_maksAntalFlasker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_samletAlkoholMaengde.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_samletAntalLiter.java" afterDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/InitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/InitialData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +234,7 @@
     <MESSAGE value="OpretDestillatPane completed (ish)" />
     <MESSAGE value="OpretDestilleringPane igang part 3" />
     <MESSAGE value="RegistrerModningPane tæt på færdigt" />
-    <MESSAGE value="Metoder i WhiskyProdukt og FadIndhold" />
-    <option name="LAST_COMMIT_MESSAGE" value="Metoder i WhiskyProdukt og FadIndhold" />
+    <MESSAGE value=".class files" />
+    <option name="LAST_COMMIT_MESSAGE" value=".class files" />
   </component>
 </project>

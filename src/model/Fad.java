@@ -10,7 +10,9 @@ public class Fad implements LagerObjekt {
     private double stoerrelse;
     private FadStatus status;
     private Leverandoer leverandoer;
-    private FadIndhold fadIndhold;
+    private LagerPlads lagerPlads;
+
+    private ArrayList<FadIndhold> fadIndholdListe = new ArrayList<>();
 
     public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse, Leverandoer leverandoer) {
         this.fadId = fadId;
@@ -21,6 +23,22 @@ public class Fad implements LagerObjekt {
         this.leverandoer = leverandoer;
     }
 
+    public void addFadIndhold(FadIndhold fadIndhold) {
+        if (!fadIndholdListe.contains(fadIndhold)) {
+            fadIndholdListe.add(fadIndhold);
+        }
+    }
+
+    public FadIndhold getAktivtFadIndhold() {
+        if (fadIndholdListe.isEmpty()) {
+            return null;
+        }
+        return fadIndholdListe.getLast();
+    }
+
+    public ArrayList<FadIndhold> getFadIndholdListe() {
+        return new ArrayList<>(fadIndholdListe);
+    }
 
 
     public FadStatus getStatus() {
@@ -47,22 +65,50 @@ public class Fad implements LagerObjekt {
         return leverandoer;
     }
 
-    public FadIndhold getFadIndhold() {
-        return fadIndhold;
+    @Override
+    public LagerPlads getLagerPlads() {
+        return lagerPlads;
     }
 
-    public void setFadIndhold(FadIndhold fadIndhold) {
-        if (this.fadIndhold!=fadIndhold){
-            if (this.fadIndhold!=null){
-                throw new IllegalArgumentException("Fadet har allerede et fadindhold");
+    @Override
+    public void setlagerPLads(LagerPlads lagerPlads) {
+        if (this.lagerPlads != lagerPlads) {
+            LagerPlads oldPlads = this.lagerPlads;
+            if (oldPlads != null) {
+                oldPlads.fjernIndhold(this);
             }
-            this.fadIndhold=fadIndhold;
-            fadIndhold.setFad(this);
+            this.lagerPlads = lagerPlads;
+            if (lagerPlads != null) {
+                lagerPlads.placerIndhold(this);
+            }
         }
     }
 
     @Override
     public String getId() {
         return fadId;
+    }
+
+    public double getLedigKapacitet() {
+        FadIndhold aktivtIndhold = getAktivtFadIndhold();
+
+        if (aktivtIndhold == null) {
+            return stoerrelse;
+        }
+
+        return stoerrelse - aktivtIndhold.beregnStartAntalLiter();
+    }
+
+    public void setStatus(FadStatus status) {
+        this.status = status;
+    }
+
+
+    @Override
+    public String toString() {
+        return "FadID: " + fadId + " | " +
+                "Trætype: " + traaType + " | " +
+                "Størrelse: " + stoerrelse + " | " +
+                "Status: " + status;
     }
 }

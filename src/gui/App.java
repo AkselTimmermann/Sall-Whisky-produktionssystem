@@ -18,7 +18,7 @@ public class App extends Application{
 
         StartVindue root = new StartVindue(controller);
 
-        Scene scene = new Scene(root, 1200, 750);
+        Scene scene = new Scene(root, 1200, 900);
         stage.setTitle("Sall Whisky Distillery");
         stage.setScene(scene);
         stage.show();

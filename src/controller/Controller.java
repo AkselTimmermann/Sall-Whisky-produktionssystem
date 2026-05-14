@@ -13,6 +13,16 @@ public class Controller {
     this.storage = storage;
     }
 
+    public void placerObjekt(LagerObjekt objekt, LagerPlads plads) {
+        if (objekt == null) {
+            throw new IllegalArgumentException("Vælg et lagerobjekt");
+        }
+        if (plads == null) {
+            throw new IllegalArgumentException("Vælg en lagerplads");
+        }
+        plads.placerIndhold(objekt);
+    }
+
     public Lager createLager(String navn, String lokation, int stoerrelse){
         Lager lager = new Lager(navn, lokation, stoerrelse);
         storage.addLager(lager);
@@ -41,8 +51,18 @@ public class Controller {
     }
 
 
-    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, FadIndhold fadIndhold, Medarbejder medarbejder) {
+    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Fad fad, Medarbejder medarbejder) {
+        FadIndhold fadIndhold = fad.getAktivtFadIndhold();
+
+        if (fadIndhold == null) {
+            fadIndhold = new FadIndhold(fad);
+            storage.addFadIndhold(fadIndhold);
+        }
+
         PaafyldningsRegistrering paafyldningsRegistrering = fadIndhold.opretPaafyldningsRegistrering(antalLiter, dato, destillat, medarbejder);
+
+        fad.setStatus(FadStatus.AKTIV);
+        storage.addPaafyldningsRegistrering(paafyldningsRegistrering);
         return paafyldningsRegistrering;
     }
 
@@ -104,5 +124,9 @@ public class Controller {
 
     public ArrayList<MaltBatch> getMaltBatches() {
         return storage.getMaltBatch();
+    }
+
+    public FadIndhold getAktivtFadIndhold(Fad fad) {
+        return fad.getAktivtFadIndhold();
     }
 }

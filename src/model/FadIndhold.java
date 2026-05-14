@@ -8,6 +8,14 @@ public class FadIndhold {
     private ArrayList<ModningsRegistrering> modningsRegistreringer = new ArrayList<>();
     private Fad fad;
 
+    public FadIndhold(Fad fad) {
+        if (fad == null) {
+            throw new IllegalArgumentException("Fad skal angives");
+        }
+        this.fad = fad;
+        fad.addFadIndhold(this);
+    }
+
     public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Medarbejder medarbejder) {
         PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillat, this, medarbejder);
         paafyldningsRegistreringer.add(paafyldningsRegistrering);
@@ -50,12 +58,12 @@ public class FadIndhold {
         return fad;
     }
 
-    public void setFad(Fad fad) {
+    /*public void setFad(Fad fad) {
         if (this.fad!=fad){
             fad.setFadIndhold(this);
             this.fad = fad;
         }
-    }
+    }*/
 
     public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
         return new ArrayList<>(paafyldningsRegistreringer);
