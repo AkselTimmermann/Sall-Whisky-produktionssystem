@@ -23,6 +23,30 @@ public class Controller {
         plads.placerIndhold(objekt);
     }
 
+    public ArrayList<Fad> getFadeUdenPlacering() {
+        ArrayList<Fad> fadeUdenPlacering = new ArrayList<>();
+        for (Fad fad : storage.getFade()) {
+            if (fad.getLagerPlads() == null) {
+                fadeUdenPlacering.add(fad);
+            }
+        }
+        return fadeUdenPlacering;
+    }
+
+    public ArrayList<FlaskeSamling> getFlaskeSamlingUdenPlacering() {
+        ArrayList<FlaskeSamling> flaskeSamlingUdenPlacering = new ArrayList<>();
+        for (FlaskeSamling flaskeSamling : storage.getFlaskesamling()) {
+            if (flaskeSamling.getLagerPlads() == null) {
+                flaskeSamlingUdenPlacering.add(flaskeSamling);
+            }
+        }
+        return flaskeSamlingUdenPlacering;
+    }
+
+    public ArrayList<LagerPlads> getLagerPladser(Lager lager) {
+        return lager.getLagretsPladser();
+    }
+
     public Lager createLager(String navn, String lokation, int stoerrelse){
         Lager lager = new Lager(navn, lokation, stoerrelse);
         storage.addLager(lager);
@@ -50,6 +74,11 @@ public class Controller {
         return fad;
     }
 
+    public FlaskeSamling createFlaskeSamling(int samlingsNr, ArrayList<Flaske> flasker) {
+        FlaskeSamling flaskeSamling = new FlaskeSamling(samlingsNr, flasker);
+        storage.addFlaskesamling(flaskeSamling);
+        return flaskeSamling;
+    }
 
     public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Fad fad, Medarbejder medarbejder) {
         FadIndhold fadIndhold = fad.getAktivtFadIndhold();

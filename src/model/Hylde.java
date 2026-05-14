@@ -15,6 +15,8 @@ public class Hylde {
         return hyldeNr;
     }
 
+
+
     public void addPlads(LagerPlads plads) {
         if (!pladser.contains(plads)) {
             pladser.add(plads);
