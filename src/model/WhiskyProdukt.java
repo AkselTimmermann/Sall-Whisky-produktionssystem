@@ -18,6 +18,17 @@ public class WhiskyProdukt {
         this.fortynding = fortynding;
     }
 
+    public ProduktRegistrering createProduktRegistrering(double antalLiter, FadIndhold fadIndhold) {
+        ProduktRegistrering produktRegistrering = new ProduktRegistrering(antalLiter, fadIndhold, this);
+
+        produktRegistreringer.add(produktRegistrering);
+
+        return produktRegistrering;
+    }
+
+
+
+
     public ArrayList<Flaske> createFlasker(double stoerrelse, int antal, FlaskeSamling flaskeSamling){
         if (stoerrelse<=0){
             throw new IllegalArgumentException("Størrelsen på en flaske skal altid være et positivt tal");

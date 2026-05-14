@@ -4,9 +4,12 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class FadIndhold {
+
+    private Fad fad;
+
     private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
     private ArrayList<ModningsRegistrering> modningsRegistreringer = new ArrayList<>();
-    private Fad fad;
+    private ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
 
     public FadIndhold(Fad fad) {
         if (fad == null) {
@@ -58,6 +61,23 @@ public class FadIndhold {
         return fad;
     }
 
+    public double getResterendeLiter() {
+        ModningsRegistrering seneste = modningsRegistreringer.getLast();
+
+        if (seneste != null) {
+            return seneste.getAntalLiter();
+        }
+        return getSamletPaafyldning();
+    }
+
+    public void reducerResterendeLiter(double antalLiter) {
+        double nuvaerendeLiter = 0;
+
+        double nyMaengde = nuvaerendeLiter - antalLiter;
+
+
+    }
+
     /*public void setFad(Fad fad) {
         if (this.fad!=fad){
             fad.setFadIndhold(this);
@@ -72,4 +92,16 @@ public class FadIndhold {
     public ArrayList<ModningsRegistrering> getModningsRegistreringer() {
         return new ArrayList<>(modningsRegistreringer);
     }
+
+
+    public double getSamletPaafyldning() {
+        double samlet = 0;
+
+        for (PaafyldningsRegistrering registrering : paafyldningsRegistreringer) {
+            samlet += registrering.getAntalLiter();
+        }
+        return samlet;
+    }
+
+
 }

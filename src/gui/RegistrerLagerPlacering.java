@@ -2,6 +2,7 @@ package gui;
 
 import controller.Controller;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -62,6 +63,9 @@ public class RegistrerLagerPlacering extends BorderPane {
         lblLagerInfo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
         pane.add(lblLagerInfo, 0, 0, 2, 1);
 
+        pladserLv.setPrefWidth(350);
+        ledigeObjekterLv.setPrefWidth(350);
+
         VBox vboxObjekt = new VBox(objekterLbl, objektCb);
         pane.add(vboxObjekt,0,1);
 
@@ -74,20 +78,25 @@ public class RegistrerLagerPlacering extends BorderPane {
         VBox vboxPlads = new VBox(pladserLbl, pladserLv);
         pane.add(vboxPlads,1,2);
 
-        HBox hboxBtn = new HBox(50,registrerPladsBtn, rydBtn);
+        HBox hboxBtn = new HBox(30,registrerPladsBtn, rydBtn);
         pane.add(hboxBtn,0,3);
+
+        hboxBtn.setAlignment(Pos.CENTER_RIGHT);
 
         objektCb.getItems().addAll("Fad", "Flaskesamling");
         objektCb.getSelectionModel().selectedItemProperty().addListener(
                 (observableValue, oldValue, newValue) -> {
                     if (newValue == null) {
                         ledigeObjekterLv.getItems().clear();
+                        fadEllerSamlingLbl.setText(null);
                         return;
                     }
                     if (newValue.equals("Fad")) {
                         ledigeObjekterLv.getItems().setAll(controller.getFadeUdenPlacering());
+                        fadEllerSamlingLbl.setText("Fade");
                     } else if (newValue.equals("Flaskesamling")) {
                         ledigeObjekterLv.getItems().setAll(controller.getFlaskeSamlingUdenPlacering());
+                        fadEllerSamlingLbl.setText("Flaskesamlinger");
                     }
                 }
         );
@@ -108,10 +117,37 @@ public class RegistrerLagerPlacering extends BorderPane {
     }
 
     private void registrerPladsAction() {
+        try {
+            LagerObjekt objekt = ledigeObjekterLv.getSelectionModel().getSelectedItem();
+            LagerPlads plads = pladserLv.getSelectionModel().getSelectedItem();
+
+            if (objekt == null) {
+                visFejl("Vælg et lagerObjekt");
+            }
+            if (plads == null) {
+                visFejl("Vælg en plads");
+            }
+            if (plads.erOptaget()) {
+                boolean fortsæt = bekraeftOptagetPlads();
+
+                if (!fortsæt) {
+                    return;
+                }
+            }
+            controller.placerObjekt(objekt, plads);
+            visInfo("Placering registreret");
+            rydFelterAction();
+        } catch (Exception e) {
+            visFejl(e.getMessage());
+        }
+
     }
 
     private void rydFelterAction() {
-
+        ledigeObjekterLv.getItems().clear();
+        pladserLv.getItems().clear();
+        objektCb.getSelectionModel().clearSelection();
+        lagerCb.getSelectionModel().clearSelection();
     }
 
     private void visFejl(String besked) {
@@ -128,5 +164,15 @@ public class RegistrerLagerPlacering extends BorderPane {
         alert.setHeaderText(null);
         alert.setContentText(besked);
         alert.showAndWait();
+    }
+    private boolean bekraeftOptagetPlads() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Plads optaget");
+        alert.setHeaderText("Pladsen er allerede optaget");
+        alert.setContentText("Vil du stadig placere objektet på denne plads?");
+
+        ButtonType svar = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+        return svar == ButtonType.OK;
     }
 }

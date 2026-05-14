@@ -2,14 +2,33 @@ package gui;
 
 import controller.Controller;
 import javafx.geometry.Insets;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import model.FadIndhold;
+import model.ProduktRegistrering;
+
+import java.util.ArrayList;
 
 public class OpretWhiskyProduktPane extends BorderPane {
 
     private final Controller controller;
+
+    private TextField txfProduktNr;
+    private TextField txfNavn;
+    private TextField txfAlkoholProcent;
+    private TextArea txaBeskrivelse;
+
+    private ComboBox<FadIndhold> cmbFadIndhold;
+    private TextField txfAntalLiter;
+    private TextArea txaFadIndholdInfo;
+
+    private ListView<ProduktRegistrering> lvwProduktRegistreringer;
+    private Label lblSamletLiter;
+
+    private final ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
+
 
     public OpretWhiskyProduktPane (Controller controller) {
         this.controller = controller;
@@ -38,14 +57,88 @@ public class OpretWhiskyProduktPane extends BorderPane {
     }
 
     private GridPane createFormat() {
+        // Standard pane-opsætning
         GridPane pane = new GridPane();
         pane.setPadding(new Insets(30));
         pane.setVgap(15);
         pane.setHgap(15);
         pane.setStyle("-fx-border-color: black; -fx-border-width: 1;");
 
+        // Opretter indhold
+        txfProduktNr = new TextField();
+        txfProduktNr.setPrefWidth(350);
+
+        txfNavn = new TextField();
+        txfNavn.setPrefWidth(350);
+
+        txfAlkoholProcent = new TextField();
+        txfAlkoholProcent.setPrefWidth(350);
+
+        txaBeskrivelse = new TextArea();
+        txaBeskrivelse.setPrefWidth(350);
+        txaBeskrivelse.setPrefRowCount(4);
+        txaBeskrivelse.setWrapText(true);
+
+        cmbFadIndhold = new ComboBox<>();
+        cmbFadIndhold.setPrefWidth(350);
+        cmbFadIndhold.setOnAction(event -> updateFadIndholdInfo());
+
+        txfAntalLiter = new TextField();
+        txfAntalLiter.setPrefWidth(350);
+        txfAntalLiter.setPromptText("Antal liter fra valgt fadindhold");
+
+        txaFadIndholdInfo = new TextArea("Vælg et fadindhold for at se info.");
+        txaFadIndholdInfo.setEditable(false);
+        txaFadIndholdInfo.setWrapText(true);
+        txaFadIndholdInfo.setPrefRowCount(5);
+        txaFadIndholdInfo.setPrefWidth(500);
+
+        lvwProduktRegistreringer = new ListView<>();
+        lvwProduktRegistreringer.setPrefSize(500, 180);
+
+        lblSamletLiter = new Label();
+
+        // Placerer indhold
+        Label lblProduktInfo = new Label("Whiskyprodukt");
+        lblProduktInfo.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
+        pane.add(lblProduktInfo, 0, 0, 2, 1);
+
+        pane.add(new Label("Produkt nr.:"), 0, 1);
+        pane.add(txfProduktNr, 1, 1);
+
+        pane.add(new Label("Navn:"), 0, 2);
+        pane.add(txfNavn, 1, 2);
+
 
         return pane;
     }
+
+    private void updateFadIndholdInfo() {
+    }
+
+
+
+    private void rydFelter() {
+        txfProduktNr.clear();
+
+
+    }
+
+    private void visFejl(String besked) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Fejl");
+        alert.setHeaderText(null);
+        alert.setContentText(besked);
+        alert.showAndWait();
+    }
+
+    private void visInfo(String besked) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Oprettet");
+        alert.setHeaderText(null);
+        alert.setContentText(besked);
+        alert.showAndWait();
+    }
+
 
 }
