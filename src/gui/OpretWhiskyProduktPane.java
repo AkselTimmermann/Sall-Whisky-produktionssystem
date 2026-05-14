@@ -9,6 +9,7 @@ import javafx.scene.layout.VBox;
 import model.FadIndhold;
 import model.ProduktRegistrering;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class OpretWhiskyProduktPane extends BorderPane {
@@ -16,16 +17,24 @@ public class OpretWhiskyProduktPane extends BorderPane {
     private final Controller controller;
 
     private TextField txfProduktNr;
-    private TextField txfNavn;
-    private TextField txfAlkoholProcent;
+    private DatePicker dpDato;
+    private TextField txfFortynding;
     private TextArea txaBeskrivelse;
 
     private ComboBox<FadIndhold> cmbFadIndhold;
     private TextField txfAntalLiter;
     private TextArea txaFadIndholdInfo;
 
-    private ListView<ProduktRegistrering> lvwProduktRegistreringer;
+    private ListView<String> lvwValgteFadIndhold;
     private Label lblSamletLiter;
+
+    private ArrayList<FadIndhold> valgteFadIndhold = new ArrayList<>();
+    private ArrayList<Double> valgteLiter = new ArrayList<>();
+
+    private TextField txfNavn;
+    private TextField txfAlkoholProcent;
+
+    private ListView<ProduktRegistrering> lvwProduktRegistreringer;
 
     private final ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
 
@@ -67,6 +76,17 @@ public class OpretWhiskyProduktPane extends BorderPane {
         // Opretter indhold
         txfProduktNr = new TextField();
         txfProduktNr.setPrefWidth(350);
+        txfProduktNr.setPromptText("Fx 1001");
+
+        dpDato = new DatePicker();
+        dpDato.setPrefWidth(350);
+        dpDato.setValue(LocalDate.now());
+
+        txfFortynding = new TextField();
+        txfFortynding.setPrefWidth(350);
+        txfFortynding.setPromptText("Liter vand tilsat. Brug 0 ved cask strength");
+
+
 
         txfNavn = new TextField();
         txfNavn.setPrefWidth(350);

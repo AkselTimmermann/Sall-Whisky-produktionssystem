@@ -62,15 +62,17 @@ public class FadIndhold {
     }
 
     public double getResterendeLiter() {
-        ModningsRegistrering seneste = modningsRegistreringer.getLast();
-
-        if (seneste != null) {
-            return seneste.getAntalLiter();
+        if (modningsRegistreringer.isEmpty()) {
+            return getSamletPaafyldning();
         }
-        return getSamletPaafyldning();
+        return modningsRegistreringer.getLast().getAntalLiter();
     }
 
     public void reducerResterendeLiter(double antalLiter) {
+        if (antalLiter <= 0) {
+            throw new IllegalArgumentException("Antal liter skal være større end 0");
+        }
+
         modningsRegistreringer.getLast().reducerLiter(antalLiter);
 
     }
