@@ -5,24 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane">
+      <change afterPath="$PROJECT_DIR$/src/gui/RegistrerLagerPlacering.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/InitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/InitialData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/StartVindue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/StartVindue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FlaskeSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FlaskeSamling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Hylde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Hylde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Lager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Lager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Reol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Reol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Storage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/storage/StorageInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/StorageInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/InitialData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/InitialData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Fad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Fad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storage/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Hylde.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Hylde.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Lager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Lager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Reol.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Reol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/storage/Storage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +225,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="controller, storage og gui klasser oprettet" />
     <MESSAGE value="controller, storage og gui klasser oprettet..." />
     <MESSAGE value="storage opdateret" />
     <MESSAGE value="storage opdaterett" />
@@ -251,6 +249,7 @@
     <MESSAGE value="OpretDestillatPane completed (ish)" />
     <MESSAGE value="OpretDestilleringPane igang part 3" />
     <MESSAGE value="RegistrerModningPane tæt på færdigt" />
-    <option name="LAST_COMMIT_MESSAGE" value="RegistrerModningPane tæt på færdigt" />
+    <MESSAGE value="placerobjekt logic i controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="placerobjekt logic i controller" />
   </component>
 </project>
