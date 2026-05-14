@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="RegistrerModningPane tæt på færdigt">
-      <change afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Flaske.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/FlaskeSamling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/LagerPlads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LagerPlads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PaafyldningsRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PaafyldningsRegistrering.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
