@@ -19,6 +19,10 @@ public class WhiskyProdukt {
     }
 
     public ProduktRegistrering createProduktRegistrering(double antalLiter, FadIndhold fadIndhold) {
+        if (antalLiter<=0){
+            throw new IllegalArgumentException("Antal liter skal være positiv");
+        }
+        if (fadIndhold.getPaafyldningsRegistreringer().getLast().getDato().plusYears(3).isBefore(dato))
         ProduktRegistrering produktRegistrering = new ProduktRegistrering(antalLiter, fadIndhold, this);
 
         produktRegistreringer.add(produktRegistrering);
