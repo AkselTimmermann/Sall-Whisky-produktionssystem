@@ -22,4 +22,8 @@ public class ModningsRegistrering {
         this.note = note;
         this.titel = titel;
     }
+
+    public double getAlkoholProcent() {
+        return alkoholProcent;
+    }
 }
