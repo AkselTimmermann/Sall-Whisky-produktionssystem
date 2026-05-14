@@ -26,6 +26,8 @@ public class WhiskyProdukt {
         ProduktRegistrering produktRegistrering = new ProduktRegistrering(antalLiter, fadIndhold, this);
 
         produktRegistreringer.add(produktRegistrering);
+         double brugtAntalLiter = fadIndhold.getModningsRegistreringer().getLast().getAntalLiter() - antalLiter;
+         fadIndhold.reducerResterendeLiter(brugtAntalLiter);
 
         return produktRegistrering;
     }

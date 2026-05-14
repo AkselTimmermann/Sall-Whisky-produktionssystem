@@ -76,10 +76,7 @@ public class FadIndhold {
     }
 
     public void reducerResterendeLiter(double antalLiter) {
-        double nuvaerendeLiter = 0;
-
-        double nyMaengde = nuvaerendeLiter - antalLiter;
-
+        modningsRegistreringer.getLast().reducerLiter(antalLiter);
 
     }
 
@@ -107,6 +104,5 @@ public class FadIndhold {
         }
         return samlet;
     }
-
 
 }
