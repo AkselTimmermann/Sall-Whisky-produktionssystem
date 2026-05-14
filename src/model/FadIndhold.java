@@ -57,6 +57,11 @@ public class FadIndhold {
                         ->paafyldningsRegistrering.getAntalLiter()*paafyldningsRegistrering.getDestillat().getAlkoholProcent()).sum();
     }
 
+    public boolean isLagretMinimum3Aar(LocalDate produktDato){
+        LocalDate paafyldningsDato = paafyldningsRegistreringer.getLast().getDato();
+        return paafyldningsDato.plusYears(3).isBefore(produktDato);
+    }
+
     public Fad getFad() {
         return fad;
     }
