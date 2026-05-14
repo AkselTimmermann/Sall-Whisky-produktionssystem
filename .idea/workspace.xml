@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="CreateFlasker">
+      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_createProduktRegistrering.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_create_Flasker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/Flaske.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Flaske.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FlaskeSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FlaskeSamling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_antalLiterIFlasker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,8 +180,8 @@
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
       <item itemvalue="JUnit.Test_Lager_Metoder" />
-      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
       <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
@@ -209,7 +216,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="controller, storage og gui klasser oprettet..." />
     <MESSAGE value="storage opdateret" />
     <MESSAGE value="storage opdaterett" />
     <MESSAGE value="PaafyldningsRegistrering oprettet" />
@@ -234,6 +240,7 @@
     <MESSAGE value="OpretDestilleringPane igang part 3" />
     <MESSAGE value="RegistrerModningPane tæt på færdigt" />
     <MESSAGE value=".class files" />
-    <option name="LAST_COMMIT_MESSAGE" value=".class files" />
+    <MESSAGE value="CreateFlasker" />
+    <option name="LAST_COMMIT_MESSAGE" value="CreateFlasker" />
   </component>
 </project>

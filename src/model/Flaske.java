@@ -13,6 +13,12 @@ public class Flaske {
         this.whiskyProdukt = whiskyProdukt;
     }
 
+    public void setFlaskeSamling(FlaskeSamling flaskeSamling) {
+        if (this.flaskeSamling!=flaskeSamling){
+            this.flaskeSamling = flaskeSamling;
+            flaskeSamling.addFlaske(this);
+        }
+    }
 
     public int getFlaskeNr() {
         return flaskeNr;

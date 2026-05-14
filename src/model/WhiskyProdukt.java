@@ -24,7 +24,9 @@ public class WhiskyProdukt {
         for (int i = startFlaskenr; i < startFlaskenr + antal ; i++) {
             Flaske flaske = new Flaske(i,stoerrelse,flaskeSamling, this);
             oprettedeFlasker.add(flaske);
+            flaske.setFlaskeSamling(flaskeSamling);
             this.flasker.add(flaske);
+
         }
         return oprettedeFlasker;
     }
