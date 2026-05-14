@@ -74,6 +74,12 @@ public class Controller {
         return fad;
     }
 
+    public WhiskyProdukt createWhiskyProdukt(String navn, int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
+        WhiskyProdukt whiskyProdukt = new WhiskyProdukt(navn, produktNr, beskrivelse,dato, fortynding);
+        storage.addWhiskyProdukt(whiskyProdukt);
+        return whiskyProdukt;
+    }
+
     public FlaskeSamling createFlaskeSamling(int samlingsNr) {
         FlaskeSamling flaskeSamling = new FlaskeSamling(samlingsNr);
         storage.addFlaskesamling(flaskeSamling);

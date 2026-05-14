@@ -5,13 +5,15 @@ import java.util.ArrayList;
 
 public class WhiskyProdukt {
     private int produktNr;
+    private String navn;
     private String beskrivelse;
     private LocalDate dato;
     private double fortynding;
     private ArrayList<Flaske> flasker = new ArrayList<>();
     private ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
 
-    public WhiskyProdukt(int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
+    public WhiskyProdukt(String navn, int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
+        this.navn = navn;
         this.produktNr = produktNr;
         this.beskrivelse = beskrivelse;
         this.dato = dato;
@@ -98,5 +100,9 @@ public class WhiskyProdukt {
 
     public ArrayList<ProduktRegistrering> getProduktRegistreringer() {
         return new ArrayList<>(produktRegistreringer);
+    }
+
+    public String toString() {
+        return navn + ", " + samletAntalLiter();
     }
 }
