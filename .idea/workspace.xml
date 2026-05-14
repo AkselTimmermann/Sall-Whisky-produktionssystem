@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/InitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/InitialData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerLagerPlacering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerLagerPlacering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FlaskeSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FlaskeSamling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Lager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Lager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/LagerPlads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/LagerPlads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/InitialData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/InitialData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Lager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Lager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/LagerPlads.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/LagerPlads.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -55,4 +55,7 @@ public class FlaskeSamling implements LagerObjekt {
     public String getId() {
         return "";
     }
+    public String toString() {
+        return "Nr: " + samlingsNr;
+    }
 }

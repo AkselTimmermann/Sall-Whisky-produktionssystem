@@ -109,4 +109,8 @@ public class Lager {
     public ArrayList<Reol> getReoler() {
         return new ArrayList<>(reoler);
     }
+
+    public String toString() {
+        return navn;
+    }
 }
