@@ -7,20 +7,21 @@ public class FlaskeSamling implements LagerObjekt {
     private LagerPlads lagerPlads;
     private ArrayList<Flaske> flasker = new ArrayList<>();
 
-    public FlaskeSamling(int samlingsNr, ArrayList<Flaske> flasker) {
+    public FlaskeSamling(int samlingsNr) {
         this.samlingsNr = samlingsNr;
-        this.flasker = flasker;
     }
 
     public void addFlaske(Flaske flaske) {
         if (!flasker.contains(flaske)) {
             flasker.add(flaske);
+            flaske.setFlaskeSamling(this);
         }
     }
 
     public void fjernFlaske(Flaske flaske) {
         if (flasker.contains(flaske)) {
             flasker.remove(flaske);
+            flaske.setFlaskeSamling(null);
         }
     }
 

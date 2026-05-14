@@ -74,8 +74,8 @@ public class Controller {
         return fad;
     }
 
-    public FlaskeSamling createFlaskeSamling(int samlingsNr, ArrayList<Flaske> flasker) {
-        FlaskeSamling flaskeSamling = new FlaskeSamling(samlingsNr, flasker);
+    public FlaskeSamling createFlaskeSamling(int samlingsNr) {
+        FlaskeSamling flaskeSamling = new FlaskeSamling(samlingsNr);
         storage.addFlaskesamling(flaskeSamling);
         return flaskeSamling;
     }
