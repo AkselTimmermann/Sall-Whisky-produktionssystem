@@ -11,13 +11,25 @@ public class WhiskyProdukt {
     private ArrayList<Flaske> flasker = new ArrayList<>();
     private ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
 
-    public WhiskyProdukt(int produktNr, String beskrivelse, LocalDate dato, double fortynding, ArrayList<ProduktRegistrering> produktRegistreringer) {
+    public WhiskyProdukt(int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
         this.produktNr = produktNr;
         this.beskrivelse = beskrivelse;
         this.dato = dato;
         this.fortynding = fortynding;
-        this.produktRegistreringer = produktRegistreringer;
     }
+
+    public ArrayList<Flaske> createFlasker(double stoerrelse, int antal, FlaskeSamling flaskeSamling){
+        ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
+        int startFlaskenr = this.flasker.getLast().getFlaskeNr() +1;
+        for (int i = startFlaskenr; i < startFlaskenr + antal ; i++) {
+            Flaske flaske = new Flaske(i,stoerrelse,flaskeSamling, this);
+            oprettedeFlasker.add(flaske);
+            this.flasker.add(flaske);
+        }
+        return oprettedeFlasker;
+    }
+
+
 
     public boolean isCaskStrength(){
         return fortynding==0;
