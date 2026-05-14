@@ -27,6 +27,10 @@ public class ModningsRegistrering {
         return alkoholProcent;
     }
 
+    public void reducerLiter(double liter) {
+        antalLiter -= liter;
+    }
+
 
     public double getAntalLiter() {
         return antalLiter;
