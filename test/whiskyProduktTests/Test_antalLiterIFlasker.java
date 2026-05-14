@@ -6,8 +6,8 @@ import org.mockito.Mock;
 
 public class Test_antalLiterIFlasker {
     @Mock
-    FlaskeSamling flaskeSamling = new FlaskeSamling(1)
+    FlaskeSamling flaskeSamling1 = new FlaskeSamling(1);
     @Mock
-    Flaske flaske = new Flaske(1,0.5,)
+    FlaskeSamling flaskeSamling2 = new FlaskeSamling(2);
 
 }

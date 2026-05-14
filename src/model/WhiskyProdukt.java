@@ -22,6 +22,8 @@ public class WhiskyProdukt {
         ProduktRegistrering produktRegistrering = new ProduktRegistrering(antalLiter, fadIndhold, this);
 
         produktRegistreringer.add(produktRegistrering);
+         double brugtAntalLiter = fadIndhold.getModningsRegistreringer().getLast().getAntalLiter() - antalLiter;
+         fadIndhold.reducerResterendeLiter(brugtAntalLiter);
 
         return produktRegistrering;
     }
@@ -30,6 +32,9 @@ public class WhiskyProdukt {
 
 
     public ArrayList<Flaske> createFlasker(double stoerrelse, int antal, FlaskeSamling flaskeSamling){
+        if (stoerrelse<=0){
+            throw new IllegalArgumentException("Størrelsen på en flaske skal altid være et positivt tal");
+        }
         ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
         int startFlaskenr = this.flasker.getLast().getFlaskeNr() +1;
         for (int i = startFlaskenr; i < startFlaskenr + antal ; i++) {
