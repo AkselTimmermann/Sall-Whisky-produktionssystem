@@ -1,9 +1,7 @@
 package gui;
 
 import controller.Controller;
-import model.Leverandoer;
-import model.MaltBatch;
-import model.Medarbejder;
+import model.*;
 
 import java.time.LocalDate;
 
@@ -21,8 +19,13 @@ public class InitialData {
         MaltBatch ma2 = controller.createMaltBatch("Mark 6", "Stairway", "2");
 
 
-        controller.createLager("Lade hos Bondemanden", "Sall, Danmark", 400);
-        controller.createLager("Container bag destilleriet", "Sall, Danmark", 200);
+        Lager ladeLager = controller.createLager("Lade hos Bondemanden", "Sall, Danmark", 400);
+        Lager containerLager = controller.createLager("Container bag destilleriet", "Sall, Danmark", 200);
+
+
+        opretLagerStruktur(controller, ladeLager, 2, 3, 10);
+        opretLagerStruktur(controller, containerLager, 3, 3, 8);
+
 
 
         controller.createFad("54", "Egetræ",
@@ -48,4 +51,24 @@ public class InitialData {
 
 
     }
+
+    private static void opretLagerStruktur(Controller controller, Lager lager,
+                                           int antalReoler, int antalHylderPrReol,
+                                           int antalPladserPrHylde) {
+        for (int reolNr = 1; reolNr < antalReoler; reolNr++) {
+            Reol reol = controller.createReol(reolNr);
+
+            for (int hyldeNr = 1; hyldeNr < antalHylderPrReol; hyldeNr++) {
+                Hylde hylde = controller.createHylde(hyldeNr);
+
+                for (int pladsNr = 1; pladsNr < antalPladserPrHylde; pladsNr++) {
+                    LagerPlads plads = controller.createLagerPlads(pladsNr);
+                    hylde.addPlads(plads);
+                }
+                reol.addHylde(hylde);
+            }
+            lager.addReol(reol);
+        }
+    }
+
 }
