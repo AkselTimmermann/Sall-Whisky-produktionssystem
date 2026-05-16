@@ -51,7 +51,6 @@ public class WhiskyProdukt {
         for (int i = startFlaskenr; i < startFlaskenr + antal ; i++) {
             Flaske flaske = new Flaske(i,stoerrelse,flaskeSamling, this);
             oprettedeFlasker.add(flaske);
-            flaske.setFlaskeSamling(flaskeSamling);
             this.flasker.add(flaske);
 
         }
@@ -109,6 +108,20 @@ public class WhiskyProdukt {
     public double antalLiterIFlasker(){
         return flasker.stream().mapToDouble(flaske -> flaske.getStoerrelse()).sum();
     }
+
+    public double beregnWhiskyTilovers(double stoerrelse, int antalFlasker) {
+        if (stoerrelse <= 0) {
+            throw new RuntimeException("Størrelse skal være større end 0");
+        }
+        if (antalFlasker <= 0) {
+            throw new RuntimeException("Antal flasker skal være større end 0");
+        }
+        //Den mængde der allerede er tappet
+        double resterendeLitter = samletAntalLiter() - antalLiterIFlasker();
+        //Den mængde der ønskes tappet nu
+        return resterendeLitter - (stoerrelse * antalFlasker);
+    }
+
 
     public ArrayList<ProduktRegistrering> getProduktRegistreringer() {
         return new ArrayList<>(produktRegistreringer);

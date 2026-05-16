@@ -167,7 +167,7 @@ public class StartVindue extends BorderPane {
 
     private void showRegistrerFlaskning() {
         markSelected(btnRegistrerFlaskning);
-        this.setCenter(new RegistrerFlaskningPane(controller));
+        this.setCenter(new RegistrerFlaskningPane(controller, this));
     }
     public void showRegistrerLagerPlacering() {
         markSelected(btnRegistrerLagerPlacering);

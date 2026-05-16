@@ -80,7 +80,8 @@ public class Controller {
         return whiskyProdukt;
     }
 
-    public FlaskeSamling createFlaskeSamling(int samlingsNr) {
+    public FlaskeSamling createFlaskeSamling() {
+        int samlingsNr = storage.getFlaskesamling().size() + 1;
         FlaskeSamling flaskeSamling = new FlaskeSamling(samlingsNr);
         storage.addFlaskesamling(flaskeSamling);
         return flaskeSamling;
@@ -131,6 +132,10 @@ public class Controller {
         Destillat destillat = new Destillat(destillatNr, destilleringer, antalLiterAfHverDestillering);
         storage.addDestillat(destillat);
         return destillat;
+    }
+
+    public ArrayList<Flaske> createFlasker(WhiskyProdukt whiskyProdukt, double stoerrelse, int antal, FlaskeSamling flaskeSamling) {
+        return whiskyProdukt.createFlasker(stoerrelse, antal, flaskeSamling);
     }
 
     public ArrayList<Leverandoer> getLeverandoer() {
