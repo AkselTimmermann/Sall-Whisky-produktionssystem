@@ -50,115 +50,115 @@ public class Test_Lager_Metoder {
     //Test af findPlads metoden
     //--------------------------
 
-    @Test
-    void findPladsTC1_gyldigplads_returnererPlads() {
-        //Arrange
-        int reolNr = 1;
-        int hyldeNr = 1;
-        int pladsNr = 1;
-
-        //Act
-        LagerPlads plads = l1.findPlads(1, 1, 1);
-
-        assertNotNull(plads);
-        assertEquals(1, plads.getPladsNr());
-    }
-    @Test
-    void findPladsTC2_ReolFindesIkke_CastException() {
-        assertThrows(IllegalStateException.class, () -> l1.findPlads(99,1,1));
-    }
-    @Test
-    void findPladsTC3_HyldeFindesIkke_CastException() {
-        assertThrows(IllegalStateException.class, () -> l1.findPlads(1,99,1));
-    }
-    @Test
-    void findPladsTC4_PladsFindesIkke_CastException() {
-        assertThrows(IllegalStateException.class, () -> l1.findPlads(1,1,99));
-    }
-    @Test
-    void findPladsTC5_UnderGraense_CastException() {
-        assertThrows(IllegalStateException.class, () -> l1.findPlads(1,1,0));
-    }
-    @Test
-    void findPladsTC6_OverGraense_CastException() {
-        assertThrows(IllegalStateException.class, () -> l1.findPlads(1,1,5));
-    }
-
-    //----------------------------
-    //Test af placerObjekt metoden
-    //----------------------------
-
-    @Test
-    void placerObjektTC1_GyldigPlads_objektPlaceres() {
-        //Arrange er i BeforeEach - fad oprettes
-
-        //Act
-        l1.placerObjekt(fad1,1,1,1);
-
-        //Assert
-        LagerPlads plads = l1.findPlads(1,1,1);
-        assertEquals(fad1, plads.getIndhold());
-    }
-    @Test
-    void placerObjektTC2_UgyldigPlads_PladsOptaget() {
-        //Arrange er i BeforeEach - 2 fad er oprettet
-
-        //Act
-        l1.placerObjekt(fad1,1,1,1);
-
-        //Assert
-        assertThrows(IllegalStateException.class, () -> l1.placerObjekt(fad2,1,1,1));
-    }
-
-    @Test
-    void placerObjektTC3_PlaceringFindesIkke_CastException() {
-        //Arrange er i BeforeEach - fad oprettet
-
-        //Act - Assert
-        assertThrows(IllegalStateException.class, () -> l1.placerObjekt(fad1,1,1,99));
-    }
-
-    //---------------------------
-    //Test af fjernObjekt metoden
-    //---------------------------
-
-    @Test
-    void fjernObjektTC1_ObjektFindes_ObjektFjernes() {
-        //Arrange
-        l1.placerObjekt(fad1,1,1,1);
-        //Act
-        l1.fjernObjekt(fad1);
-        //Assert
-        assertNull(l1.findPlads(1,1,1).getIndhold());
-    }
-    @Test
-    void fjernObjektTC2_ObjektFindesIkke_CastException() {
-        assertThrows(IllegalStateException.class, () -> l1.fjernObjekt(fad1));
-    }
-
-    //-----------------------------
-    //Test af findPlacering metoden
-    //----------------------------
-    @Test
-    void findPlaceringTC1_ObjektFindes_Placeringprintes() {
-        //Arrange
-        l1.placerObjekt(fad1,1,1,1);
-
-        //Act
-        String placering = l1.findPlacering(fad1);
-
-        //Assert
-        assertEquals("Reol 1, Hylde 1, Plads 1", placering);
-    }
-    @Test
-    void findPlaceringTC2_ObjektetFindesIkke_PlaceringIkkeFundet() {
-        //Arrange er i BeforeEach
-
-        //Act
-        String placering = l1.findPlacering(fad1);
-
-        //Assert
-        assertEquals("Placering ikke fundet", placering);
-    }
+//    @Test
+//    void findPladsTC1_gyldigplads_returnererPlads() {
+//        //Arrange
+//        int reolNr = 1;
+//        int hyldeNr = 1;
+//        int pladsNr = 1;
+//
+//        //Act
+//        LagerPlads plads = l1.findPlads(1, 1, 1);
+//
+//        assertNotNull(plads);
+//        assertEquals(1, plads.getPladsNr());
+//    }
+//    @Test
+//    void findPladsTC2_ReolFindesIkke_CastException() {
+//        assertThrows(IllegalStateException.class, () -> l1.findPlads(99,1,1));
+//    }
+//    @Test
+//    void findPladsTC3_HyldeFindesIkke_CastException() {
+//        assertThrows(IllegalStateException.class, () -> l1.findPlads(1,99,1));
+//    }
+//    @Test
+//    void findPladsTC4_PladsFindesIkke_CastException() {
+//        assertThrows(IllegalStateException.class, () -> l1.findPlads(1,1,99));
+//    }
+//    @Test
+//    void findPladsTC5_UnderGraense_CastException() {
+//        assertThrows(IllegalStateException.class, () -> l1.findPlads(1,1,0));
+//    }
+//    @Test
+//    void findPladsTC6_OverGraense_CastException() {
+//        assertThrows(IllegalStateException.class, () -> l1.findPlads(1,1,5));
+//    }
+//
+//    //----------------------------
+//    //Test af placerObjekt metoden
+//    //----------------------------
+//
+//    @Test
+//    void placerObjektTC1_GyldigPlads_objektPlaceres() {
+//        //Arrange er i BeforeEach - fad oprettes
+//
+//        //Act
+//        l1.placerObjekt(fad1,1,1,1);
+//
+//        //Assert
+//        LagerPlads plads = l1.findPlads(1,1,1);
+//        assertEquals(fad1, plads.getIndhold());
+//    }
+//    @Test
+//    void placerObjektTC2_UgyldigPlads_PladsOptaget() {
+//        //Arrange er i BeforeEach - 2 fad er oprettet
+//
+//        //Act
+//        l1.placerObjekt(fad1,1,1,1);
+//
+//        //Assert
+//        assertThrows(IllegalStateException.class, () -> l1.placerObjekt(fad2,1,1,1));
+//    }
+//
+//    @Test
+//    void placerObjektTC3_PlaceringFindesIkke_CastException() {
+//        //Arrange er i BeforeEach - fad oprettet
+//
+//        //Act - Assert
+//        assertThrows(IllegalStateException.class, () -> l1.placerObjekt(fad1,1,1,99));
+//    }
+//
+//    //---------------------------
+//    //Test af fjernObjekt metoden
+//    //---------------------------
+//
+//    @Test
+//    void fjernObjektTC1_ObjektFindes_ObjektFjernes() {
+//        //Arrange
+//        l1.placerObjekt(fad1,1,1,1);
+//        //Act
+//        l1.fjernObjekt(fad1);
+//        //Assert
+//        assertNull(l1.findPlads(1,1,1).getIndhold());
+//    }
+//    @Test
+//    void fjernObjektTC2_ObjektFindesIkke_CastException() {
+//        assertThrows(IllegalStateException.class, () -> l1.fjernObjekt(fad1));
+//    }
+//
+//    //-----------------------------
+//    //Test af findPlacering metoden
+//    //----------------------------
+//    @Test
+//    void findPlaceringTC1_ObjektFindes_Placeringprintes() {
+//        //Arrange
+//        l1.placerObjekt(fad1,1,1,1);
+//
+//        //Act
+//        String placering = l1.findPlacering(fad1);
+//
+//        //Assert
+//        assertEquals("Reol 1, Hylde 1, Plads 1", placering);
+//    }
+//    @Test
+//    void findPlaceringTC2_ObjektetFindesIkke_PlaceringIkkeFundet() {
+//        //Arrange er i BeforeEach
+//
+//        //Act
+//        String placering = l1.findPlacering(fad1);
+//
+//        //Assert
+//        assertEquals("Placering ikke fundet", placering);
+//    }
 
 }

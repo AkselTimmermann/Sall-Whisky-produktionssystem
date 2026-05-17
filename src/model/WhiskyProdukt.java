@@ -54,10 +54,9 @@ public class WhiskyProdukt {
             this.flasker.add(flaske);
 
         }
+
         return oprettedeFlasker;
     }
-
-
 
     public boolean isCaskStrength(){
         return fortynding==0;
@@ -87,10 +86,13 @@ public class WhiskyProdukt {
     }
 
     public double beregnAlkoholProcent(){
+        if (samletAntalLiter()<=0){
+            throw new IllegalStateException("Alkoholprocenten kan ikke udregnet, da der ikke er tilføjet whisky til produktet");
+        }
         return samletAlkoholMaengde()/samletAntalLiter();
     }
 
-    private double samletAlkoholMaengde() {
+    public double samletAlkoholMaengde() {
         double samletAlkoholMaengde=0;
         for (ProduktRegistrering produktRegistrering : produktRegistreringer){
             double antalLiter = produktRegistrering.getAntalLiter();
@@ -130,4 +132,6 @@ public class WhiskyProdukt {
     public String toString() {
         return navn + ", " + samletAntalLiter();
     }
+
+
 }
