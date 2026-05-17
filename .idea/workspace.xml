@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Added toString to Medarbejder and Destillat. Began coding RegistrerPaafyldningPane">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="RegistrerPaafyldningPane done. Added storage-methods and some initial data. Added constructor to FadIndhold and made some methods for FadIndhold and Fad">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretDestilleringPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretFadPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretLagerPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/StartVindue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/InitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/InitialData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/StorageInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/StorageInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/InitialData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/InitialData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Fad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Fad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storage/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +38,12 @@
     &quot;assignee&quot;: &quot;AkselTimmermann&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,
-    &quot;accountId&quot;: &quot;48052c54-ad71-490d-957e-0f0b68768a0e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git",
+    "accountId": "88d76782-f8ab-4215-8ee7-39a62216925d"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -226,7 +214,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="controller, storage og gui klasser oprettet" />
     <MESSAGE value="controller, storage og gui klasser oprettet..." />
     <MESSAGE value="storage opdateret" />
     <MESSAGE value="storage opdaterett" />
@@ -251,6 +238,7 @@
     <MESSAGE value="OpretDestillatPane completed (ish)" />
     <MESSAGE value="OpretDestilleringPane igang part 3" />
     <MESSAGE value="RegistrerModningPane tæt på færdigt" />
-    <option name="LAST_COMMIT_MESSAGE" value="RegistrerModningPane tæt på færdigt" />
+    <MESSAGE value="RegistrerPaafyldningPane done. Added storage-methods and some initial data. Added constructor to FadIndhold and made some methods for FadIndhold and Fad" />
+    <option name="LAST_COMMIT_MESSAGE" value="RegistrerPaafyldningPane done. Added storage-methods and some initial data. Added constructor to FadIndhold and made some methods for FadIndhold and Fad" />
   </component>
 </project>
