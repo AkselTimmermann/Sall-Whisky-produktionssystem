@@ -35,7 +35,7 @@ public class FlaskeSamling implements LagerObjekt {
 
     @Override
     public LagerPlads getLagerPlads() {
-        return null;
+        return lagerPlads;
     }
 
     @Override

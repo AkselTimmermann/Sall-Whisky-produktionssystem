@@ -13,6 +13,7 @@ public class Storage implements StorageInterface {
     private ArrayList<Medarbejder> medarbejderer = new ArrayList<>();
     private ArrayList<Destillat> destillater = new ArrayList<>();
     private ArrayList<FlaskeSamling> flaskeSamlinger = new ArrayList<>();
+    private ArrayList<WhiskyProdukt> whiskyProdukter = new ArrayList<>();
 
     private ArrayList<FadIndhold> fadIndholdListe = new ArrayList<>();
     private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
@@ -23,6 +24,7 @@ public class Storage implements StorageInterface {
             destilleringer.add(destillering);
         }
     }
+
 
     public void addFad(Fad fad) {
         if (!fade.contains(fad)) {
@@ -76,6 +78,13 @@ public class Storage implements StorageInterface {
         }
     }
 
+    @Override
+    public void addWhiskyProdukt(WhiskyProdukt whiskyProdukt) {
+        if(!whiskyProdukter.contains(whiskyProdukt)) {
+            whiskyProdukter.add(whiskyProdukt);
+        }
+    }
+
     public ArrayList<Destillering> getDestilleringer() {
         return new ArrayList<Destillering>(destilleringer);
     }
@@ -121,4 +130,11 @@ public class Storage implements StorageInterface {
     public ArrayList<FlaskeSamling> getFlaskesamling() {
         return new ArrayList<>(flaskeSamlinger);
     }
+
+    @Override
+    public ArrayList<WhiskyProdukt> getWhiskyProdukt() {
+        return new ArrayList<>(whiskyProdukter);
+    }
+
+
 }

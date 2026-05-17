@@ -135,7 +135,7 @@ public class StartVindue extends BorderPane {
 
     private void showOpretFad() {
         markSelected(btnOpretFad);
-        this.setCenter(new OpretFadPane(controller));
+        this.setCenter(new OpretFadPane(controller, this));
     }
 
     private void showOpretDestillering() {
@@ -167,9 +167,9 @@ public class StartVindue extends BorderPane {
 
     private void showRegistrerFlaskning() {
         markSelected(btnRegistrerFlaskning);
-        this.setCenter(new RegistrerFlaskningPane(controller));
+        this.setCenter(new RegistrerFlaskningPane(controller, this));
     }
-    private void showRegistrerLagerPlacering() {
+    public void showRegistrerLagerPlacering() {
         markSelected(btnRegistrerLagerPlacering);
         this.setCenter(new RegistrerLagerPlacering(controller));
     }

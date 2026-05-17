@@ -9,12 +9,16 @@ public class Flaske {
     public Flaske(int flaskeNr, double stoerrelse, FlaskeSamling flaskeSamling, WhiskyProdukt whiskyProdukt) {
         this.flaskeNr = flaskeNr;
         this.stoerrelse = stoerrelse;
-        this.flaskeSamling = flaskeSamling;
+        setFlaskeSamling(flaskeSamling);
         this.whiskyProdukt = whiskyProdukt;
     }
 
     public void setFlaskeSamling(FlaskeSamling flaskeSamling) {
         if (this.flaskeSamling!=flaskeSamling){
+            FlaskeSamling oldFlaskesamling = this.flaskeSamling;
+            if (oldFlaskesamling != null) {
+                oldFlaskesamling.fjernFlaske(this);
+            }
             this.flaskeSamling = flaskeSamling;
             flaskeSamling.addFlaske(this);
         }
