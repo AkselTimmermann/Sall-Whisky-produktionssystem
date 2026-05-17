@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Lidt rettelser">
-      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="sidste nye WhiskyProdukt">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretDestilleringPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretFadPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretLagerPane.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/StartVindue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_antalLiterIFlasker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_createProduktRegistrering.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_create_Flasker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,8 +182,8 @@
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
       <item itemvalue="JUnit.Test_Lager_Metoder" />
-      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
       <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
@@ -208,7 +218,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="storage opdaterett" />
     <MESSAGE value="PaafyldningsRegistrering oprettet" />
     <MESSAGE value="PaafyldningsRegistrering oprettett" />
     <MESSAGE value="Modnings- og paafyldnings registreringer opdateret" />
@@ -233,6 +242,7 @@
     <MESSAGE value=".class files" />
     <MESSAGE value="CreateFlasker" />
     <MESSAGE value="Lidt rettelser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lidt rettelser" />
+    <MESSAGE value="sidste nye WhiskyProdukt" />
+    <option name="LAST_COMMIT_MESSAGE" value="sidste nye WhiskyProdukt" />
   </component>
 </project>
