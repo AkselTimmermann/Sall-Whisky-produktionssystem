@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="xml-files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Flaske.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Flaske.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FlaskeSamling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/FlaskeSamling.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-    </list>
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Rettelser i OpretWhiskyProduktPane" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -220,7 +206,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PaafyldningsRegistrering oprettet" />
     <MESSAGE value="PaafyldningsRegistrering oprettett" />
     <MESSAGE value="Modnings- og paafyldnings registreringer opdateret" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controller" />
@@ -245,6 +230,7 @@
     <MESSAGE value="CreateFlasker" />
     <MESSAGE value="Lidt rettelser" />
     <MESSAGE value="RegistrerFlaskningPane igangsat" />
-    <option name="LAST_COMMIT_MESSAGE" value="RegistrerFlaskningPane igangsat" />
+    <MESSAGE value="Rettelser i OpretWhiskyProduktPane" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rettelser i OpretWhiskyProduktPane" />
   </component>
 </project>
