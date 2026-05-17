@@ -23,6 +23,10 @@ public interface StorageInterface {
 
     public void addPaafyldningsRegistrering(PaafyldningsRegistrering paafyldningsRegistrering);
 
+    public void addFlaskesamling(FlaskeSamling flaskeSamling);
+
+    public void addWhiskyProdukt(WhiskyProdukt whiskyProdukt);
+
     public ArrayList<Destillering> getDestilleringer();
 
     public ArrayList<Fad> getFade();
@@ -40,4 +44,8 @@ public interface StorageInterface {
     public ArrayList<FadIndhold> getFadIndholdListe();
 
     public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer();
+
+    public ArrayList<FlaskeSamling> getFlaskesamling();
+
+    public ArrayList<WhiskyProdukt> getWhiskyProdukt();
 }

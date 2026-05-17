@@ -28,6 +28,8 @@ public class StartVindue extends BorderPane {
     private Button btnOpretWhiskyProdukt;
     private Button btnRegistrerFlaskning;
 
+    private Button btnRegistrerLagerPlacering;
+
 
     public StartVindue(Controller controller) {
         this.controller = controller;
@@ -70,6 +72,8 @@ public class StartVindue extends BorderPane {
         btnOpretWhiskyProdukt = createButtonMenu("Opret whiskyprodukt");
         btnRegistrerFlaskning = createButtonMenu("Registrer flaskning");
 
+        btnRegistrerLagerPlacering = createButtonMenu("Registrer lagerplacering");
+
         btnForside.setOnAction(event -> showForside());
 
         btnOpretLager.setOnAction(event -> showOpretLager());
@@ -82,6 +86,8 @@ public class StartVindue extends BorderPane {
 
         btnOpretWhiskyProdukt.setOnAction(event -> showOpretWhiskyProdukt());
         btnRegistrerFlaskning.setOnAction(event -> showRegistrerFlaskning());
+
+        btnRegistrerLagerPlacering.setOnAction(actionEvent -> showRegistrerLagerPlacering());
 
         VBox buttons = new VBox(12);
         buttons.setPadding(new Insets(35, 25, 0, 25));
@@ -97,7 +103,8 @@ public class StartVindue extends BorderPane {
                 separator,
                 btnRegistrerPaafyldning,
                 btnRegistrerModning,
-                btnRegistrerFlaskning);
+                btnRegistrerFlaskning,
+                btnRegistrerLagerPlacering);
 
         sideMenu.getChildren().addAll(title, buttons);
 
@@ -128,7 +135,7 @@ public class StartVindue extends BorderPane {
 
     private void showOpretFad() {
         markSelected(btnOpretFad);
-        this.setCenter(new OpretFadPane(controller));
+        this.setCenter(new OpretFadPane(controller, this));
     }
 
     private void showOpretDestillering() {
@@ -160,7 +167,11 @@ public class StartVindue extends BorderPane {
 
     private void showRegistrerFlaskning() {
         markSelected(btnRegistrerFlaskning);
-        this.setCenter(new RegistrerFlaskningPane(controller));
+        this.setCenter(new RegistrerFlaskningPane(controller, this));
+    }
+    public void showRegistrerLagerPlacering() {
+        markSelected(btnRegistrerLagerPlacering);
+        this.setCenter(new RegistrerLagerPlacering(controller));
     }
 
 
@@ -175,6 +186,7 @@ public class StartVindue extends BorderPane {
         btnRegistrerModning.setStyle(menuButtonStyle(false));
         btnRegistrerFlaskning.setStyle(menuButtonStyle(false));
         btnOpretWhiskyProdukt.setStyle(menuButtonStyle(false));
+        btnRegistrerLagerPlacering.setStyle(menuButtonStyle(false));
 
         selectedButton.setStyle(menuButtonStyle(true));
     }

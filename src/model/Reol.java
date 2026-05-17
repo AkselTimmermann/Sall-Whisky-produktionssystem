@@ -11,6 +11,14 @@ public class Reol {
         this.reolNr = reolNr;
     }
 
+    public ArrayList<LagerPlads> getReolPladser() {
+        ArrayList<LagerPlads> reolPladser = new ArrayList<>();
+        for (Hylde hylde : hylder) {
+            reolPladser.addAll(hylde.getPladser());
+        }
+        return reolPladser;
+    }
+
     public int getReolNr() {
         return reolNr;
     }

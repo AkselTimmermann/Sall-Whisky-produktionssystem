@@ -23,6 +23,30 @@ public class Controller {
         plads.placerIndhold(objekt);
     }
 
+    public ArrayList<Fad> getFadeUdenPlacering() {
+        ArrayList<Fad> fadeUdenPlacering = new ArrayList<>();
+        for (Fad fad : storage.getFade()) {
+            if (fad.getLagerPlads() == null) {
+                fadeUdenPlacering.add(fad);
+            }
+        }
+        return fadeUdenPlacering;
+    }
+
+    public ArrayList<FlaskeSamling> getFlaskeSamlingUdenPlacering() {
+        ArrayList<FlaskeSamling> flaskeSamlingUdenPlacering = new ArrayList<>();
+        for (FlaskeSamling flaskeSamling : storage.getFlaskesamling()) {
+            if (flaskeSamling.getLagerPlads() == null) {
+                flaskeSamlingUdenPlacering.add(flaskeSamling);
+            }
+        }
+        return flaskeSamlingUdenPlacering;
+    }
+
+    public ArrayList<LagerPlads> getLagerPladser(Lager lager) {
+        return lager.getLagretsPladser();
+    }
+
     public Lager createLager(String navn, String lokation, int stoerrelse){
         Lager lager = new Lager(navn, lokation, stoerrelse);
         storage.addLager(lager);
@@ -50,6 +74,18 @@ public class Controller {
         return fad;
     }
 
+    public WhiskyProdukt createWhiskyProdukt(String navn, int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
+        WhiskyProdukt whiskyProdukt = new WhiskyProdukt(navn, produktNr, beskrivelse,dato, fortynding);
+        storage.addWhiskyProdukt(whiskyProdukt);
+        return whiskyProdukt;
+    }
+
+    public FlaskeSamling createFlaskeSamling() {
+        int samlingsNr = storage.getFlaskesamling().size() + 1;
+        FlaskeSamling flaskeSamling = new FlaskeSamling(samlingsNr);
+        storage.addFlaskesamling(flaskeSamling);
+        return flaskeSamling;
+    }
 
     public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Fad fad, Medarbejder medarbejder) {
         FadIndhold fadIndhold = fad.getAktivtFadIndhold();
@@ -96,6 +132,10 @@ public class Controller {
         Destillat destillat = new Destillat(destillatNr, destilleringer, antalLiterAfHverDestillering);
         storage.addDestillat(destillat);
         return destillat;
+    }
+
+    public ArrayList<Flaske> createFlasker(WhiskyProdukt whiskyProdukt, double stoerrelse, int antal, FlaskeSamling flaskeSamling) {
+        return whiskyProdukt.createFlasker(stoerrelse, antal, flaskeSamling);
     }
 
     public ArrayList<Leverandoer> getLeverandoer() {

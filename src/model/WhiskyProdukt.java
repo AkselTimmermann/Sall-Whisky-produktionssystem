@@ -5,19 +5,59 @@ import java.util.ArrayList;
 
 public class WhiskyProdukt {
     private int produktNr;
+    private String navn;
     private String beskrivelse;
     private LocalDate dato;
     private double fortynding;
     private ArrayList<Flaske> flasker = new ArrayList<>();
     private ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
 
-    public WhiskyProdukt(int produktNr, String beskrivelse, LocalDate dato, double fortynding, ArrayList<ProduktRegistrering> produktRegistreringer) {
+    public WhiskyProdukt(String navn, int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
+        this.navn = navn;
         this.produktNr = produktNr;
         this.beskrivelse = beskrivelse;
         this.dato = dato;
         this.fortynding = fortynding;
-        this.produktRegistreringer = produktRegistreringer;
     }
+
+
+    public ProduktRegistrering createProduktRegistrering(double antalLiter, FadIndhold fadIndhold) {
+        if (antalLiter<=0){
+            throw new IllegalArgumentException("Antal liter skal være positiv");
+        }
+        if (!fadIndhold.isLagretMinimum3Aar(this.dato)){
+            throw new IllegalArgumentException("Alt indhold i produktet skal være mindst 3 år gammelt");
+        }
+        ProduktRegistrering produktRegistrering = new ProduktRegistrering(antalLiter, fadIndhold, this);
+
+        produktRegistreringer.add(produktRegistrering);
+        fadIndhold.reducerResterendeLiter(antalLiter);
+
+        return produktRegistrering;
+    }
+
+
+
+
+    public ArrayList<Flaske> createFlasker(double stoerrelse, int antal, FlaskeSamling flaskeSamling){
+        if (stoerrelse<=0){
+            throw new IllegalArgumentException("Størrelsen på en flaske skal altid være et positivt tal");
+        }
+        if (antal<=0){
+            throw new IllegalArgumentException("Der skal oprettes mindst 1 flaske");
+        }
+        ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
+        int startFlaskenr = this.flasker.getLast().getFlaskeNr() +1;
+        for (int i = startFlaskenr; i < startFlaskenr + antal ; i++) {
+            Flaske flaske = new Flaske(i,stoerrelse,flaskeSamling, this);
+            oprettedeFlasker.add(flaske);
+            this.flasker.add(flaske);
+
+        }
+        return oprettedeFlasker;
+    }
+
+
 
     public boolean isCaskStrength(){
         return fortynding==0;
@@ -40,6 +80,9 @@ public class WhiskyProdukt {
     }
 
     public int maksAntalFlasker(double stoerrelse){
+        if (stoerrelse<=0){
+            throw new IllegalArgumentException("Størrelsen på en flaske skal altid være et positivt tal");
+        }
         return (int) ((samletAntalLiter()-antalLiterIFlasker())/stoerrelse);
     }
 
@@ -66,7 +109,25 @@ public class WhiskyProdukt {
         return flasker.stream().mapToDouble(flaske -> flaske.getStoerrelse()).sum();
     }
 
+    public double beregnWhiskyTilovers(double stoerrelse, int antalFlasker) {
+        if (stoerrelse <= 0) {
+            throw new RuntimeException("Størrelse skal være større end 0");
+        }
+        if (antalFlasker <= 0) {
+            throw new RuntimeException("Antal flasker skal være større end 0");
+        }
+        //Den mængde der allerede er tappet
+        double resterendeLitter = samletAntalLiter() - antalLiterIFlasker();
+        //Den mængde der ønskes tappet nu
+        return resterendeLitter - (stoerrelse * antalFlasker);
+    }
+
+
     public ArrayList<ProduktRegistrering> getProduktRegistreringer() {
         return new ArrayList<>(produktRegistreringer);
+    }
+
+    public String toString() {
+        return navn + ", " + samletAntalLiter();
     }
 }

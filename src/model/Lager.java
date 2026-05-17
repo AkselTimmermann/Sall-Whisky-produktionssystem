@@ -73,6 +73,13 @@ public class Lager {
         return "Placering ikke fundet";
     }
      */
+    public ArrayList<LagerPlads> getLagretsPladser() {
+        ArrayList<LagerPlads> lagretsPladser = new ArrayList<>();
+        for (Reol reol : reoler) {
+            lagretsPladser.addAll(reol.getReolPladser());
+        }
+        return lagretsPladser;
+    }
 
     public void addReol(Reol reol) {
         if (!reoler.contains(reol)) {
@@ -101,5 +108,9 @@ public class Lager {
 
     public ArrayList<Reol> getReoler() {
         return new ArrayList<>(reoler);
+    }
+
+    public String toString() {
+        return navn;
     }
 }

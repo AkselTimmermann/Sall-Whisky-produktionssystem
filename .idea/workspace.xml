@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="RegistrerPaafyldningPane done. Added storage-methods and some initial data. Added constructor to FadIndhold and made some methods for FadIndhold and Fad">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="RegistrerFlaskningPane igangsat">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretDestilleringPane.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretFadPane.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretLagerPane.class" beforeDir="false" />
@@ -12,6 +12,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/StartVindue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/StartVindue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Flaske.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Flaske.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FlaskeSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FlaskeSamling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +51,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git",
-    "accountId": "88d76782-f8ab-4215-8ee7-39a62216925d"
+    "accountId": "243a52f7-dc64-4338-89d3-b4e43ed51bf1"
   }
 }]]></component>
   <component name="MavenImportPreferences">
@@ -178,8 +188,8 @@
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.Test_Lager_Metoder (1)" />
       <item itemvalue="JUnit.Test_Lager_Metoder" />
-      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
       <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes" />
+      <item itemvalue="JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
@@ -214,9 +224,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="controller, storage og gui klasser oprettet..." />
-    <MESSAGE value="storage opdateret" />
-    <MESSAGE value="storage opdaterett" />
     <MESSAGE value="PaafyldningsRegistrering oprettet" />
     <MESSAGE value="PaafyldningsRegistrering oprettett" />
     <MESSAGE value="Modnings- og paafyldnings registreringer opdateret" />
@@ -238,7 +245,10 @@
     <MESSAGE value="OpretDestillatPane completed (ish)" />
     <MESSAGE value="OpretDestilleringPane igang part 3" />
     <MESSAGE value="RegistrerModningPane tæt på færdigt" />
-    <MESSAGE value="RegistrerPaafyldningPane done. Added storage-methods and some initial data. Added constructor to FadIndhold and made some methods for FadIndhold and Fad" />
-    <option name="LAST_COMMIT_MESSAGE" value="RegistrerPaafyldningPane done. Added storage-methods and some initial data. Added constructor to FadIndhold and made some methods for FadIndhold and Fad" />
+    <MESSAGE value=".class files" />
+    <MESSAGE value="CreateFlasker" />
+    <MESSAGE value="Lidt rettelser" />
+    <MESSAGE value="RegistrerFlaskningPane igangsat" />
+    <option name="LAST_COMMIT_MESSAGE" value="RegistrerFlaskningPane igangsat" />
   </component>
 </project>
