@@ -25,6 +25,15 @@ public class WhiskyProdukt {
         if (antalLiter<=0){
             throw new IllegalArgumentException("Antal liter skal være positiv");
         }
+
+        if (fadIndhold == null) {
+            throw new IllegalArgumentException("Fadindhold skal vælges");
+        }
+
+        if (antalLiter > fadIndhold.getResterendeLiter()) {
+            throw new IllegalArgumentException("Der er ikke nok liter tilbage på fadindholdet");
+        }
+
         if (!fadIndhold.isLagretMinimum3Aar(this.dato)){
             throw new IllegalArgumentException("Alt indhold i produktet skal være mindst 3 år gammelt");
         }

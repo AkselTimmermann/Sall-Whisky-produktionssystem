@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="RegistrerFlaskningPane igangsat">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretDestilleringPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretFadPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/OpretLagerPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/StartVindue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07-05-2026_12_13__Changes_.xml" beforeDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="xml-files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/StartVindue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/StartVindue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Flaske.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Flaske.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FlaskeSamling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FlaskeSamling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Flaske.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Flaske.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/FlaskeSamling.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/FlaskeSamling.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -48,12 +44,12 @@
     &quot;assignee&quot;: &quot;AkselTimmermann&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git",
-    "accountId": "243a52f7-dc64-4338-89d3-b4e43ed51bf1"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,
+    &quot;accountId&quot;: &quot;243a52f7-dc64-4338-89d3-b4e43ed51bf1&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>

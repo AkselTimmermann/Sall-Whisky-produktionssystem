@@ -107,4 +107,9 @@ public class FadIndhold {
         return samlet;
     }
 
+
+    public String toString() {
+        return null;
+    }
+
 }
