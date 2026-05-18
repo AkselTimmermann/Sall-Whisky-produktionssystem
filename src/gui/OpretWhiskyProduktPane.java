@@ -292,7 +292,7 @@ public class OpretWhiskyProduktPane extends BorderPane {
             try {
                 fortynding = Double.parseDouble(fortyndingTekst.replace(",", "."));
             } catch (NumberFormatException e) {
-                visFejl(e.getMessage());
+                visFejl("Fortynding skal være et tal.");
                 return;
             }
         }

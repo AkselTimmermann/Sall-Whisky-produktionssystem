@@ -94,7 +94,7 @@ public class FadIndhold {
     }
 
     public ArrayList<ModningsRegistrering> getModningsRegistreringer() {
-        if (modningsRegistreringer.getLast()==null){
+        if (modningsRegistreringer.isEmpty()){
             opretModningsRegistrering(beregnStartAlkoholProcent(),LocalDate.now(),beregnStartAntalLiter(),"Automatisk oprettet modningsregistrering ud fra påfyldt destilat","Autogenereret modningsregistrering");
         }
         return new ArrayList<>(modningsRegistreringer);
@@ -115,7 +115,7 @@ public class FadIndhold {
         if (!getModningsRegistreringer().isEmpty()) {
             return "Fad ID: " + fad.getFadId() +
                     " | Antal liter: " + getModningsRegistreringer().getLast().getAntalLiter() +
-                    " | Alkoholprocent: " + getModningsRegistreringer().getLast().getAlkoholProcent();
+                    " | Alkoholprocent: " + String.format("%.2f", getModningsRegistreringer().getLast().getAlkoholProcent()) ;
 
         }
         return "Hej";
