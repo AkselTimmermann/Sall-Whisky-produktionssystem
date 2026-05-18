@@ -3,11 +3,12 @@ package model;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class FadIndhold {
+public class FadIndhold implements Paafyldningsvaeske {
 
     private Fad fad;
 
-    private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
+    private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringerFra = new ArrayList<>();
+    private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringerTil = new ArrayList<>();
     private ArrayList<ModningsRegistrering> modningsRegistreringer = new ArrayList<>();
     private ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
 
@@ -21,15 +22,15 @@ public class FadIndhold {
 
 
 
-    public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Medarbejder medarbejder) {
-        PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillat, this, medarbejder);
-        paafyldningsRegistreringer.add(paafyldningsRegistrering);
+    public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Paafyldningsvaeske paafyldningsvaeske, Medarbejder medarbejder) {
+        PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, paafyldningsvaeske, this, medarbejder);
+        paafyldningsRegistreringerFra.add(paafyldningsRegistrering);
         return paafyldningsRegistrering;
     }
 
     public void fjernPaafyldningsRegistrering(PaafyldningsRegistrering paafyldningsRegistrering) {
-        if (paafyldningsRegistreringer.contains(paafyldningsRegistrering)) {
-            paafyldningsRegistreringer.remove(paafyldningsRegistrering);
+        if (paafyldningsRegistreringerFra.contains(paafyldningsRegistrering)) {
+            paafyldningsRegistreringerFra.remove(paafyldningsRegistrering);
         }
     }
 
@@ -50,35 +51,61 @@ public class FadIndhold {
     }
 
     public double beregnStartAntalLiter(){
-        return paafyldningsRegistreringer.stream().mapToDouble(paafyldningsRegistrering->paafyldningsRegistrering.getAntalLiter()).sum();
+        return paafyldningsRegistreringerFra.stream().mapToDouble(paafyldningsRegistrering->paafyldningsRegistrering.getAntalLiter()).sum();
     }
 
     private double beregnStartAlkoholMaengde(){
-        return paafyldningsRegistreringer.stream().mapToDouble(
+        return paafyldningsRegistreringerFra.stream().mapToDouble(
                 paafyldningsRegistrering
-                        ->paafyldningsRegistrering.getAntalLiter()*paafyldningsRegistrering.getDestillat().getAlkoholProcent()).sum();
+                        ->paafyldningsRegistrering.getAntalLiter()*paafyldningsRegistrering.getPaafyldningsvaeske().getAlkoholProcent()).sum();
     }
 
     public boolean isLagretMinimum3Aar(LocalDate produktDato){
-        LocalDate paafyldningsDato = paafyldningsRegistreringer.getLast().getDato();
+        LocalDate paafyldningsDato = getSenesteModningsStartDato();
         return paafyldningsDato.plusYears(3).isBefore(produktDato);
+    }
+
+    public LocalDate getSenesteModningsStartDato(){
+        LocalDate modningsStartDato = paafyldningsRegistreringerFra.getLast().getSenesteModningsStartDato();
+        for (PaafyldningsRegistrering paafyldningsRegistrering :paafyldningsRegistreringerFra){
+            LocalDate modningsStartDatoForPaafyldningsRegistrering = paafyldningsRegistrering.getSenesteModningsStartDato();
+            if (modningsStartDatoForPaafyldningsRegistrering.isAfter(modningsStartDato)){
+                modningsStartDato = modningsStartDatoForPaafyldningsRegistrering;
+            }
+        }
+        return modningsStartDato;
     }
 
     public Fad getFad() {
         return fad;
     }
 
-    public double getResterendeLiter() {
+    public ArrayList<Fad> getFade(){
+        ArrayList<Fad> fade = new ArrayList<>();
+        fade.add(fad);
+        for (PaafyldningsRegistrering paafyldningsRegistrering : paafyldningsRegistreringerFra){
+            Paafyldningsvaeske paafyldningsvaeske = paafyldningsRegistrering.getPaafyldningsvaeske();
+            if (paafyldningsvaeske instanceof FadIndhold){
+                fade.addAll(((FadIndhold) paafyldningsvaeske).getFade());
+            }
+        }
+        return fade;
+    }
+
+    @Override
+    public double getAntalLiter() {
         initierModningsregistreringHvisIngen();
         return modningsRegistreringer.getLast().getAntalLiter();
     }
+
+
 
     public void reducerResterendeLiter(double antalLiter) {
         if (antalLiter <= 0) {
             throw new IllegalArgumentException("Antal liter skal være større end 0");
         }
-        if (antalLiter>getResterendeLiter()){
-            throw new IllegalArgumentException("Der er kun " + getResterendeLiter() + " tilbage, og du vil gerne bruge " + antalLiter);
+        if (antalLiter> getAntalLiter()){
+            throw new IllegalArgumentException("Der er kun " + getAntalLiter() + " tilbage, og du vil gerne bruge " + antalLiter);
         }
         initierModningsregistreringHvisIngen();
 
@@ -93,8 +120,8 @@ public class FadIndhold {
         }
     }*/
 
-    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
-        return new ArrayList<>(paafyldningsRegistreringer);
+    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringerFra() {
+        return new ArrayList<>(paafyldningsRegistreringerFra);
     }
 
     public ArrayList<ModningsRegistrering> getModningsRegistreringer() {
@@ -112,7 +139,7 @@ public class FadIndhold {
     public double getSamletPaafyldning() {
         double samlet = 0;
 
-        for (PaafyldningsRegistrering registrering : paafyldningsRegistreringer) {
+        for (PaafyldningsRegistrering registrering : paafyldningsRegistreringerFra) {
             samlet += registrering.getAntalLiter();
         }
         return samlet;
@@ -127,5 +154,25 @@ public class FadIndhold {
 
         }
         return "Hej";
+    }
+
+    @Override
+    public double getAlkoholProcent() {
+        initierModningsregistreringHvisIngen();
+        return modningsRegistreringer.getLast().getAlkoholProcent();
+    }
+
+
+    @Override
+    public void addPaafyldningsRegistreringTil(PaafyldningsRegistrering paafyldningsRegistrering) {
+        if (!paafyldningsRegistreringerTil.contains(paafyldningsRegistrering)){
+            paafyldningsRegistreringerTil.add(paafyldningsRegistrering);
+            paafyldningsRegistrering.setPaafyldningsvaeske(this);
+        }
+    }
+
+    @Override
+    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringerTil() {
+        return paafyldningsRegistreringerTil;
     }
 }

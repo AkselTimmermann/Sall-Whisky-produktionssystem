@@ -112,7 +112,7 @@ public class Controller {
         return flaskeSamling;
     }
 
-    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Fad fad, Medarbejder medarbejder) {
+    public PaafyldningsRegistrering createPaafyldningsRegistrering(double antalLiter, LocalDate dato, Paafyldningsvaeske paafyldningsvaeske, Fad fad, Medarbejder medarbejder) {
         FadIndhold fadIndhold = fad.getAktivtFadIndhold();
 
         if (fadIndhold == null) {
@@ -120,7 +120,7 @@ public class Controller {
             storage.addFadIndhold(fadIndhold);
         }
 
-        PaafyldningsRegistrering paafyldningsRegistrering = fadIndhold.opretPaafyldningsRegistrering(antalLiter, dato, destillat, medarbejder);
+        PaafyldningsRegistrering paafyldningsRegistrering = fadIndhold.opretPaafyldningsRegistrering(antalLiter, dato, paafyldningsvaeske, medarbejder);
 
         fad.setStatus(FadStatus.AKTIV);
         storage.addPaafyldningsRegistrering(paafyldningsRegistrering);
@@ -197,5 +197,9 @@ public class Controller {
 
     public FadIndhold getAktivtFadIndhold(Fad fad) {
         return fad.getAktivtFadIndhold();
+    }
+
+    public ArrayList<Paafyldningsvaeske> getPaafyldningsvaesker() {
+        return storage.getPaafyldningsVaesker();
     }
 }

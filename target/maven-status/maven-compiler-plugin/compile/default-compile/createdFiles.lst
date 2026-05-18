@@ -5,12 +5,15 @@ gui\OpretDestillatPane.class
 storage\Storage.class
 model\Leverandoer.class
 gui\RegistrerFlaskningPane.class
+model\Paafyldningsvaeske.class
 model\Fad.class
 gui\InitialData.class
 model\Destillering.class
+model\FadIndhold.class
 gui\OpretWhiskyProduktPane.class
 model\Destillat.class
 gui\RegistrerModningPane.class
+storage\StorageInterface.class
 gui\OpretLagerPane.class
 gui\StartVindue.class
 gui\RegistrerPaafyldningPane.class

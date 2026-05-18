@@ -30,7 +30,7 @@ public class WhiskyProdukt {
             throw new IllegalArgumentException("Fadindhold skal vælges");
         }
 
-        if (antalLiter > fadIndhold.getResterendeLiter()) {
+        if (antalLiter > fadIndhold.getAntalLiter()) {
             throw new IllegalArgumentException("Der er ikke nok liter tilbage på fadindholdet");
         }
 

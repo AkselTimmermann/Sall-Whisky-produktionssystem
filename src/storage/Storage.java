@@ -136,5 +136,13 @@ public class Storage implements StorageInterface {
         return new ArrayList<>(whiskyProdukter);
     }
 
+    @Override
+    public ArrayList<Paafyldningsvaeske> getPaafyldningsVaesker() {
+        ArrayList<Paafyldningsvaeske> paafyldningsvaesker = new ArrayList<>();
+        paafyldningsvaesker.addAll(getDestillat());
+        paafyldningsvaesker.addAll(getFadIndholdListe());
+        return paafyldningsvaesker;
+    }
+
 
 }

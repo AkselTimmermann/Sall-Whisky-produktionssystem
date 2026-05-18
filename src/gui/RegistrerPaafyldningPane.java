@@ -16,7 +16,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
     private final Controller controller;
 
-    private ComboBox<Destillat> cmbDestillat;
+    private ComboBox<Paafyldningsvaeske> cmbDestillat;
     private ComboBox<Medarbejder> cmbMedarbejder;
     private ComboBox<Fad> cmbFad;
 
@@ -29,7 +29,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
     private ListView<String> lvwValgteDestillater;
     private Label lblSamletLiter;
 
-    private final ArrayList<Destillat> valgteDestillater = new ArrayList<>();
+    private final ArrayList<Paafyldningsvaeske> valgteDestillater = new ArrayList<>();
     private final ArrayList<Double> valgteLiter = new ArrayList<>();
 
 
@@ -179,7 +179,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
         cmbFad.getItems().clear();
         cmbMedarbejder.getItems().clear();
 
-        cmbDestillat.getItems().addAll(controller.getDestillater());
+        cmbDestillat.getItems().addAll(controller.getPaafyldningsvaesker());
         cmbFad.getItems().addAll(controller.getFade());
         cmbMedarbejder.getItems().addAll(controller.getMedarbejdere());
     }
@@ -202,7 +202,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
     // Metode der tilføjer et destillat til listen over valgte destillater
     private void tilfoejDestillatAction() {
-        Destillat destillat = cmbDestillat.getValue();
+        Paafyldningsvaeske destillat = cmbDestillat.getValue();
 
         if (destillat == null) {
             visFejl("Vælg et destillat.");
@@ -284,7 +284,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
         try {
             for (int i = 0; i < valgteDestillater.size(); i++) {
-                Destillat destillat = valgteDestillater.get(i);
+                Paafyldningsvaeske destillat = valgteDestillater.get(i);
                 double liter = valgteLiter.get(i);
 
                 controller.createPaafyldningsRegistrering(liter, dato, destillat, fad, medarbejder);
@@ -314,14 +314,14 @@ public class RegistrerPaafyldningPane extends BorderPane {
         lvwValgteDestillater.getItems().clear();
 
         for (int i = 0; i < valgteDestillater.size(); i++) {
-            Destillat destillat = valgteDestillater.get(i);
+            Paafyldningsvaeske destillat = valgteDestillater.get(i);
             double liter = valgteLiter.get(i);
 
-            String tekst = destillat.getDestillatNr()
-                    + " (" + liter + " liter, "
-                    + String.format("%.2f", destillat.getAlkoholProcent()) + "%)";
-
-            lvwValgteDestillater.getItems().add(tekst);
+//            String tekst = destillat.getDestillatNr()
+//                    + " (" + liter + " liter, "
+//                    + String.format("%.2f", destillat.getAlkoholProcent()) + "%)";
+//
+//            lvwValgteDestillater.getItems().add(tekst);
         }
 
         updateOpsummering();
@@ -340,7 +340,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
 
     private void updateDestillatInfo() {
-        Destillat destillat = cmbDestillat.getValue();
+        Paafyldningsvaeske destillat = cmbDestillat.getValue();
 
         if (destillat == null) {
             txaDestillatInfo.setText("Vælg et destillat for at se information");
@@ -351,12 +351,12 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
         sb.append("Består af følgende destilleringer:\n");
 
-        for (Destillering destillering : destillat.getDestilleringer()) {
-            sb.append("- ").append(destillering.getNewMakeNr())
-                    .append(" | ").append(String.format("%.2f", destillering.getAlkoholProcent())).append("%");
-            sb.append("\n");
-        }
-        txaDestillatInfo.setText(sb.toString());
+//        for (Destillering destillering : destillat.getDestilleringer()) {
+//            sb.append("- ").append(destillering.getNewMakeNr())
+//                    .append(" | ").append(String.format("%.2f", destillering.getAlkoholProcent())).append("%");
+//            sb.append("\n");
+//        }
+//        txaDestillatInfo.setText(sb.toString());
 
     }
 

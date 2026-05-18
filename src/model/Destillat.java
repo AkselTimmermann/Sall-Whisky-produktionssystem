@@ -2,11 +2,11 @@ package model;
 
 import java.util.ArrayList;
 
-public class Destillat {
+public class Destillat implements Paafyldningsvaeske {
     private double antalLiter;
     private double alkoholProcent;
     private String destillatNr;
-    private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
+    private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringerTil = new ArrayList<>();
     private ArrayList<Destillering> destilleringer = new ArrayList<>();
 
     public Destillat(String destillatNr, ArrayList<Destillering> destilleringer, double[] antalLiterAfHverDestillering) {
@@ -45,13 +45,24 @@ public class Destillat {
         return alkoholProcent;
     }
 
+    @Override
+    public void addPaafyldningsRegistreringTil(PaafyldningsRegistrering paafyldningsRegistrering) {
+        if (!paafyldningsRegistreringerTil.contains(paafyldningsRegistrering)){
+            paafyldningsRegistreringerTil.add(paafyldningsRegistrering);
+            paafyldningsRegistrering.setPaafyldningsvaeske(this);
+        }
+    }
+
     public String getDestillatNr() {
         return destillatNr;
     }
 
-    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringer() {
-        return new ArrayList<>(paafyldningsRegistreringer);
+    @Override
+    public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringerTil() {
+        return new ArrayList<>(paafyldningsRegistreringerTil);
     }
+
+
 
     public ArrayList<Destillering> getDestilleringer() {
         return new ArrayList<>(destilleringer);
@@ -63,6 +74,8 @@ public class Destillat {
         }
         this.antalLiter -= liter;
     }
+
+
 
     @Override
     public String toString() {

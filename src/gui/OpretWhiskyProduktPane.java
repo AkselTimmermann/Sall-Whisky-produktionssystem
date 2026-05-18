@@ -8,7 +8,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import model.FadIndhold;
-import model.ProduktRegistrering;
 import model.WhiskyProdukt;
 
 import java.time.LocalDate;
@@ -233,7 +232,7 @@ public class OpretWhiskyProduktPane extends BorderPane {
             return;
         }
 
-        if (antalLiter > fadIndhold.getResterendeLiter()) {
+        if (antalLiter > fadIndhold.getAntalLiter()) {
             visFejl("Der er ikke nok resterede liter på fadet");
             return;
         }
@@ -413,7 +412,7 @@ public class OpretWhiskyProduktPane extends BorderPane {
 
         sb.append("Fad: ").append(fadIndhold.getFad()).append("\n");
         sb.append("Resterende liter: ")
-                .append(String.format("%.1f", fadIndhold.getResterendeLiter()))
+                .append(String.format("%.1f", fadIndhold.getAntalLiter()))
                 .append("\n");
 
         if (!fadIndhold.getModningsRegistreringer().isEmpty()) {

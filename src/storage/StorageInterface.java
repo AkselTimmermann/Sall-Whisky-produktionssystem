@@ -48,4 +48,6 @@ public interface StorageInterface {
     public ArrayList<FlaskeSamling> getFlaskesamling();
 
     public ArrayList<WhiskyProdukt> getWhiskyProdukt();
+
+    public ArrayList<Paafyldningsvaeske> getPaafyldningsVaesker();
 }
