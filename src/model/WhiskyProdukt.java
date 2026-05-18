@@ -5,13 +5,15 @@ import java.util.ArrayList;
 
 public class WhiskyProdukt {
     private int produktNr;
+    private String navn;
     private String beskrivelse;
     private LocalDate dato;
     private double fortynding;
     private ArrayList<Flaske> flasker = new ArrayList<>();
     private ArrayList<ProduktRegistrering> produktRegistreringer = new ArrayList<>();
 
-    public WhiskyProdukt(int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
+    public WhiskyProdukt(String navn, int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
+        this.navn = navn;
         this.produktNr = produktNr;
         this.beskrivelse = beskrivelse;
         this.dato = dato;
@@ -23,6 +25,15 @@ public class WhiskyProdukt {
         if (antalLiter<=0){
             throw new IllegalArgumentException("Antal liter skal være positiv");
         }
+
+        if (fadIndhold == null) {
+            throw new IllegalArgumentException("Fadindhold skal vælges");
+        }
+
+        if (antalLiter > fadIndhold.getResterendeLiter()) {
+            throw new IllegalArgumentException("Der er ikke nok liter tilbage på fadindholdet");
+        }
+
         if (!fadIndhold.isLagretMinimum3Aar(this.dato)){
             throw new IllegalArgumentException("Alt indhold i produktet skal være mindst 3 år gammelt");
         }
@@ -49,14 +60,12 @@ public class WhiskyProdukt {
         for (int i = startFlaskenr; i < startFlaskenr + antal ; i++) {
             Flaske flaske = new Flaske(i,stoerrelse,flaskeSamling, this);
             oprettedeFlasker.add(flaske);
-            flaske.setFlaskeSamling(flaskeSamling);
             this.flasker.add(flaske);
 
         }
+
         return oprettedeFlasker;
     }
-
-
 
     public boolean isCaskStrength(){
         return fortynding==0;
@@ -86,10 +95,13 @@ public class WhiskyProdukt {
     }
 
     public double beregnAlkoholProcent(){
+        if (samletAntalLiter()<=0){
+            throw new IllegalStateException("Alkoholprocenten kan ikke udregnet, da der ikke er tilføjet whisky til produktet");
+        }
         return samletAlkoholMaengde()/samletAntalLiter();
     }
 
-    private double samletAlkoholMaengde() {
+    public double samletAlkoholMaengde() {
         double samletAlkoholMaengde=0;
         for (ProduktRegistrering produktRegistrering : produktRegistreringer){
             double antalLiter = produktRegistrering.getAntalLiter();
@@ -108,7 +120,27 @@ public class WhiskyProdukt {
         return flasker.stream().mapToDouble(flaske -> flaske.getStoerrelse()).sum();
     }
 
+    public double beregnWhiskyTilovers(double stoerrelse, int antalFlasker) {
+        if (stoerrelse <= 0) {
+            throw new RuntimeException("Størrelse skal være større end 0");
+        }
+        if (antalFlasker <= 0) {
+            throw new RuntimeException("Antal flasker skal være større end 0");
+        }
+        //Den mængde der allerede er tappet
+        double resterendeLitter = samletAntalLiter() - antalLiterIFlasker();
+        //Den mængde der ønskes tappet nu
+        return resterendeLitter - (stoerrelse * antalFlasker);
+    }
+
+
     public ArrayList<ProduktRegistrering> getProduktRegistreringer() {
         return new ArrayList<>(produktRegistreringer);
     }
+
+    public String toString() {
+        return navn + ", " + samletAntalLiter();
+    }
+
+
 }

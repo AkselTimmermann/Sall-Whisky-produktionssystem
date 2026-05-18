@@ -15,9 +15,11 @@ import java.util.Locale;
 public class OpretFadPane extends BorderPane {
 
     private final Controller controller;
+    private final StartVindue startVindue;
 
-    public OpretFadPane(Controller controller) {
+    public OpretFadPane(Controller controller, StartVindue startVindue) {
         this.controller = controller;
+        this.startVindue = startVindue;
         initContent();
     }
 
@@ -136,8 +138,12 @@ public class OpretFadPane extends BorderPane {
             }
 
             controller.createFad(fadId, traaType, beskrivelse, stoerrelse, leverandoer);
-            visInfo("Fad blev oprettet med fadId: " + fadId + ", træ type: " + traaType + ", størrelse:" + stoerrelse + ", Leverandør:" + leverandoer);
+            boolean ok = visInfo("Fad blev oprettet med fadId: " + fadId + ", træ type: " + traaType + ", størrelse:" + stoerrelse + ", Leverandør:" + leverandoer +
+            "\n" + "Vil du registrere lagerplacering?");
 
+            if (ok) {
+                startVindue.showRegistrerLagerPlacering();
+            }
             rydFelterAction();
 
         } catch (Exception e) {
@@ -161,11 +167,14 @@ public class OpretFadPane extends BorderPane {
         alert.showAndWait();
     }
 
-    private void visInfo(String besked) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Oprettet");
+    private boolean visInfo(String besked) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Fad Oprettet");
         alert.setHeaderText(null);
         alert.setContentText(besked);
-        alert.showAndWait();
+
+        ButtonType svar = alert.showAndWait().orElse(ButtonType.CANCEL);
+
+        return svar == ButtonType.OK;
     }
 }
