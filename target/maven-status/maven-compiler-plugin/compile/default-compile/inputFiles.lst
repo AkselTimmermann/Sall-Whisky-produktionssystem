@@ -1,36 +1,36 @@
-D:\Sall-Whisky-produktionssystem\src\controller\Controller.java
-D:\Sall-Whisky-produktionssystem\src\gui\App.java
-D:\Sall-Whisky-produktionssystem\src\gui\ForsidePane.java
-D:\Sall-Whisky-produktionssystem\src\gui\InitialData.java
-D:\Sall-Whisky-produktionssystem\src\gui\OpretDestillatPane.java
-D:\Sall-Whisky-produktionssystem\src\gui\OpretDestilleringPane.java
-D:\Sall-Whisky-produktionssystem\src\gui\OpretFadPane.java
-D:\Sall-Whisky-produktionssystem\src\gui\OpretLagerPane.java
-D:\Sall-Whisky-produktionssystem\src\gui\OpretWhiskyProduktPane.java
-D:\Sall-Whisky-produktionssystem\src\gui\RegistrerFlaskningPane.java
-D:\Sall-Whisky-produktionssystem\src\gui\RegistrerLagerPlacering.java
-D:\Sall-Whisky-produktionssystem\src\gui\RegistrerModningPane.java
-D:\Sall-Whisky-produktionssystem\src\gui\RegistrerPaafyldningPane.java
-D:\Sall-Whisky-produktionssystem\src\gui\StartVindue.java
-D:\Sall-Whisky-produktionssystem\src\model\Destillat.java
-D:\Sall-Whisky-produktionssystem\src\model\Destillering.java
-D:\Sall-Whisky-produktionssystem\src\model\Fad.java
-D:\Sall-Whisky-produktionssystem\src\model\FadIndhold.java
-D:\Sall-Whisky-produktionssystem\src\model\FadStatus.java
-D:\Sall-Whisky-produktionssystem\src\model\Flaske.java
-D:\Sall-Whisky-produktionssystem\src\model\FlaskeSamling.java
-D:\Sall-Whisky-produktionssystem\src\model\Hylde.java
-D:\Sall-Whisky-produktionssystem\src\model\Lager.java
-D:\Sall-Whisky-produktionssystem\src\model\LagerObjekt.java
-D:\Sall-Whisky-produktionssystem\src\model\LagerPlads.java
-D:\Sall-Whisky-produktionssystem\src\model\Leverandoer.java
-D:\Sall-Whisky-produktionssystem\src\model\MaltBatch.java
-D:\Sall-Whisky-produktionssystem\src\model\Medarbejder.java
-D:\Sall-Whisky-produktionssystem\src\model\ModningsRegistrering.java
-D:\Sall-Whisky-produktionssystem\src\model\PaafyldningsRegistrering.java
-D:\Sall-Whisky-produktionssystem\src\model\ProduktRegistrering.java
-D:\Sall-Whisky-produktionssystem\src\model\Reol.java
-D:\Sall-Whisky-produktionssystem\src\model\WhiskyProdukt.java
-D:\Sall-Whisky-produktionssystem\src\model\WhiskyType.java
-D:\Sall-Whisky-produktionssystem\src\storage\Storage.java
-D:\Sall-Whisky-produktionssystem\src\storage\StorageInterface.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\controller\Controller.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\App.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\ForsidePane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\InitialData.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\OpretDestillatPane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\OpretDestilleringPane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\OpretFadPane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\OpretLagerPane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\OpretWhiskyProduktPane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\RegistrerFlaskningPane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\RegistrerLagerPlacering.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\RegistrerModningPane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\RegistrerPaafyldningPane.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\gui\StartVindue.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Destillat.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Destillering.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Fad.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\FadIndhold.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\FadStatus.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Flaske.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\FlaskeSamling.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Hylde.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Lager.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\LagerObjekt.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\LagerPlads.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Leverandoer.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\MaltBatch.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Medarbejder.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\ModningsRegistrering.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\PaafyldningsRegistrering.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\ProduktRegistrering.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\Reol.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\WhiskyProdukt.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\model\WhiskyType.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\storage\Storage.java
+C:\Users\CappiDell\Google Drive\Datamatiker\Introduktion til Java\Sall-Whisky-produktionssystemNy\src\storage\StorageInterface.java
