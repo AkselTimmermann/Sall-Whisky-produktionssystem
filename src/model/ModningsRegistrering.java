@@ -28,6 +28,14 @@ public class ModningsRegistrering {
     }
 
     public void reducerLiter(double liter) {
+        if (liter<=0){
+            if (antalLiter <= 0) {
+                throw new IllegalArgumentException("liter skal være større end 0");
+            }
+        }
+        if (antalLiter < liter){
+            throw new IllegalArgumentException("Der er kun " + antalLiter + " tilbage, så der kan ikke reduceres med " + liter);
+        }
         antalLiter -= liter;
     }
 

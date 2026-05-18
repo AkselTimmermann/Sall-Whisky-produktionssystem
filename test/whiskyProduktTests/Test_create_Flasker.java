@@ -1,5 +1,6 @@
 package whiskyProduktTests;
 
+import model.Flaske;
 import model.FlaskeSamling;
 import model.WhiskyProdukt;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,8 +9,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Test_create_Flasker {
     private AutoCloseable closeable;
@@ -28,6 +30,7 @@ public class Test_create_Flasker {
         double stoerrelse = 0;
         int antal = 10;
 
+        //Act & Assert
         assertThrows(IllegalArgumentException.class,()->whiskyProdukt.createFlasker(stoerrelse,antal,flaskeSamling));
     }
 
@@ -37,7 +40,66 @@ public class Test_create_Flasker {
         double stoerrelse = 10;
         int antal = 0;
 
+        //Act & Assert
         assertThrows(IllegalArgumentException.class,()->whiskyProdukt.createFlasker(stoerrelse,antal,flaskeSamling));
+    }
+@Test
+    void testOpret1LilleFlaske(){
+        //Arrange
+        double stoerrelse = 0.1;
+        int antal = 1;
+        int antalFlaskerTidligereOprettet = whiskyProdukt.getFlasker().size();
+
+        //Act
+        ArrayList<Flaske> flaskerOprettet = whiskyProdukt.createFlasker(stoerrelse,antal,flaskeSamling);
+        ArrayList<Flaske> flaskerPaaWhiskyprodukt = new ArrayList<>();
+        for (int i = antalFlaskerTidligereOprettet; i < antalFlaskerTidligereOprettet+antal; i++) {
+            flaskerPaaWhiskyprodukt.add(whiskyProdukt.getFlasker().get(i));
+        }
+        //Assert
+        for (int i = 0; i < flaskerOprettet.size(); i++) {
+            assertSame(flaskerPaaWhiskyprodukt.get(i), flaskerOprettet.get(i));
+        }
+    }
+
+    @Test
+    void test100StoreFlasker(){
+        //Arrange
+        double stoerrelse = 0.75;
+        int antal = 100;
+        int antalFlaskerTidligereOprettet = whiskyProdukt.getFlasker().size();
+
+        //Act
+        ArrayList<Flaske> flaskerOprettet = whiskyProdukt.createFlasker(stoerrelse,antal,flaskeSamling);
+        ArrayList<Flaske> flaskerPaaWhiskyprodukt = new ArrayList<>();
+        for (int i = antalFlaskerTidligereOprettet; i < antalFlaskerTidligereOprettet+antal; i++) {
+            flaskerPaaWhiskyprodukt.add(whiskyProdukt.getFlasker().get(i));
+        }
+        //Assert
+        for (int i = 0; i < flaskerOprettet.size(); i++) {
+            assertSame(flaskerPaaWhiskyprodukt.get(i), flaskerOprettet.get(i));
+        }
+    }
+
+    @Test
+    void testOpretFlaskerNaarDerAlleredeErOprettetFlasker(){
+        //Arrange
+        double stoerrelse = 0.75;
+        int antal = 100;
+        whiskyProdukt.createFlasker(stoerrelse,antal,flaskeSamling);
+        int antalFlaskerTidligereOprettet = whiskyProdukt.getFlasker().size();
+
+        //Act
+
+        ArrayList<Flaske> flaskerOprettet = whiskyProdukt.createFlasker(stoerrelse,antal,flaskeSamling);
+        ArrayList<Flaske> flaskerPaaWhiskyprodukt = new ArrayList<>();
+        for (int i = antalFlaskerTidligereOprettet; i < antalFlaskerTidligereOprettet+antal; i++) {
+            flaskerPaaWhiskyprodukt.add(whiskyProdukt.getFlasker().get(i));
+        }
+        //Assert
+        for (int i = 0; i < flaskerOprettet.size(); i++) {
+            assertSame(flaskerPaaWhiskyprodukt.get(i), flaskerOprettet.get(i));
+        }
     }
 
 }

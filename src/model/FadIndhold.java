@@ -19,6 +19,8 @@ public class FadIndhold {
         fad.addFadIndhold(this);
     }
 
+
+
     public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Medarbejder medarbejder) {
         PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillat, this, medarbejder);
         paafyldningsRegistreringer.add(paafyldningsRegistrering);
@@ -67,9 +69,7 @@ public class FadIndhold {
     }
 
     public double getResterendeLiter() {
-        if (modningsRegistreringer.isEmpty()) {
-            return getSamletPaafyldning();
-        }
+        initierModningsregistreringHvisIngen();
         return modningsRegistreringer.getLast().getAntalLiter();
     }
 
@@ -77,6 +77,10 @@ public class FadIndhold {
         if (antalLiter <= 0) {
             throw new IllegalArgumentException("Antal liter skal være større end 0");
         }
+        if (antalLiter>getResterendeLiter()){
+            throw new IllegalArgumentException("Der er kun " + getResterendeLiter() + " tilbage, og du vil gerne bruge " + antalLiter);
+        }
+        initierModningsregistreringHvisIngen();
 
         modningsRegistreringer.getLast().reducerLiter(antalLiter);
 
@@ -94,10 +98,14 @@ public class FadIndhold {
     }
 
     public ArrayList<ModningsRegistrering> getModningsRegistreringer() {
+        initierModningsregistreringHvisIngen();
+        return new ArrayList<>(modningsRegistreringer);
+    }
+
+    public void initierModningsregistreringHvisIngen(){
         if (modningsRegistreringer.isEmpty()){
             opretModningsRegistrering(beregnStartAlkoholProcent(),LocalDate.now(),beregnStartAntalLiter(),"Automatisk oprettet modningsregistrering ud fra påfyldt destilat","Autogenereret modningsregistrering");
         }
-        return new ArrayList<>(modningsRegistreringer);
     }
 
 
