@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="3 tests">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Paafyldning af fad ændrer maengde destillat">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" afterDir="false" />
@@ -62,52 +61,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.Test_Lager_Metoder (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlads_HyldeFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlads_ReolFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.findPlads_gyldigplads_returnererPlads.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.placerObjekt_GyldigPlads_objektPlaceres.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.placerObjekt_PlaceringFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_Lager_Metoder.placerObjekt_UgyldigPlads_PladsOptaget.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_antalLiterIFlasker.antalFlaskerIngenFlasker.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_antalLiterIFlasker.antalLiterIFlaskerAlmindeligTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_beregnAlkoholProcent.testDividerMedNul.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_beregnAlkoholProcent.testNormal.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_beregnWhiskyTilovers.testLidtNegativ.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_beregnWhiskyTilovers.testLidtPositiv.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_create_Flasker.testExceptionAntalFlasker0.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_create_Flasker.testExceptionStoerrelse0.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.sall-whisky-produktionssystem [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.sall-whisky-produktionssystem [javafx:run].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.sall-whisky-produktionssystem [test].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Sall-Whisky-produktionssystem/pom.xml&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.Test_Lager_Metoder (1).executor": "Run",
+    "JUnit.Test_Lager_Metoder.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_HyldeFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_ReolFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.findPlads_gyldigplads_returnererPlads.executor": "Run",
+    "JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_GyldigPlads_objektPlaceres.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_PlaceringFindesIkke_CastException.executor": "Run",
+    "JUnit.Test_Lager_Metoder.placerObjekt_UgyldigPlads_PladsOptaget.executor": "Run",
+    "JUnit.Test_antalLiterIFlasker.antalFlaskerIngenFlasker.executor": "Run",
+    "JUnit.Test_antalLiterIFlasker.antalLiterIFlaskerAlmindeligTest.executor": "Run",
+    "JUnit.Test_beregnAlkoholProcent.testDividerMedNul.executor": "Run",
+    "JUnit.Test_beregnAlkoholProcent.testNormal.executor": "Run",
+    "JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul.executor": "Run",
+    "JUnit.Test_beregnWhiskyTilovers.testLidtNegativ.executor": "Run",
+    "JUnit.Test_beregnWhiskyTilovers.testLidtPositiv.executor": "Run",
+    "JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul.executor": "Run",
+    "JUnit.Test_create_Flasker.testExceptionAntalFlasker0.executor": "Run",
+    "JUnit.Test_create_Flasker.testExceptionStoerrelse0.executor": "Run",
+    "Maven.sall-whisky-produktionssystem [clean].executor": "Run",
+    "Maven.sall-whisky-produktionssystem [javafx:run].executor": "Run",
+    "Maven.sall-whisky-produktionssystem [test].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Sall-Whisky-produktionssystem/pom.xml",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
-  <component name="RunManager" selected="Maven.sall-whisky-produktionssystem [javafx:run]">
+}]]></component>
+  <component name="RunManager" selected="JUnit.Test_create_Flasker.testExceptionAntalFlasker0">
     <configuration name="Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
@@ -252,7 +251,7 @@
     <MESSAGE value="Lidt rettelser" />
     <MESSAGE value="RegistrerFlaskningPane igangsat" />
     <MESSAGE value="3 tests" />
-    <MESSAGE value="Sidste rettelser i OpretWhiskyProduktPane" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sidste rettelser i OpretWhiskyProduktPane" />
+    <MESSAGE value="Paafyldning af fad ændrer maengde destillat" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paafyldning af fad ændrer maengde destillat" />
   </component>
 </project>
