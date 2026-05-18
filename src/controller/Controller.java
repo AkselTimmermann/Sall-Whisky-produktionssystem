@@ -153,7 +153,7 @@ public class Controller {
         storage.addMedarbejder(medarbejder);
         return medarbejder;
     }
-    public Destillat createDestillat(String destillatNr, ArrayList<Destillering> destilleringer, int[] antalLiterAfHverDestillering) {
+    public Destillat createDestillat(String destillatNr, ArrayList<Destillering> destilleringer, double[] antalLiterAfHverDestillering) {
         Destillat destillat = new Destillat(destillatNr, destilleringer, antalLiterAfHverDestillering);
         storage.addDestillat(destillat);
         return destillat;

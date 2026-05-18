@@ -88,6 +88,11 @@ public class OpretWhiskyProduktPane extends BorderPane {
         txfFortynding = new TextField();
         txfFortynding.setPrefWidth(350);
         txfFortynding.setPromptText("Liter vand tilsat. Brug 0 ved cask strength");
+        txfFortynding.textProperty().addListener((obs,
+                                                  oldValue,
+                                                  newValue) -> updateOpsummering());
+
+
 
         txaBeskrivelse = new TextArea();
         txaBeskrivelse.setPrefWidth(350);
@@ -213,11 +218,18 @@ public class OpretWhiskyProduktPane extends BorderPane {
             return;
         }
 
-        double antalLiter = 0;
+        double antalLiter;
         try {
-            antalLiter = Double.parseDouble(txfAntalLiter.getText().trim());
-        } catch (IllegalArgumentException e) {
+            antalLiter = Double.parseDouble(txfAntalLiter.getText().trim()
+                    .replace(",", "."));
+
+        } catch (NumberFormatException e) {
             visFejl(e.getMessage());
+            return;
+        }
+
+        if (antalLiter <= 0) {
+            visFejl("Antal liter skal være større end 0.");
             return;
         }
 
@@ -273,11 +285,21 @@ public class OpretWhiskyProduktPane extends BorderPane {
             return;
         }
 
-        double fortynding;
-        try {
-            fortynding = Double.parseDouble(txfFortynding.getText().trim());
-        } catch (IllegalArgumentException e) {
-            visFejl(e.getMessage());
+        double fortynding = 0;
+        String fortyndingTekst = txfFortynding.getText().trim();
+
+        if (!fortyndingTekst.isEmpty()) {
+            try {
+                fortynding = Double.parseDouble(fortyndingTekst.replace(",", "."));
+            } catch (NumberFormatException e) {
+                visFejl("Fortynding skal være et tal.");
+                return;
+            }
+        }
+
+
+        if (fortynding < 0) {
+            visFejl("Fortynding må ikke være negativ.");
             return;
         }
 
@@ -331,12 +353,52 @@ public class OpretWhiskyProduktPane extends BorderPane {
         double samletLiter = 0;
         double samletAlkohol = 0;
 
-        for (double liter : valgteLiter) {
+        for (int i = 0; i < valgteFadIndhold.size(); i++) {
+            FadIndhold fadIndhold = valgteFadIndhold.get(i);
+            double liter = valgteLiter.get(i);
+
             samletLiter += liter;
+
+            if (!fadIndhold.getModningsRegistreringer().isEmpty()) {
+                double alkoholProcent = fadIndhold.getModningsRegistreringer().
+                        getLast().getAlkoholProcent();
+
+                samletAlkohol += liter * alkoholProcent;
+            }
         }
 
-        lblSamletLiter.setText("Samlet antal liter i whiskyprodukt: "
+        double fortynding = 0;
+        String fortyndingTekst = txfFortynding.getText().trim();
+
+        if (!fortyndingTekst.isEmpty()) {
+            try {
+                fortynding = Double.parseDouble(fortyndingTekst.replace(",", "."));
+
+                if (fortynding < 0) {
+                    lblSamletAlkohol.setText("Beregnet alkoholprocent: Ugyldig indtastning");
+                    return;
+                }
+            } catch (NumberFormatException e) {
+                lblSamletAlkohol.setText("Beregnet alkoholprocent: Ugyldig indtastning");
+                return;
+            }
+        }
+
+        double samletVaeske = samletLiter + fortynding;
+        double beregnetAlkoholProcent = 0;
+
+        if (samletVaeske > 0) {
+            beregnetAlkoholProcent = samletAlkohol / samletVaeske;
+        }
+
+        lblSamletLiter.setText("Samlet antal liter før fortynding:");
+
+
+        lblSamletLiter.setText("Samlet antal liter før fortynding: "
                 + String.format("%.1f", samletLiter));
+
+        lblSamletAlkohol.setText("Beregnet alkohol efter fortynding: "
+                + String.format("%.2f", beregnetAlkoholProcent) + "%");
     }
 
     private void updateFadIndholdInfo() {
@@ -346,15 +408,49 @@ public class OpretWhiskyProduktPane extends BorderPane {
             txaFadIndholdInfo.setText("Vælg et fadindhold for at se info.");
             return;
         }
-        txaFadIndholdInfo.setText("");
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("Fad: ").append(fadIndhold.getFad()).append("\n");
+        sb.append("Resterende liter: ")
+                .append(String.format("%.1f", fadIndhold.getResterendeLiter()))
+                .append("\n");
+
+        if (!fadIndhold.getModningsRegistreringer().isEmpty()) {
+            sb.append("Seneste alkoholprocent: ")
+                    .append(String.format("%.2f",
+                            fadIndhold.getModningsRegistreringer().getLast().getAlkoholProcent()))
+                    .append("%\n");
+        }
+
+        LocalDate dato = dpDato.getValue();
+        if (dato != null) {
+            sb.append("Lagret minimum 3 år: ")
+                    .append(fadIndhold.isLagretMinimum3Aar(dato) ? "Ja" : "Nej");
+        }
+
+        txaFadIndholdInfo.setText(sb.toString());
 
     }
 
 
 
     private void rydFelter() {
+        txfNavn.clear();
         txfProduktNr.clear();
+        dpDato.setValue(LocalDate.now());
+        txfFortynding.clear();
+        txaBeskrivelse.clear();
 
+        cmbFadIndhold.getSelectionModel().clearSelection();
+        txfAntalLiter.clear();
+
+        valgteFadIndhold.clear();
+        valgteLiter.clear();
+
+        updateValgteFadIndholdListe();
+        updateOpsummering();
+        updateFadIndholdInfo();
 
     }
 

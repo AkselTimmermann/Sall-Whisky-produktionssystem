@@ -27,10 +27,10 @@ public class ForsidePane extends BorderPane {
         VBox root = new VBox(25);
         root.setPadding(new Insets(30, 60, 30, 60));
 
-        Label title = new Label("Forside");
+        Label title = new Label("Forside og historik");
         title.setStyle("-fx-font-size: 26px; -fx-font-weight: bold;");
 
-        Label subTitle = new Label("Midlertidigt overblik");
+        Label subTitle = new Label("Overblik over fade og produkter");
         subTitle.setStyle("-fx-font-size: 16px;");
 
         VBox header = new VBox(5, title, subTitle);
