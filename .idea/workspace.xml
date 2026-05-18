@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="a">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="RegistrerFlaskningPane ændret så man kan se antal flaskesamlinger, der skal placeres">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +223,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="paafyldningsRegistrering lavet i Controllerr" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerrr" />
     <MESSAGE value="Test navne opdateret" />
     <MESSAGE value="a" />
@@ -250,6 +247,7 @@
     <MESSAGE value="Paafyldning af fad ændrer maengde destillat" />
     <MESSAGE value="Mini-ændringer i ForsidePane mm." />
     <MESSAGE value="ModningsRegistrering opdateret" />
-    <option name="LAST_COMMIT_MESSAGE" value="ModningsRegistrering opdateret" />
+    <MESSAGE value="RegistrerFlaskningPane ændret så man kan se antal flaskesamlinger, der skal placeres" />
+    <option name="LAST_COMMIT_MESSAGE" value="RegistrerFlaskningPane ændret så man kan se antal flaskesamlinger, der skal placeres" />
   </component>
 </project>
