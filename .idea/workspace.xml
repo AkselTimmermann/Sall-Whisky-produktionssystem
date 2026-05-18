@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="xml-filer">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="3 tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/OpretDestillatPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretDestillatPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Destillat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_beregnWhiskyTilovers.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_beregnWhiskyTilovers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_create_Flasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_create_Flasker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +38,12 @@
     &quot;assignee&quot;: &quot;AkselTimmermann&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem",
-    "accountId": "a87361ce-942a-4756-8cd3-042006455c4f"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,
+    &quot;accountId&quot;: &quot;48052c54-ad71-490d-957e-0f0b68768a0e&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -81,12 +83,12 @@
     "JUnit.Test_antalLiterIFlasker.antalLiterIFlaskerAlmindeligTest.executor": "Run",
     "JUnit.Test_beregnAlkoholProcent.testDividerMedNul.executor": "Run",
     "JUnit.Test_beregnAlkoholProcent.testNormal.executor": "Run",
-    "JUnit.Test_beregnWhiskyTilovers.executor": "Run",
     "JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul.executor": "Run",
     "JUnit.Test_beregnWhiskyTilovers.testLidtNegativ.executor": "Run",
     "JUnit.Test_beregnWhiskyTilovers.testLidtPositiv.executor": "Run",
-    "JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul (1).executor": "Run",
     "JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul.executor": "Run",
+    "JUnit.Test_create_Flasker.testExceptionAntalFlasker0.executor": "Run",
+    "JUnit.Test_create_Flasker.testExceptionStoerrelse0.executor": "Run",
     "Maven.sall-whisky-produktionssystem [clean].executor": "Run",
     "Maven.sall-whisky-produktionssystem [javafx:run].executor": "Run",
     "Maven.sall-whisky-produktionssystem [test].executor": "Run",
@@ -106,16 +108,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Maven.sall-whisky-produktionssystem [javafx:run]">
-    <configuration name="Test_beregnWhiskyTilovers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sall-Whisky-produktionssystem" />
-      <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_beregnWhiskyTilovers" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.Test_create_Flasker.testExceptionAntalFlasker0">
     <configuration name="Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
@@ -146,11 +139,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Sall-Whisky-produktionssystem" />
+    <configuration name="Test_create_Flasker.testExceptionAntalFlasker0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_beregnWhiskyTilovers" />
-      <option name="METHOD_NAME" value="testStoerrelseMindreEndNul" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
+      <option name="METHOD_NAME" value="testExceptionAntalFlasker0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_create_Flasker.testExceptionStoerrelse0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sall-whisky-produktionssystem" />
+      <option name="PACKAGE_NAME" value="whiskyProduktTests" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
+      <option name="METHOD_NAME" value="testExceptionStoerrelse0" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -187,8 +190,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.Test_beregnWhiskyTilovers" />
-      <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul (1)" />
+      <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
+      <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
@@ -196,8 +199,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test_beregnWhiskyTilovers" />
-        <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul (1)" />
+        <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
+        <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
         <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
         <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
         <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />

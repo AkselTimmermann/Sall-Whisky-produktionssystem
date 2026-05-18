@@ -12,6 +12,7 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.spy;
 
 public class Test_beregnWhiskyTilovers {
@@ -64,7 +65,7 @@ public class Test_beregnWhiskyTilovers {
         double whiskyTilovers = whiskyProdukt.beregnWhiskyTilovers(stoerrelse,antalFlasker);
 
         //Assert
-        assertEquals(-0.1,whiskyTilovers);
+        assertEquals(-0.1,whiskyTilovers,0.00000005);
     }
 
     @Test
@@ -79,6 +80,6 @@ public class Test_beregnWhiskyTilovers {
         double whiskyTilovers = whiskyProdukt.beregnWhiskyTilovers(stoerrelse,antalFlasker);
 
         //Assert
-        assertEquals(0.1,whiskyTilovers);
+        assertEquals(0.1,whiskyTilovers,0.000000005);
     }
 }

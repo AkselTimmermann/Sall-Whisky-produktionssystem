@@ -150,7 +150,7 @@ public class OpretDestillatPane extends BorderPane {
             return;
         }
 
-        int[] literArray = new int[valgteLiter.size()];
+        double[] literArray = new double[valgteLiter.size()];
         for (int i = 0; i < valgteLiter.size(); i++) {
             literArray[i] = valgteLiter.get(i);
         }

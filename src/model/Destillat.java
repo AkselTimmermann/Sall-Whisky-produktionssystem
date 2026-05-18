@@ -3,13 +3,13 @@ package model;
 import java.util.ArrayList;
 
 public class Destillat {
-    private int antalLiter;
+    private double antalLiter;
     private double alkoholProcent;
     private String destillatNr;
     private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
     private ArrayList<Destillering> destilleringer = new ArrayList<>();
 
-    public Destillat(String destillatNr, ArrayList<Destillering> destilleringer, int[] antalLiterAfHverDestillering) {
+    public Destillat(String destillatNr, ArrayList<Destillering> destilleringer, double[] antalLiterAfHverDestillering) {
         if (destilleringer.size()!=antalLiterAfHverDestillering.length){
             throw new IllegalArgumentException("Hver brugt destillering skal have angivet en mængde");
         }
@@ -32,12 +32,12 @@ public class Destillat {
         }
     }
 
-    private void updateAntalLiterAndAlkoholprocent(int maengde, double alkoholProcent){
+    private void updateAntalLiterAndAlkoholprocent(double maengde, double alkoholProcent){
         this.alkoholProcent = (this.antalLiter*this.alkoholProcent+maengde*alkoholProcent)/(this.antalLiter+maengde);
         this.antalLiter+=maengde;
     }
 
-    public int getAntalLiter() {
+    public double getAntalLiter() {
         return antalLiter;
     }
 
@@ -57,6 +57,12 @@ public class Destillat {
         return new ArrayList<>(destilleringer);
     }
 
+    public void reducerResterendeLiter(double liter) {
+        if (liter > antalLiter) {
+            throw new IllegalArgumentException("Ikke nok væske");
+        }
+        this.antalLiter -= liter;
+    }
 
     @Override
     public String toString() {
