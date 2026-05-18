@@ -20,7 +20,7 @@ public class WhiskyProdukt {
         this.fortynding = fortynding;
     }
 
-
+    //At antalliter skal være positiv og at der skal være nok tilbage bliver allerede tjekket for i fadindhold klassen
     public ProduktRegistrering createProduktRegistrering(double antalLiter, FadIndhold fadIndhold) {
         if (antalLiter<=0){
             throw new IllegalArgumentException("Antal liter skal være positiv");
