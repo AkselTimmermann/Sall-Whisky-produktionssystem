@@ -63,7 +63,7 @@ public class Destillat implements Paafyldningsvaeske {
     }
 
 
-
+    @Override
     public ArrayList<Destillering> getDestilleringer() {
         return new ArrayList<>(destilleringer);
     }

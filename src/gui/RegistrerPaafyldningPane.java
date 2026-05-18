@@ -16,20 +16,20 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
     private final Controller controller;
 
-    private ComboBox<Paafyldningsvaeske> cmbDestillat;
+    private ComboBox<Paafyldningsvaeske> cmbDestillatEllerFadindhold;
     private ComboBox<Medarbejder> cmbMedarbejder;
     private ComboBox<Fad> cmbFad;
 
     private TextField txfAntalLiter;
     private DatePicker dpDato;
 
-    private TextArea txaDestillatInfo;
+    private TextArea txaDestillatEllerFadindholdInfo;
     private TextArea txaFadInfo;
 
-    private ListView<String> lvwValgteDestillater;
+    private ListView<String> lvwValgteDestillaterEllerFadindhold;
     private Label lblSamletLiter;
 
-    private final ArrayList<Paafyldningsvaeske> valgteDestillater = new ArrayList<>();
+    private final ArrayList<Paafyldningsvaeske> valgteDestillaterEllerFadindhold = new ArrayList<>();
     private final ArrayList<Double> valgteLiter = new ArrayList<>();
 
 
@@ -57,7 +57,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
         Label title = new Label("Registrer påfyldning");
         title.setStyle("-fx-font-size: 26px; -fx-font-weight: bold;");
 
-        Label subtitle = new Label("Vælg et fad for at tilføje destillater.");
+        Label subtitle = new Label("Vælg et fad for at tilføje destillater eller fadindhold.");
         subtitle.setStyle("-fx-font-size: 16px;");
 
         return new VBox(5, title, subtitle);
@@ -78,8 +78,8 @@ public class RegistrerPaafyldningPane extends BorderPane {
         cmbMedarbejder = new ComboBox<>();
         cmbMedarbejder.setPrefWidth(350);
 
-        cmbDestillat = new ComboBox<>();
-        cmbDestillat.setPrefWidth(350);
+        cmbDestillatEllerFadindhold = new ComboBox<>();
+        cmbDestillatEllerFadindhold.setPrefWidth(350);
 
         dpDato = new DatePicker();
         dpDato.setPrefWidth(350);
@@ -87,7 +87,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
         txfAntalLiter = new TextField();
         txfAntalLiter.setPrefWidth(350);
-        txfAntalLiter.setPromptText("Antal liter fra valgt destillat");
+        txfAntalLiter.setPromptText("Antal liter fra valgt destillat eller fadindhold");
 
         txaFadInfo = new TextArea("Vælg et fad for at se information");
         txaFadInfo.setEditable(false);
@@ -95,19 +95,19 @@ public class RegistrerPaafyldningPane extends BorderPane {
         txaFadInfo.setPrefRowCount(5);
         txaFadInfo.setPrefWidth(500);
 
-        txaDestillatInfo = new TextArea("Vælg et destillat for at se information.");
-        txaDestillatInfo.setEditable(false);
-        txaDestillatInfo.setWrapText(true);
-        txaDestillatInfo.setPrefRowCount(5);
-        txaDestillatInfo.setPrefWidth(500);
+        txaDestillatEllerFadindholdInfo = new TextArea("Vælg et destillat eller fadindhold for at se information.");
+        txaDestillatEllerFadindholdInfo.setEditable(false);
+        txaDestillatEllerFadindholdInfo.setWrapText(true);
+        txaDestillatEllerFadindholdInfo.setPrefRowCount(5);
+        txaDestillatEllerFadindholdInfo.setPrefWidth(500);
 
-        lvwValgteDestillater = new ListView<>();
-        lvwValgteDestillater.setPrefSize(500, 100);
+        lvwValgteDestillaterEllerFadindhold = new ListView<>();
+        lvwValgteDestillaterEllerFadindhold.setPrefSize(500, 100);
 
         lblSamletLiter = new Label("Samlet påfyldning: 0.00 liter");
 
 
-        cmbDestillat.setOnAction(event -> updateDestillatInfo());
+        cmbDestillatEllerFadindhold.setOnAction(event -> updateDestillatEllerFadindholdInfo());
         cmbFad.setOnAction(event -> updateFadInfo());
 
 
@@ -128,32 +128,32 @@ public class RegistrerPaafyldningPane extends BorderPane {
         pane.add(new Label("Dato:"), 0, 4);
         pane.add(dpDato, 1, 4);
 
-        Label lblTilfoejDestillat = new Label("Tilføj destillat");
-        lblTilfoejDestillat.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
-        pane.add(lblTilfoejDestillat, 0, 6, 2 ,1);
+        Label lblTilfoejDestillatEllerFadindhold = new Label("Tilføj destillat eller fadindhold");
+        lblTilfoejDestillatEllerFadindhold.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
+        pane.add(lblTilfoejDestillatEllerFadindhold, 0, 6, 2 ,1);
 
-        pane.add(new Label("Destillat:"), 0, 7);
-        pane.add(cmbDestillat, 1, 7);
+        pane.add(new Label("Destillat eller fadindhold:"), 0, 7);
+        pane.add(cmbDestillatEllerFadindhold, 1, 7);
 
-        pane.add(new Label("Destillat info:"), 0, 8);
-        pane.add(txaDestillatInfo, 1, 8);
+        pane.add(new Label("Destillat eller fadindhold info:"), 0, 8);
+        pane.add(txaDestillatEllerFadindholdInfo, 1, 8);
 
         pane.add(new Label("Antal liter:"), 0, 9);
         pane.add(txfAntalLiter, 1, 9);
 
-        Button btnTilfoej = new Button("Tilføj destillat");
-        btnTilfoej.setOnAction(event -> tilfoejDestillatAction());
+        Button btnTilfoej = new Button("Tilføj destillat eller fadindhold");
+        btnTilfoej.setOnAction(event -> tilfoejDestillatEllerFadindholdAction());
         pane.add(btnTilfoej, 1, 10);
 
 
-        Label lblValgte = new Label("Valgte destillater");
+        Label lblValgte = new Label("Valgte destillater eller fadindhold");
         lblValgte.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;");
         pane.add(lblValgte, 0, 12, 2, 1);
 
-        pane.add(lvwValgteDestillater, 1, 13);
+        pane.add(lvwValgteDestillaterEllerFadindhold, 1, 13);
 
-        Button btnFjern = new Button("Fjern valgt destillat");
-        btnFjern.setOnAction(event -> fjernValgtDestillatAction());
+        Button btnFjern = new Button("Fjern valgt destillat eller fadindhold");
+        btnFjern.setOnAction(event -> fjernValgtDestillatEllerFadindholdAction());
         pane.add(btnFjern, 1, 14);
 
         pane.add(lblSamletLiter, 1, 15);
@@ -175,42 +175,42 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
     // Metode der opdaterer comboboxes hver gang siden åbnes
     private void updateComboBoxes() {
-        cmbDestillat.getItems().clear();
+        cmbDestillatEllerFadindhold.getItems().clear();
         cmbFad.getItems().clear();
         cmbMedarbejder.getItems().clear();
 
-        cmbDestillat.getItems().addAll(controller.getPaafyldningsvaesker());
+        cmbDestillatEllerFadindhold.getItems().addAll(controller.getPaafyldningsVaeskerIkkeTom());
         cmbFad.getItems().addAll(controller.getFade());
         cmbMedarbejder.getItems().addAll(controller.getMedarbejdere());
     }
 
 
-    // Metode der fjerner et destillat fra listen over valgte destillater
-    private void fjernValgtDestillatAction() {
-        int index = lvwValgteDestillater.getSelectionModel().getSelectedIndex();
+    // Metode der fjerner et destillat eller fadindhold fra listen over valgte destillater eller fadindhold
+    private void fjernValgtDestillatEllerFadindholdAction() {
+        int index = lvwValgteDestillaterEllerFadindhold.getSelectionModel().getSelectedIndex();
 
         if (index < 0) {
-            visFejl("Vælg et destillat der skal fjernes.");
+            visFejl("Vælg et destillat eller fadindhold der skal fjernes.");
             return;
         }
 
-        valgteDestillater.remove(index);
+        valgteDestillaterEllerFadindhold.remove(index);
         valgteLiter.remove(index);
 
         updateValgteListe();
     }
 
-    // Metode der tilføjer et destillat til listen over valgte destillater
-    private void tilfoejDestillatAction() {
-        Paafyldningsvaeske destillat = cmbDestillat.getValue();
+    // Metode der tilføjer et destillat eller fadindhold til listen over valgte destillater eller fadindhold
+    private void tilfoejDestillatEllerFadindholdAction() {
+        Paafyldningsvaeske destillatEllerFadindhold = cmbDestillatEllerFadindhold.getValue();
 
-        if (destillat == null) {
-            visFejl("Vælg et destillat.");
+        if (destillatEllerFadindhold == null) {
+            visFejl("Vælg et destillat eller fadindhold.");
             return;
         }
 
-        if (valgteDestillater.contains(destillat)) {
-            visFejl("Dette destillat er allerede tilføjet.");
+        if (valgteDestillaterEllerFadindhold.contains(destillatEllerFadindhold)) {
+            visFejl("Dette destillat eller fadindhold er allerede tilføjet.");
             return;
         }
 
@@ -227,19 +227,19 @@ public class RegistrerPaafyldningPane extends BorderPane {
             return;
         }
 
-        if (antalLiter > destillat.getAntalLiter()) {
-            visFejl("Antal liter overstiger mængden i det valgte destillat.");
+        if (antalLiter > destillatEllerFadindhold.getAntalLiter()) {
+            visFejl("Antal liter overstiger mængden i det valgte destillat eller fadindhold.");
             return;
         }
 
-        valgteDestillater.add(destillat);
+        valgteDestillaterEllerFadindhold.add(destillatEllerFadindhold);
         valgteLiter.add(antalLiter);
 
         updateValgteListe();
 
-        cmbDestillat.getSelectionModel().clearSelection();
+        cmbDestillatEllerFadindhold.getSelectionModel().clearSelection();
         txfAntalLiter.clear();
-        updateDestillatInfo();
+        updateDestillatEllerFadindholdInfo();
 
 
     }
@@ -266,8 +266,8 @@ public class RegistrerPaafyldningPane extends BorderPane {
             return;
         }
 
-        if (valgteDestillater.isEmpty()) {
-            visFejl("Tilføj mindst ét destillat.");
+        if (valgteDestillaterEllerFadindhold.isEmpty()) {
+            visFejl("Tilføj mindst ét destillat eller fadindhold.");
             return;
         }
 
@@ -283,11 +283,11 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
 
         try {
-            for (int i = 0; i < valgteDestillater.size(); i++) {
-                Paafyldningsvaeske destillat = valgteDestillater.get(i);
+            for (int i = 0; i < valgteDestillaterEllerFadindhold.size(); i++) {
+                Paafyldningsvaeske destillatEllerFadindhold = valgteDestillaterEllerFadindhold.get(i);
                 double liter = valgteLiter.get(i);
 
-                controller.createPaafyldningsRegistrering(liter, dato, destillat, fad, medarbejder);
+                controller.createPaafyldningsRegistrering(liter, dato, destillatEllerFadindhold, fad, medarbejder);
             }
 
             visInfo("Påfyldning registreret");
@@ -309,26 +309,32 @@ public class RegistrerPaafyldningPane extends BorderPane {
         return samletLiter;
     }
 
-    // Metode der opdaterer listen over valgte destillater
+    // Metode der opdaterer listen over valgte destillater eller fadindhold
     private void updateValgteListe() {
-        lvwValgteDestillater.getItems().clear();
+        lvwValgteDestillaterEllerFadindhold.getItems().clear();
 
-        for (int i = 0; i < valgteDestillater.size(); i++) {
-            Paafyldningsvaeske destillat = valgteDestillater.get(i);
+        for (int i = 0; i < valgteDestillaterEllerFadindhold.size(); i++) {
+            Paafyldningsvaeske destillatEllerFadindhold = valgteDestillaterEllerFadindhold.get(i);
             double liter = valgteLiter.get(i);
-
-//            String tekst = destillat.getDestillatNr()
-//                    + " (" + liter + " liter, "
-//                    + String.format("%.2f", destillat.getAlkoholProcent()) + "%)";
-//
-//            lvwValgteDestillater.getItems().add(tekst);
+            String tekst;
+            if (destillatEllerFadindhold instanceof Destillat) {
+                tekst = ((Destillat) destillatEllerFadindhold).getDestillatNr()
+                        + " (" + liter + " liter, "
+                        + String.format("%.2f", destillatEllerFadindhold.getAlkoholProcent()) + "%)";
+            }
+            else{
+                tekst = ((FadIndhold) destillatEllerFadindhold).getFad().getFadId()
+                        + " (" + liter + " liter, "
+                        + String.format("%.2f", destillatEllerFadindhold.getAlkoholProcent()) + "%)";
+            }
+            lvwValgteDestillaterEllerFadindhold.getItems().add(tekst);
         }
 
         updateOpsummering();
         updateFadInfo();
     }
 
-    // Metode der kaldes hver gang listen af valgte destillater opdateres
+    // Metode der kaldes hver gang listen af valgte destillater eller fadindhold opdateres
     private void updateOpsummering() {
         double samletLiter = 0;
 
@@ -339,11 +345,11 @@ public class RegistrerPaafyldningPane extends BorderPane {
     }
 
 
-    private void updateDestillatInfo() {
-        Paafyldningsvaeske destillat = cmbDestillat.getValue();
+    private void updateDestillatEllerFadindholdInfo() {
+        Paafyldningsvaeske destillatEllerFadindhold = cmbDestillatEllerFadindhold.getValue();
 
-        if (destillat == null) {
-            txaDestillatInfo.setText("Vælg et destillat for at se information");
+        if (destillatEllerFadindhold == null) {
+            txaDestillatEllerFadindholdInfo.setText("Vælg et destillat eller fadindhold for at se information");
             return;
         }
 
@@ -351,12 +357,12 @@ public class RegistrerPaafyldningPane extends BorderPane {
 
         sb.append("Består af følgende destilleringer:\n");
 
-//        for (Destillering destillering : destillat.getDestilleringer()) {
-//            sb.append("- ").append(destillering.getNewMakeNr())
-//                    .append(" | ").append(String.format("%.2f", destillering.getAlkoholProcent())).append("%");
-//            sb.append("\n");
-//        }
-//        txaDestillatInfo.setText(sb.toString());
+        for (Destillering destillering : destillatEllerFadindhold.getDestilleringer()) {
+            sb.append("- ").append(destillering.getNewMakeNr())
+                    .append(" | ").append(String.format("%.2f", destillering.getAlkoholProcent())).append("%");
+            sb.append("\n");
+        }
+        txaDestillatEllerFadindholdInfo.setText(sb.toString());
 
     }
 
@@ -377,16 +383,16 @@ public class RegistrerPaafyldningPane extends BorderPane {
     private void rydFelter() {
         cmbFad.getSelectionModel().clearSelection();
         cmbMedarbejder.getSelectionModel().clearSelection();
-        cmbDestillat.getSelectionModel().clearSelection();
+        cmbDestillatEllerFadindhold.getSelectionModel().clearSelection();
 
         dpDato.setValue(LocalDate.now());
         txfAntalLiter.clear();
 
-        valgteDestillater.clear();
+        valgteDestillaterEllerFadindhold.clear();
         valgteLiter.clear();
 
         updateValgteListe();
-        updateDestillatInfo();
+        updateDestillatEllerFadindholdInfo();
         updateFadInfo();
     }
 
@@ -398,7 +404,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
         alert.showAndWait();
     }
 
-    // Metode der kaldes når et destillat oprettes
+    // Metode der kaldes når et destillat eller fadindhold oprettes
     private void visInfo(String besked) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Registreret");

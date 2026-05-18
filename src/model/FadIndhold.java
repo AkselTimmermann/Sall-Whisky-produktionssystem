@@ -172,6 +172,16 @@ public class FadIndhold implements Paafyldningsvaeske {
     }
 
     @Override
+    public ArrayList<Destillering> getDestilleringer() {
+        ArrayList<Destillering> destilleringer = new ArrayList<>();
+        for (PaafyldningsRegistrering paafyldningsRegistrering : paafyldningsRegistreringerFra){
+            Paafyldningsvaeske paafyldningsvaeske = paafyldningsRegistrering.getPaafyldningsvaeske();
+            destilleringer.addAll(paafyldningsvaeske.getDestilleringer());
+        }
+        return destilleringer;
+    }
+
+    @Override
     public ArrayList<PaafyldningsRegistrering> getPaafyldningsRegistreringerTil() {
         return paafyldningsRegistreringerTil;
     }

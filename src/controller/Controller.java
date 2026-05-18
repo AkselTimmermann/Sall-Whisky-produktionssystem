@@ -202,4 +202,14 @@ public class Controller {
     public ArrayList<Paafyldningsvaeske> getPaafyldningsvaesker() {
         return storage.getPaafyldningsVaesker();
     }
+
+    public ArrayList<Paafyldningsvaeske> getPaafyldningsVaeskerIkkeTom(){
+        ArrayList<Paafyldningsvaeske> paafyldningsvaeskerIkkeTom = new ArrayList<>();
+        for (Paafyldningsvaeske paafyldningsvaeske : getPaafyldningsvaesker()){
+            if (paafyldningsvaeske.getAntalLiter() > 0){
+                paafyldningsvaeskerIkkeTom.add(paafyldningsvaeske);
+            }
+        }
+        return paafyldningsvaeskerIkkeTom;
+    }
 }
