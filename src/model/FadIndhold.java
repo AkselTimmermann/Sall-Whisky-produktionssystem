@@ -16,8 +16,11 @@ public class FadIndhold implements Paafyldningsvaeske {
         if (fad == null) {
             throw new IllegalArgumentException("Fad skal angives");
         }
+        if (fad.getStatus()!=FadStatus.INAKTIV){
+            throw new IllegalArgumentException("Fad har allerede indhold eller er ikke i funktion");
+        }
         this.fad = fad;
-        fad.addFadIndhold(this);
+        fad.setFadindholdContainer(this);
     }
 
 
@@ -25,6 +28,10 @@ public class FadIndhold implements Paafyldningsvaeske {
     public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Paafyldningsvaeske paafyldningsvaeske, Medarbejder medarbejder) {
         PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, paafyldningsvaeske, this, medarbejder);
         paafyldningsRegistreringerFra.add(paafyldningsRegistrering);
+        if (!modningsRegistreringer.isEmpty()){
+            modningsRegistreringer.getLast().addAntalLiter(antalLiter);
+        }
+        else initierModningsregistreringHvisIngen();
         return paafyldningsRegistrering;
     }
 
@@ -110,6 +117,9 @@ public class FadIndhold implements Paafyldningsvaeske {
         initierModningsregistreringHvisIngen();
 
         modningsRegistreringer.getLast().reducerLiter(antalLiter);
+        if (modningsRegistreringer.getLast().getAntalLiter()==0){
+            this.fad.removeFadindholdContainer();
+        }
 
     }
 

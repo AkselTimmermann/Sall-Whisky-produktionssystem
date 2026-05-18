@@ -11,38 +11,48 @@ public class Fad implements LagerObjekt {
     private FadStatus status;
     private Leverandoer leverandoer;
     private LagerPlads lagerPlads;
-
-    private ArrayList<FadIndhold> fadIndholdListe = new ArrayList<>();
+    private FadIndhold fadindholdContainer;
+    private ArrayList<FadIndhold> tidligereFadIndholdListe = new ArrayList<>();
 
     public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse, Leverandoer leverandoer) {
         this.fadId = fadId;
         this.traaType = traaType;
         this.beskrivelse = beskrivelse;
         this.stoerrelse = stoerrelse;
-        this.status = FadStatus.DEAKTIVERET;
         this.leverandoer = leverandoer;
     }
 
-    public void addFadIndhold(FadIndhold fadIndhold) {
-        if (!fadIndholdListe.contains(fadIndhold)) {
-            fadIndholdListe.add(fadIndhold);
+    public void setFadindholdContainer(FadIndhold fadIndhold){
+        if (this.fadindholdContainer==null){
+            this.fadindholdContainer=fadIndhold;
         }
     }
 
-    public FadIndhold getAktivtFadIndhold() {
-        if (fadIndholdListe.isEmpty()) {
-            return null;
+    public void removeFadindholdContainer(){
+        if (fadindholdContainer != null){
+            tidligereFadIndholdListe.add(fadindholdContainer);
+            fadindholdContainer = null;
         }
-        return fadIndholdListe.getLast();
+    }
+
+
+    public FadIndhold getAktivtFadIndhold() {
+        return fadindholdContainer;
     }
 
     public ArrayList<FadIndhold> getFadIndholdListe() {
-        return new ArrayList<>(fadIndholdListe);
+        return new ArrayList<>(tidligereFadIndholdListe);
     }
 
 
     public FadStatus getStatus() {
-        return status;
+        if (status==FadStatus.DEAKTIVERET) return FadStatus.DEAKTIVERET;
+        else if (fadindholdContainer == null) {
+            return FadStatus.INAKTIV;
+        } else if (fadindholdContainer.getAntalLiter()>0) {
+            return FadStatus.AKTIV;
+        }
+        else return FadStatus.INAKTIV;
     }
 
     public String getTraaType() {
@@ -96,12 +106,14 @@ public class Fad implements LagerObjekt {
             return stoerrelse;
         }
 
-        return stoerrelse - aktivtIndhold.beregnStartAntalLiter();
+        return stoerrelse - aktivtIndhold.getAntalLiter();
     }
 
-    public void setStatus(FadStatus status) {
-        this.status = status;
+    public void retireFad() {
+        this.status = FadStatus.DEAKTIVERET;
     }
+
+
 
 
     @Override
@@ -109,6 +121,6 @@ public class Fad implements LagerObjekt {
         return "FadID: " + fadId + " | " +
                 "Trætype: " + traaType + " | " +
                 "Størrelse: " + stoerrelse + " | " +
-                "Status: " + status;
+                "Status: " + getStatus();
     }
 }

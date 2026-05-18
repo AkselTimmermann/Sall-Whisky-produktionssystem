@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Version 2">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerPaafyldningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Destillat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Paafyldningsvaeske.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Paafyldningsvaeske.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Fad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Fad.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Paafyldningsvaeske.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Paafyldningsvaeske.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/ModningsRegistrering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/ModningsRegistrering.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,11 +206,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
-        <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
         <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
         <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
         <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />
+        <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
+        <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
       </list>
     </recent_temporary>
   </component>

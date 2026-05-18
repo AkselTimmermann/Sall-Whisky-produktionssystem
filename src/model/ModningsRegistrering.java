@@ -43,4 +43,8 @@ public class ModningsRegistrering {
     public double getAntalLiter() {
         return antalLiter;
     }
+
+    public void addAntalLiter(double antalLiter) {
+        this.antalLiter += antalLiter;
+    }
 }

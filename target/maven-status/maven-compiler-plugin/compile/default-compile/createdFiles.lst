@@ -4,6 +4,7 @@ controller\Controller.class
 gui\OpretDestillatPane.class
 storage\Storage.class
 model\Leverandoer.class
+model\WhiskyProdukt.class
 gui\RegistrerFlaskningPane.class
 model\Paafyldningsvaeske.class
 model\Fad.class

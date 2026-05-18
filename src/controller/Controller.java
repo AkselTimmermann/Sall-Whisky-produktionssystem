@@ -121,8 +121,6 @@ public class Controller {
         }
 
         PaafyldningsRegistrering paafyldningsRegistrering = fadIndhold.opretPaafyldningsRegistrering(antalLiter, dato, paafyldningsvaeske, medarbejder);
-
-        fad.setStatus(FadStatus.AKTIV);
         storage.addPaafyldningsRegistrering(paafyldningsRegistrering);
         return paafyldningsRegistrering;
     }
