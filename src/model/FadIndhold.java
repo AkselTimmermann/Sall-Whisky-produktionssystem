@@ -94,6 +94,9 @@ public class FadIndhold {
     }
 
     public ArrayList<ModningsRegistrering> getModningsRegistreringer() {
+        if (modningsRegistreringer.getLast()==null){
+            opretModningsRegistrering(beregnStartAlkoholProcent(),LocalDate.now(),beregnStartAntalLiter(),"Automatisk oprettet modningsregistrering ud fra påfyldt destilat","Autogenereret modningsregistrering");
+        }
         return new ArrayList<>(modningsRegistreringer);
     }
 
