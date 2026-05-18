@@ -25,6 +25,15 @@ public class WhiskyProdukt {
         if (antalLiter<=0){
             throw new IllegalArgumentException("Antal liter skal være positiv");
         }
+
+        if (fadIndhold == null) {
+            throw new IllegalArgumentException("Fadindhold skal vælges");
+        }
+
+        if (antalLiter > fadIndhold.getResterendeLiter()) {
+            throw new IllegalArgumentException("Der er ikke nok liter tilbage på fadindholdet");
+        }
+
         if (!fadIndhold.isLagretMinimum3Aar(this.dato)){
             throw new IllegalArgumentException("Alt indhold i produktet skal være mindst 3 år gammelt");
         }
@@ -43,7 +52,7 @@ public class WhiskyProdukt {
         if (stoerrelse<=0){
             throw new IllegalArgumentException("Størrelsen på en flaske skal altid være et positivt tal");
         }
-        if (antal<=0){
+        if (antal<1){
             throw new IllegalArgumentException("Der skal oprettes mindst 1 flaske");
         }
         ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
@@ -54,10 +63,9 @@ public class WhiskyProdukt {
             this.flasker.add(flaske);
 
         }
+
         return oprettedeFlasker;
     }
-
-
 
     public boolean isCaskStrength(){
         return fortynding==0;
@@ -87,10 +95,13 @@ public class WhiskyProdukt {
     }
 
     public double beregnAlkoholProcent(){
+        if (samletAntalLiter()<=0){
+            throw new IllegalStateException("Alkoholprocenten kan ikke udregnet, da der ikke er tilføjet whisky til produktet");
+        }
         return samletAlkoholMaengde()/samletAntalLiter();
     }
 
-    private double samletAlkoholMaengde() {
+    public double samletAlkoholMaengde() {
         double samletAlkoholMaengde=0;
         for (ProduktRegistrering produktRegistrering : produktRegistreringer){
             double antalLiter = produktRegistrering.getAntalLiter();
@@ -113,7 +124,7 @@ public class WhiskyProdukt {
         if (stoerrelse <= 0) {
             throw new RuntimeException("Størrelse skal være større end 0");
         }
-        if (antalFlasker <= 0) {
+        if (antalFlasker < 1) {
             throw new RuntimeException("Antal flasker skal være større end 0");
         }
         //Den mængde der allerede er tappet
@@ -130,4 +141,6 @@ public class WhiskyProdukt {
     public String toString() {
         return navn + ", " + samletAntalLiter();
     }
+
+
 }

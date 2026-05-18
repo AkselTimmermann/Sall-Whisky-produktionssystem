@@ -74,11 +74,36 @@ public class Controller {
         return fad;
     }
 
-    public WhiskyProdukt createWhiskyProdukt(String navn, int produktNr, String beskrivelse, LocalDate dato, double fortynding) {
-        WhiskyProdukt whiskyProdukt = new WhiskyProdukt(navn, produktNr, beskrivelse,dato, fortynding);
+    public WhiskyProdukt createWhiskyProdukt(
+            String navn,
+            int produktNr,
+            String beskrivelse,
+            LocalDate dato,
+            double fortynding,
+            ArrayList<FadIndhold> fadIndholdListe,
+            ArrayList<Double> literListe) {
+
+        if (fadIndholdListe.size() != literListe.size()) {
+            throw new IllegalArgumentException("Hvert fadindhold skal have en mængde.");
+        }
+
+        WhiskyProdukt whiskyProdukt = new WhiskyProdukt(
+                navn,
+                produktNr,
+                beskrivelse,
+                dato,
+                fortynding);
+
+        for (int i = 0; i < fadIndholdListe.size(); i++) {
+            whiskyProdukt.createProduktRegistrering(
+                    literListe.get(i),
+                    fadIndholdListe.get(i));
+        }
+
         storage.addWhiskyProdukt(whiskyProdukt);
         return whiskyProdukt;
     }
+
 
     public FlaskeSamling createFlaskeSamling() {
         int samlingsNr = storage.getFlaskesamling().size() + 1;
@@ -128,7 +153,7 @@ public class Controller {
         storage.addMedarbejder(medarbejder);
         return medarbejder;
     }
-    public Destillat createDestillat(String destillatNr, ArrayList<Destillering> destilleringer, int[] antalLiterAfHverDestillering) {
+    public Destillat createDestillat(String destillatNr, ArrayList<Destillering> destilleringer, double[] antalLiterAfHverDestillering) {
         Destillat destillat = new Destillat(destillatNr, destilleringer, antalLiterAfHverDestillering);
         storage.addDestillat(destillat);
         return destillat;
@@ -164,6 +189,10 @@ public class Controller {
 
     public ArrayList<MaltBatch> getMaltBatches() {
         return storage.getMaltBatch();
+    }
+
+    public ArrayList<FadIndhold> getFadIndhold() {
+        return storage.getFadIndholdListe();
     }
 
     public FadIndhold getAktivtFadIndhold(Fad fad) {

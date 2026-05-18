@@ -13,12 +13,10 @@ public class PaafyldningsRegistrering {
         if (destillat == null) {
             throw new IllegalStateException("Destillering skal være oprettet");
         }
-        if (antalLiter > destillat.getAntalLiter()) {
-            throw new IllegalStateException("Antal liter overstiger mængden af ledig destillering");
-        }
         if (fadIndhold == null) {
             throw new IllegalStateException("Der skal være et ledigt fad");
         }
+        destillat.reducerResterendeLiter(antalLiter);
         this.antalLiter = antalLiter;
         this.dato = dato;
         this.destillat = destillat;
