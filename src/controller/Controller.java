@@ -170,20 +170,22 @@ public class Controller {
         return destillat;
     }
 
-    public ArrayList<Flaske> registrerFlaskning(WhiskyProdukt whiskyProdukt, double stoerrelse, int antal) {
-        ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
+    public int  registrerFlaskning(WhiskyProdukt whiskyProdukt, double stoerrelse, int antal) {
+
         int resterendeFlasker = antal;
+        int antalSamlinger = 0;
 
         while (resterendeFlasker > 0) {
             FlaskeSamling flaskeSamling = createFlaskeSamling();
 
             int antalTilDenneSamling = Math.min(100, resterendeFlasker);
 
-            oprettedeFlasker.addAll(whiskyProdukt.createFlasker(stoerrelse, antalTilDenneSamling, flaskeSamling));
+            whiskyProdukt.createFlasker(stoerrelse, antalTilDenneSamling, flaskeSamling);
 
+            antalSamlinger++;
             resterendeFlasker -= antalTilDenneSamling;
         }
-        return oprettedeFlasker;
+        return antalSamlinger;
     }
 
     public ArrayList<Leverandoer> getLeverandoer() {

@@ -10,6 +10,8 @@ import javafx.scene.layout.VBox;
 import model.FlaskeSamling;
 import model.WhiskyProdukt;
 
+import java.util.ArrayList;
+
 public class RegistrerFlaskningPane extends BorderPane {
 
     private final Controller controller;
@@ -148,8 +150,11 @@ public class RegistrerFlaskningPane extends BorderPane {
             WhiskyProdukt whiskyProdukt = whiskyProduktComboBox.getSelectionModel().getSelectedItem();
             double stoerrelse = Double.parseDouble(flaskeStoerrelseTxf.getText().trim());
             int antalFLasker = Integer.parseInt(oesnketAntalTxf.getText().trim());
-            controller.registrerFlaskning(whiskyProdukt, stoerrelse,antalFLasker);
-            boolean ok = visInfo("Registrering oprettet \n vil du registrere placering med det samme?");
+            int flaskeSamlinger = controller.registrerFlaskning(whiskyProdukt, stoerrelse,antalFLasker);
+            boolean ok = visInfo("Registrering oprettet \n" +
+                    antalFLasker + " antal flasker oprettet \n" +
+                    "med" + flaskeSamlinger + " flaskesamling(er)\n" +
+                    "vil du registrere placering med det samme?");
             if (ok) {
                 startVindue.showRegistrerLagerPlacering();
             }
