@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="blabla">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegistrerFlaskningPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ForsidePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ForsidePane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/ModningsRegistrering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/ModningsRegistrering.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
