@@ -7,10 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import model.FlaskeSamling;
 import model.WhiskyProdukt;
-
-import java.util.ArrayList;
 
 public class RegistrerFlaskningPane extends BorderPane {
 
@@ -29,13 +26,14 @@ public class RegistrerFlaskningPane extends BorderPane {
     Label maksAntalLbl = new Label("Maks antal flasker:");
     Label tiloversLbl = new Label("Whisky tilovers:");
 
-    ComboBox<WhiskyProdukt> whiskyProduktComboBox = new ComboBox<>();
-    TextField flaskeStoerrelseTxf = new TextField();
-    TextField oesnketAntalTxf = new TextField();
-    Button registrerBtn = new Button("Registrer");
-    Button rydBtn = new Button("Ryd felter");
-    Button vaelgFlaskeStoerrelseBtn = new Button("Vælg");
-    Button vaelgOesnetStoerrelseBtn = new Button("Vælg");
+    private ComboBox<WhiskyProdukt> whiskyProduktComboBox = new ComboBox<>();
+    private TextField flaskeStoerrelseTxf = new TextField();
+    private TextField oesnketAntalTxf = new TextField();
+    private Button registrerBtn = new Button("Registrer");
+    private Button rydBtn = new Button("Ryd felter");
+    private Button vaelgFlaskeStoerrelseBtn = new Button("Vælg");
+    private Button vaelgOesnetAntalBtn = new Button("Vælg");
+    private TextArea whiskyInformationTxtA = new TextArea();
 
 
     private void initContent() {
@@ -74,27 +72,35 @@ public class RegistrerFlaskningPane extends BorderPane {
         whiskyProduktComboBox.setPrefWidth(350);
         oesnketAntalTxf.setPrefWidth(350);
 
+        whiskyInformationTxtA.setEditable(false);
+        whiskyInformationTxtA.setPrefWidth(350);
+        whiskyInformationTxtA.setPrefRowCount(1);
+
         VBox vbox1 = new VBox(2,whiskyLbl, whiskyProduktComboBox);
         pane.add(vbox1,0,1);
 
+        pane.add(whiskyInformationTxtA,0,2);
+
         VBox vBox2 = new VBox(2,flaskeStoerrelseLbl, flaskeStoerrelseTxf,vaelgFlaskeStoerrelseBtn);
-        pane.add(vBox2,0,2);
+        pane.add(vBox2,0,3);
 
 
 
-        pane.add(maksAntalLbl,0,3);
+        pane.add(maksAntalLbl,0,4);
 
-        VBox vBox3 = new VBox(2,oensketAntalLbl,oesnketAntalTxf,vaelgOesnetStoerrelseBtn);
-        pane.add(vBox3,0,4);
+        VBox vBox3 = new VBox(2,oensketAntalLbl,oesnketAntalTxf, vaelgOesnetAntalBtn);
+        pane.add(vBox3,0,5);
 
 
-        pane.add(tiloversLbl,0,5);
+        pane.add(tiloversLbl,0,6);
 
         HBox hBox = new HBox(30, registrerBtn, rydBtn);
-        pane.add(hBox,0,6);
+        pane.add(hBox,0,7);
+
+        whiskyProduktComboBox.setOnAction(actionEvent -> updateWhiskyInfo());
 
         vaelgFlaskeStoerrelseBtn.setOnAction(actionEvent -> beregnMaksAntalFlaskerAction());
-        vaelgOesnetStoerrelseBtn.setOnAction(actionEvent -> beregnWhiskyTiloversAction());
+        vaelgOesnetAntalBtn.setOnAction(actionEvent -> beregnWhiskyTiloversAction());
         registrerBtn.setOnAction(actionEvent -> registrerAftapningAction());
         rydBtn.setOnAction(actionEvent -> rydFelterAction());
         return pane;
@@ -143,6 +149,17 @@ public class RegistrerFlaskningPane extends BorderPane {
             return;
         }
         tiloversLbl.setText("Whisky tilovers: " + tilovers);
+    }
+
+    private void updateWhiskyInfo() {
+        WhiskyProdukt whiskyProdukt = whiskyProduktComboBox.getValue();
+        if (whiskyProdukt == null) {
+            whiskyInformationTxtA.setText("Vælg et whisky produkt for at se information");
+            return;
+        }
+        whiskyInformationTxtA.setText(whiskyProdukt.toString());
+
+
     }
 
     private void registrerAftapningAction() {
