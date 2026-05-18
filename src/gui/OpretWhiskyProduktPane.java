@@ -350,8 +350,6 @@ public class OpretWhiskyProduktPane extends BorderPane {
 
     }
 
-
-
     private void rydFelter() {
         txfProduktNr.clear();
 
