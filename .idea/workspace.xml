@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Paafyldning af fad ændrer maengde destillat">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/OpretWhiskyProduktPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Mini-ændringer i ForsidePane mm.">
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/ForsidePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/ForsidePane.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +223,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modnings- og paafyldnings registreringer opdateret" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controller" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerr" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerrr" />
@@ -250,6 +247,7 @@
     <MESSAGE value="RegistrerFlaskningPane igangsat" />
     <MESSAGE value="3 tests" />
     <MESSAGE value="Paafyldning af fad ændrer maengde destillat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paafyldning af fad ændrer maengde destillat" />
+    <MESSAGE value="Mini-ændringer i ForsidePane mm." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mini-ændringer i ForsidePane mm." />
   </component>
 </project>
