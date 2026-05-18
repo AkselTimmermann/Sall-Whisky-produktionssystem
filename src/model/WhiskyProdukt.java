@@ -43,7 +43,7 @@ public class WhiskyProdukt {
         if (stoerrelse<=0){
             throw new IllegalArgumentException("Størrelsen på en flaske skal altid være et positivt tal");
         }
-        if (antal<=0){
+        if (antal<1){
             throw new IllegalArgumentException("Der skal oprettes mindst 1 flaske");
         }
         ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
@@ -115,7 +115,7 @@ public class WhiskyProdukt {
         if (stoerrelse <= 0) {
             throw new RuntimeException("Størrelse skal være større end 0");
         }
-        if (antalFlasker <= 0) {
+        if (antalFlasker < 1) {
             throw new RuntimeException("Antal flasker skal være større end 0");
         }
         //Den mængde der allerede er tappet
