@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="AutoModningsregistrering">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_createProduktRegistrering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_createProduktRegistrering.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_create_Flasker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_create_Flasker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_createProduktRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_createProduktRegistrering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_create_Flasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_create_Flasker.java" afterDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Mini-ændringer i ForsidePane mm.">
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/ForsidePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/ForsidePane.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,11 +81,8 @@
     &quot;JUnit.Test_beregnWhiskyTilovers.testLidtNegativ.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.Test_beregnWhiskyTilovers.testLidtPositiv.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_create_Flasker.test100StoreFlasker.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.Test_create_Flasker.testExceptionAntalFlasker0.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.Test_create_Flasker.testExceptionStoerrelse0.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_create_Flasker.testOpret1LilleFlaske.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test_create_Flasker.testOpretFlaskerNaarDerAlleredeErOprettetFlasker.executor&quot;: &quot;Run&quot;,
     &quot;Maven.sall-whisky-produktionssystem [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.sall-whisky-produktionssystem [javafx:run].executor&quot;: &quot;Run&quot;,
     &quot;Maven.sall-whisky-produktionssystem [test].executor&quot;: &quot;Run&quot;,
@@ -112,11 +103,31 @@
   }
 }</component>
   <component name="RunManager" selected="Maven.sall-whisky-produktionssystem [javafx:run]">
-    <configuration name="Test_create_Flasker.test100StoreFlasker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
-      <option name="METHOD_NAME" value="test100StoreFlasker" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_beregnWhiskyTilovers" />
+      <option name="METHOD_NAME" value="testFlaskerFaerreEndNul" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_beregnWhiskyTilovers.testLidtNegativ" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sall-whisky-produktionssystem" />
+      <option name="PACKAGE_NAME" value="whiskyProduktTests" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_beregnWhiskyTilovers" />
+      <option name="METHOD_NAME" value="testLidtNegativ" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test_beregnWhiskyTilovers.testLidtPositiv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sall-whisky-produktionssystem" />
+      <option name="PACKAGE_NAME" value="whiskyProduktTests" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_beregnWhiskyTilovers" />
+      <option name="METHOD_NAME" value="testLidtPositiv" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,26 +148,6 @@
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
       <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
       <option name="METHOD_NAME" value="testExceptionStoerrelse0" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test_create_Flasker.testOpret1LilleFlaske" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sall-whisky-produktionssystem" />
-      <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
-      <option name="METHOD_NAME" value="testOpret1LilleFlaske" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test_create_Flasker.testOpretFlaskerNaarDerAlleredeErOprettetFlasker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="sall-whisky-produktionssystem" />
-      <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
-      <option name="METHOD_NAME" value="testOpretFlaskerNaarDerAlleredeErOprettetFlasker" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -193,20 +184,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.Test_create_Flasker.test100StoreFlasker" />
       <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
       <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
-      <item itemvalue="JUnit.Test_create_Flasker.testOpret1LilleFlaske" />
-      <item itemvalue="JUnit.Test_create_Flasker.testOpretFlaskerNaarDerAlleredeErOprettetFlasker" />
+      <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />
+      <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
+      <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test_create_Flasker.testOpretFlaskerNaarDerAlleredeErOprettetFlasker" />
-        <item itemvalue="JUnit.Test_create_Flasker.test100StoreFlasker" />
-        <item itemvalue="JUnit.Test_create_Flasker.testOpret1LilleFlaske" />
         <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
         <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
+        <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
+        <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
+        <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +247,7 @@
     <MESSAGE value="RegistrerFlaskningPane igangsat" />
     <MESSAGE value="3 tests" />
     <MESSAGE value="Paafyldning af fad ændrer maengde destillat" />
-    <MESSAGE value="AutoModningsregistrering" />
-    <option name="LAST_COMMIT_MESSAGE" value="AutoModningsregistrering" />
+    <MESSAGE value="Mini-ændringer i ForsidePane mm." />
+    <option name="LAST_COMMIT_MESSAGE" value="Mini-ændringer i ForsidePane mm." />
   </component>
 </project>
