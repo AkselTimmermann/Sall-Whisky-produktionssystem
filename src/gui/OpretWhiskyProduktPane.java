@@ -223,10 +223,11 @@ public class OpretWhiskyProduktPane extends BorderPane {
             antalLiter = Double.parseDouble(txfAntalLiter.getText().trim()
                     .replace(",", "."));
 
-        } catch (IllegalArgumentException e) {
+        } catch (NumberFormatException e) {
             visFejl(e.getMessage());
             return;
         }
+
         if (antalLiter <= 0) {
             visFejl("Antal liter skal være større end 0.");
             return;
@@ -284,15 +285,19 @@ public class OpretWhiskyProduktPane extends BorderPane {
             return;
         }
 
-        double fortynding;
-        try {
-            fortynding = Double.parseDouble(txfFortynding.getText().trim()
-                    .replace(",", "."));
+        double fortynding = 0;
+        String fortyndingTekst = txfFortynding.getText().trim();
 
-        } catch (IllegalArgumentException e) {
-            visFejl(e.getMessage());
-            return;
+        if (!fortyndingTekst.isEmpty()) {
+            try {
+                fortynding = Double.parseDouble(fortyndingTekst.replace(",", "."));
+            } catch (NumberFormatException e) {
+                visFejl(e.getMessage());
+                return;
+            }
         }
+
+
         if (fortynding < 0) {
             visFejl("Fortynding må ikke være negativ.");
             return;
