@@ -5,6 +5,8 @@ import storage.StorageInterface;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class Controller {
     private StorageInterface storage;
@@ -21,6 +23,15 @@ public class Controller {
             throw new IllegalArgumentException("Vælg en lagerplads");
         }
         plads.placerIndhold(objekt);
+    }
+
+    //Returnere en sorteret liste med ældste registrering øverst
+    public ArrayList<FadIndhold> getFadeSorteretEfterModningsDato() {
+        ArrayList<FadIndhold> liste = storage.getFadIndholdListe();
+
+        liste.sort(Comparator.comparing(fadIndhold -> fadIndhold.getModningsRegistreringer().getLast().getDato()));
+
+        return liste;
     }
 
     public ArrayList<Fad> getFadeUdenPlacering() {
@@ -159,8 +170,20 @@ public class Controller {
         return destillat;
     }
 
-    public ArrayList<Flaske> createFlasker(WhiskyProdukt whiskyProdukt, double stoerrelse, int antal, FlaskeSamling flaskeSamling) {
-        return whiskyProdukt.createFlasker(stoerrelse, antal, flaskeSamling);
+    public ArrayList<Flaske> registrerFlaskning(WhiskyProdukt whiskyProdukt, double stoerrelse, int antal) {
+        ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
+        int resterendeFlasker = antal;
+
+        while (resterendeFlasker > 0) {
+            FlaskeSamling flaskeSamling = createFlaskeSamling();
+
+            int antalTilDenneSamling = Math.min(100, resterendeFlasker);
+
+            oprettedeFlasker.addAll(whiskyProdukt.createFlasker(stoerrelse, antalTilDenneSamling, flaskeSamling));
+
+            resterendeFlasker -= antalTilDenneSamling;
+        }
+        return oprettedeFlasker;
     }
 
     public ArrayList<Leverandoer> getLeverandoer() {

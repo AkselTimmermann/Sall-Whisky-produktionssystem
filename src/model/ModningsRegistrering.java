@@ -31,6 +31,9 @@ public class ModningsRegistrering {
         antalLiter -= liter;
     }
 
+    public LocalDate getDato() {
+        return dato;
+    }
 
     public double getAntalLiter() {
         return antalLiter;

@@ -123,18 +123,22 @@ public class RegistrerFlaskningPane extends BorderPane {
 
         if (antalFlaskerText.isEmpty()) {
             visFejl("Indtast ønsket antal flasker");
+            return;
         }
         if (whiskyProdukt == null) {
             visFejl("Vælg et Whiskyprodukt");
+            return;
         }
         int antalFlasker = Integer.parseInt(antalFlaskerText);
         if (antalFlasker <= 0 ) {
             visFejl("antal flasker skal være større end 0");
+            return;
         }
         double tilovers = whiskyProdukt.beregnWhiskyTilovers(stoerrelse, antalFlasker);
 
         if (antalFlasker > whiskyProdukt.maksAntalFlasker(stoerrelse)) {
             visFejl("Ønsket antal flasker overstiger antal flasker tilgængelige");
+            return;
         }
         tiloversLbl.setText("Whisky tilovers: " + tilovers);
     }
@@ -144,9 +148,7 @@ public class RegistrerFlaskningPane extends BorderPane {
             WhiskyProdukt whiskyProdukt = whiskyProduktComboBox.getSelectionModel().getSelectedItem();
             double stoerrelse = Double.parseDouble(flaskeStoerrelseTxf.getText().trim());
             int antalFLasker = Integer.parseInt(oesnketAntalTxf.getText().trim());
-            FlaskeSamling flaskeSamling = controller.createFlaskeSamling();
-
-            whiskyProdukt.createFlasker(stoerrelse, antalFLasker, flaskeSamling);
+            controller.registrerFlaskning(whiskyProdukt, stoerrelse,antalFLasker);
             boolean ok = visInfo("Registrering oprettet \n vil du registrere placering med det samme?");
             if (ok) {
                 startVindue.showRegistrerLagerPlacering();

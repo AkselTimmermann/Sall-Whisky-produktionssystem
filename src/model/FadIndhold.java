@@ -115,7 +115,8 @@ public class FadIndhold {
         if (!getModningsRegistreringer().isEmpty()) {
             return "Fad ID: " + fad.getFadId() +
                     " | Antal liter: " + getModningsRegistreringer().getLast().getAntalLiter() +
-                    " | Alkoholprocent: " + String.format("%.2f", getModningsRegistreringer().getLast().getAlkoholProcent()) ;
+                    " | Alkoholprocent: " + String.format("%.2f", getModningsRegistreringer().getLast().getAlkoholProcent()) +
+                    " | sidste registrering: " + getModningsRegistreringer().getLast().getDato();
 
         }
         return "Hej";

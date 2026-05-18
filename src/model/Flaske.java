@@ -20,7 +20,9 @@ public class Flaske {
                 oldFlaskesamling.fjernFlaske(this);
             }
             this.flaskeSamling = flaskeSamling;
-            flaskeSamling.addFlaske(this);
+            if (flaskeSamling != null) {
+                flaskeSamling.addFlaske(this);
+            }
         }
     }
 
