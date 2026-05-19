@@ -7,9 +7,11 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import model.FadIndhold;
 import org.w3c.dom.Text;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class RegistrerModningPane extends BorderPane {
 
@@ -18,8 +20,9 @@ public class RegistrerModningPane extends BorderPane {
     public RegistrerModningPane(Controller controller) {
         this.controller = controller;
         initContent();
+        updateFadInholdListe();
     }
-
+    Label lblFade = new Label("Fade");
     Label lblAlkoholProcent = new Label("Alkoholprocent:");
     Label lbldato = new Label("Dato:");
     Label lblantalLiter = new Label("Antal liter");
@@ -33,6 +36,7 @@ public class RegistrerModningPane extends BorderPane {
     private Button btnRyd = new Button("Ryd felter");
     private TextField tfNote = new TextField();
     private TextField tfTitel = new TextField();
+    private ListView<FadIndhold> fadIndholdListView = new ListView<>();
     private void initContent() {
         VBox root = new VBox(10);
         root.setPadding(new Insets(30, 60, 30, 60));
@@ -70,28 +74,36 @@ public class RegistrerModningPane extends BorderPane {
         tfAntalLiter.setPrefWidth(350);
         tfTitel.setPrefWidth(350);
         tfNote.setPrefWidth(350);
+        fadIndholdListView.setPrefWidth(350);
+        fadIndholdListView.setPrefHeight(350);
 
         //Grid 1
+        VBox vBoxLw = new VBox(lblFade, fadIndholdListView);
+        pane.add(vBoxLw,0,1,1,6);
 
+        //Grid 1
         VBox vbox1 = new VBox(lblTitel,tfTitel);
-        pane.add(vbox1,0,1);
+        pane.add(vbox1,1,1);
 
         //Grid 2
         VBox vbox2 = new VBox(lblAlkoholProcent, tfAlk);
-        pane.add(vbox2,0,2);
+        pane.add(vbox2,1,2);
 
         //Grid 3
         VBox vbox3 = new VBox(lblantalLiter, tfAntalLiter);
-        pane.add(vbox3,0,3);
+        pane.add(vbox3,1,3);
 
+        //Grid 4
         VBox vbox4 = new VBox(lbldato, dpDato);
-        pane.add(vbox4, 0,4);
+        pane.add(vbox4, 1,4);
 
+        //Grid 5
         VBox vbox5 = new VBox(lblNote, tfNote);
-        pane.add(vbox5,0,5);
+        pane.add(vbox5,1,5);
 
+        //Grid 6
         HBox hbox1 = new HBox(50,btnRegistrer, btnRyd);
-        pane.add(hbox1,0,6);
+        pane.add(hbox1,1,6);
 
 
 
@@ -108,6 +120,7 @@ public class RegistrerModningPane extends BorderPane {
             String antalLiterText = tfAntalLiter.getText().trim();
             String note = tfNote.getText().trim();
             String titel = tfTitel.getText().trim();
+            FadIndhold fadIndhold = fadIndholdListView.getSelectionModel().getSelectedItem();
 
             if (dato == null) {
                 visFejl("Vælg dato");
@@ -129,6 +142,10 @@ public class RegistrerModningPane extends BorderPane {
                 visInfo("Indtast titel");
                 return;
             }
+            if (fadIndhold == null) {
+                visFejl("Vælg et fad");
+                return;
+            }
             double alkohol = Double.parseDouble(alkoholText);
             double antalLiter = Double.parseDouble(antalLiterText);
             if (alkohol <= 0) {
@@ -139,12 +156,12 @@ public class RegistrerModningPane extends BorderPane {
                 visFejl("Antal liter skal være større end 0");
                 return;
             }
-            /*
-            controller.createModningsRegistrering(alkohol, dato, antalLiter, note, titel);
+
+            controller.createModningsRegistrering(alkohol, dato, antalLiter, note, titel, fadIndhold);
             visInfo("Registrering oprettet");
 
             rydFelterAction();
-            */
+
 
 
         } catch (Exception e) {
@@ -156,6 +173,12 @@ public class RegistrerModningPane extends BorderPane {
         dpDato.setValue(null);
         tfAlk.clear();
         tfAntalLiter.clear();
+    }
+
+    private void updateFadInholdListe() {
+        ArrayList<FadIndhold> fadIndholdsliste = controller.getFadeSorteretEfterModningsDato();
+
+        fadIndholdListView.getItems().setAll(fadIndholdsliste);
     }
     private void visFejl(String besked) {
         Alert alert = new Alert(Alert.AlertType.ERROR);

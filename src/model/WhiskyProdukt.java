@@ -20,7 +20,7 @@ public class WhiskyProdukt {
         this.fortynding = fortynding;
     }
 
-
+    //At antalliter skal være positiv og at der skal være nok tilbage bliver allerede tjekket for i fadindhold klassen
     public ProduktRegistrering createProduktRegistrering(double antalLiter, FadIndhold fadIndhold) {
         if (antalLiter<=0){
             throw new IllegalArgumentException("Antal liter skal være positiv");
@@ -56,7 +56,14 @@ public class WhiskyProdukt {
             throw new IllegalArgumentException("Der skal oprettes mindst 1 flaske");
         }
         ArrayList<Flaske> oprettedeFlasker = new ArrayList<>();
-        int startFlaskenr = this.flasker.getLast().getFlaskeNr() +1;
+        int startFlaskenr;
+        if (this.flasker.isEmpty()){
+            startFlaskenr = 1;
+        }
+        else {
+            startFlaskenr = this.flasker.getLast().getFlaskeNr() +1;
+        }
+
         for (int i = startFlaskenr; i < startFlaskenr + antal ; i++) {
             Flaske flaske = new Flaske(i,stoerrelse,flaskeSamling, this);
             oprettedeFlasker.add(flaske);
@@ -136,6 +143,10 @@ public class WhiskyProdukt {
 
     public ArrayList<ProduktRegistrering> getProduktRegistreringer() {
         return new ArrayList<>(produktRegistreringer);
+    }
+
+    public ArrayList<Flaske> getFlasker() {
+        return new ArrayList<>(flasker);
     }
 
     public String toString() {
