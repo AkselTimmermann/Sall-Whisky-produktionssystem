@@ -28,7 +28,7 @@ public class Test_beregnWhiskyTilovers {
     }
 
     @Test
-    void testStoerrelseMindreEndNul() {
+    void testBeregnWhiskyTilovers_StoerrelseMindreEndNul_exception() {
         //Arrange
         double stoerrelse = 0;
         int antalFlasker =10;
@@ -41,7 +41,7 @@ public class Test_beregnWhiskyTilovers {
     }
 
     @Test
-    void testFlaskerFaerreEndNul() {
+    void testBeregnWhiskyTilovers_FlaskerFaerreEndNul_Exception() {
         //Arrange
         double stoerrelse = 0.5;
         int antalFlasker =0;
@@ -54,7 +54,7 @@ public class Test_beregnWhiskyTilovers {
     }
 
     @Test
-    void testLidtNegativ() {
+    void testBeregnWhiskyTilovers_LidtNegativ() {
         //Arrange
         double stoerrelse = 0.5;
         int antalFlasker = 10;
@@ -65,11 +65,12 @@ public class Test_beregnWhiskyTilovers {
         double whiskyTilovers = whiskyProdukt.beregnWhiskyTilovers(stoerrelse,antalFlasker);
 
         //Assert
+        //Pga. afrundinger i Java bliver vi nødt til at indføre en fejlmargin
         assertEquals(-0.1,whiskyTilovers,0.00000005);
     }
 
     @Test
-    void testLidtPositiv() {
+    void testBeregnWhiskyTilovers_LidtPositiv() {
         //Arrange
         double stoerrelse = 0.5;
         int antalFlasker = 10;
@@ -79,6 +80,7 @@ public class Test_beregnWhiskyTilovers {
         //Act
         double whiskyTilovers = whiskyProdukt.beregnWhiskyTilovers(stoerrelse,antalFlasker);
 
+        //Pga. afrundinger i Java bliver vi nødt til at indføre en fejlmargin
         //Assert
         assertEquals(0.1,whiskyTilovers,0.000000005);
     }

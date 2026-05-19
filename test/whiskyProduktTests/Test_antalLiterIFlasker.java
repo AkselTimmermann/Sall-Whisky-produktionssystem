@@ -22,7 +22,6 @@ public class Test_antalLiterIFlasker {
     @Mock private Flaske mockFlaske0751;
     @Mock private Flaske mockFlaske0752;
     @Mock private Flaske mockFlaske0753;
-    @Mock private Flaske mockFlaskeTestExceptions;
 
     private AutoCloseable closeable;
 
@@ -37,7 +36,7 @@ public class Test_antalLiterIFlasker {
     }
 
     @Test
-    void antalLiterIFlaskerAlmindeligTest() throws IllegalAccessException, NoSuchFieldException {
+    void testAntalLiterIFlaskerAlmindeligTest() throws IllegalAccessException, NoSuchFieldException {
         //Arrange
         ArrayList<Flaske> flasker = new ArrayList<>(Arrays.asList(mockFlaske005,mockFlaske1000,mockFlaske0751,mockFlaske0752,mockFlaske0753));
         Field field = whiskyProdukt.getClass().getDeclaredField("flasker");
@@ -58,7 +57,7 @@ public class Test_antalLiterIFlasker {
     }
 
     @Test
-    void antalFlaskerIngenFlasker(){
+    void testAntalFlasker_IngenFlasker_Exception(){
         //Arrange
         //Vi tester en resultatet ved en tom liste af flasker, så der skal ikke tilknyttes nogen
 
