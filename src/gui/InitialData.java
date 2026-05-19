@@ -29,11 +29,11 @@ public class InitialData {
 
 
         controller.createFad("54", "Egetræ",
-                "Lille ex-bourbon fad af spansk egetræ.", 32, l2);
+                "Ex-bourbon", 32, l2);
         controller.createFad("58", "Egetræ",
-                "Mellem dansk egetræsfad", 94, l1);
+                "Ex-cherry", 94, l1);
         controller.createFad("314", "Egetræ",
-                "Stort fransk Revesaltes Ambré fad. Tidligere brugt til lagring af hedvin.",
+                "Ex-Revesaltes Ambré",
                 230, l3);
 
 

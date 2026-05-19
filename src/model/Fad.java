@@ -11,38 +11,29 @@ public class Fad implements LagerObjekt {
     private FadStatus status;
     private Leverandoer leverandoer;
     private LagerPlads lagerPlads;
-
-    private ArrayList<FadIndhold> fadIndholdListe = new ArrayList<>();
+    private FadIndhold nuvaerendeFadindhold;
+    private ArrayList<FadIndhold> gammeltFadIndholdListe = new ArrayList<>();
 
     public Fad(String fadId, String traaType, String beskrivelse, double stoerrelse, Leverandoer leverandoer) {
         this.fadId = fadId;
         this.traaType = traaType;
         this.beskrivelse = beskrivelse;
         this.stoerrelse = stoerrelse;
-        this.status = FadStatus.DEAKTIVERET;
         this.leverandoer = leverandoer;
     }
 
-    public void addFadIndhold(FadIndhold fadIndhold) {
-        if (!fadIndholdListe.contains(fadIndhold)) {
-            fadIndholdListe.add(fadIndhold);
+    public void addGammmeltFadIndhold(FadIndhold fadIndhold) {
+        if (!gammeltFadIndholdListe.contains(fadIndhold)) {
+            gammeltFadIndholdListe.add(fadIndhold);
         }
     }
 
     public FadIndhold getAktivtFadIndhold() {
-        if (fadIndholdListe.isEmpty()) {
-            return null;
-        }
-        return fadIndholdListe.getLast();
+        return nuvaerendeFadindhold;
     }
 
-    public ArrayList<FadIndhold> getFadIndholdListe() {
-        return new ArrayList<>(fadIndholdListe);
-    }
-
-
-    public FadStatus getStatus() {
-        return status;
+    public ArrayList<FadIndhold> getGammeltFadIndholdListe() {
+        return new ArrayList<>(gammeltFadIndholdListe);
     }
 
     public String getTraaType() {
@@ -109,6 +100,28 @@ public class Fad implements LagerObjekt {
         return "FadID: " + fadId + " | " +
                 "Trætype: " + traaType + " | " +
                 "Størrelse: " + stoerrelse + " | " +
-                "Status: " + status;
+                "Status: " + getStatus();
+    }
+
+    public void setNuvaerendeFadindhold(FadIndhold nuvaerendeFadindhold) {
+        if (this.nuvaerendeFadindhold!=null){
+            if (this.nuvaerendeFadindhold.getResterendeLiter()==0){
+                gammeltFadIndholdListe.add(this.nuvaerendeFadindhold);
+            }
+            else {
+                throw new IllegalArgumentException("Der er allerede oprettet indhold til dette fad");
+            }
+        }
+        this.nuvaerendeFadindhold = nuvaerendeFadindhold;
+    }
+
+    public FadStatus getStatus() {
+        if (status==FadStatus.DEAKTIVERET) return FadStatus.DEAKTIVERET;
+        else if (nuvaerendeFadindhold == null) {
+            return FadStatus.INAKTIV;
+        } else if (nuvaerendeFadindhold.getResterendeLiter()>0) {
+            return FadStatus.AKTIV;
+        }
+        else return FadStatus.INAKTIV;
     }
 }

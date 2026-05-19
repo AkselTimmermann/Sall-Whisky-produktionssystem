@@ -179,7 +179,7 @@ public class RegistrerPaafyldningPane extends BorderPane {
         cmbFad.getItems().clear();
         cmbMedarbejder.getItems().clear();
 
-        cmbDestillat.getItems().addAll(controller.getDestillater());
+        cmbDestillat.getItems().addAll(controller.getDestillaterIkkeTom());
         cmbFad.getItems().addAll(controller.getFade());
         cmbMedarbejder.getItems().addAll(controller.getMedarbejdere());
     }

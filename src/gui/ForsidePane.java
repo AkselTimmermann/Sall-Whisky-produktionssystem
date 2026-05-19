@@ -162,7 +162,7 @@ public class ForsidePane extends BorderPane {
             sb.append("Lagerplacering: Ikke placeret\n");
         }
 
-        sb.append("\nFadindhold på fadet: ").append(fad.getFadIndholdListe().size()).append("\n");
+        sb.append("\nFadindhold på fadet: ").append(fad.getAktivtFadIndhold()).append("\n");
 
         txaDetaljer.setText(sb.toString());
     }

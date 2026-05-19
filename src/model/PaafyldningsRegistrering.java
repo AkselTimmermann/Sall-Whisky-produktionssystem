@@ -16,10 +16,10 @@ public class PaafyldningsRegistrering {
         if (fadIndhold == null) {
             throw new IllegalStateException("Der skal være et ledigt fad");
         }
-        destillat.reducerResterendeLiter(antalLiter);
+        destillat.tjekLiterNok(antalLiter);
+        setDestillat(destillat);
         this.antalLiter = antalLiter;
         this.dato = dato;
-        this.destillat = destillat;
         this.fadIndhold = fadIndhold;
         this.medarbejder = medarbejder;
     }
@@ -42,5 +42,12 @@ public class PaafyldningsRegistrering {
 
     public Medarbejder getMedarbejder() {
         return medarbejder;
+    }
+
+    public void setDestillat(Destillat destillat) {
+        if (!destillat.getPaafyldningsRegistreringer().contains(this)){
+            this.destillat = destillat;
+            destillat.addPaafyldningsregistrering(this);
+        }
     }
 }

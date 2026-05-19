@@ -237,6 +237,16 @@ public class Controller {
         return storage.getDestillat();
     }
 
+    public ArrayList<Destillat> getDestillaterIkkeTom(){
+        ArrayList<Destillat> destillaterIkkeTom = new ArrayList<>();
+        for (Destillat destillat : getDestillater()){
+            if (destillat.getAntalLiter() > 0){
+                destillaterIkkeTom.add(destillat);
+            }
+        }
+        return destillaterIkkeTom;
+    }
+
     public ArrayList<Medarbejder> getMedarbejdere() {
         return storage.getMedarbejder();
     }
@@ -252,4 +262,6 @@ public class Controller {
     public FadIndhold getAktivtFadIndhold(Fad fad) {
         return fad.getAktivtFadIndhold();
     }
+
+
 }
