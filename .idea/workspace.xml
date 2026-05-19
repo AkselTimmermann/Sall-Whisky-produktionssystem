@@ -6,60 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ForsidePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ForsidePane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Destillat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/PaafyldningsRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/PaafyldningsRegistrering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/ForsidePane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/InitialData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestillatPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretDestilleringPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretFadPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretLagerPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/OpretWhiskyProduktPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerFlaskningPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerLagerPlacering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerModningPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/RegistrerPaafyldningPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Destillering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Fad.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FadIndhold.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FadStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Flaske.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/FlaskeSamling.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Hylde.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Lager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/LagerObjekt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/LagerPlads.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Leverandoer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/MaltBatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Medarbejder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/ModningsRegistrering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/PaafyldningsRegistrering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/ProduktRegistrering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Reol.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/WhiskyProdukt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/WhiskyType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/Storage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/StorageInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/lagerTests/Test_Lager_Metoder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_antalLiterIFlasker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_beregnAlkoholProcent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_beregnWhiskyTilovers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_createProduktRegistrering.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_create_Flasker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_isCaskStrength.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_isWhiskyType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_maksAntalFlasker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_samletAlkoholMaengde.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_samletAntalLiter.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
