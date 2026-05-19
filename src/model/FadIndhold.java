@@ -15,8 +15,8 @@ public class FadIndhold {
         if (fad == null) {
             throw new IllegalArgumentException("Fad skal angives");
         }
+        fad.setNuvaerendeFadindhold(this);
         this.fad = fad;
-        fad.addFadIndhold(this);
     }
 
 
@@ -24,6 +24,10 @@ public class FadIndhold {
     public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Medarbejder medarbejder) {
         PaafyldningsRegistrering paafyldningsRegistrering = new PaafyldningsRegistrering(antalLiter, dato, destillat, this, medarbejder);
         paafyldningsRegistreringer.add(paafyldningsRegistrering);
+        if (!modningsRegistreringer.isEmpty()){
+            modningsRegistreringer.getLast().addAntalLiter(antalLiter);
+        }
+        else initierModningsregistreringHvisIngen();
         return paafyldningsRegistrering;
     }
 
@@ -83,6 +87,9 @@ public class FadIndhold {
         initierModningsregistreringHvisIngen();
 
         modningsRegistreringer.getLast().reducerLiter(antalLiter);
+        if (modningsRegistreringer.getLast().getAntalLiter()==0){
+            this.fad.setNuvaerendeFadindhold(null);
+        }
 
     }
 

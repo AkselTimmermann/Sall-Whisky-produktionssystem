@@ -38,6 +38,10 @@ public class Destillat {
     }
 
     public double getAntalLiter() {
+        return antalLiter - paafyldningsRegistreringer.stream().mapToDouble(paafyldningsRegistrering->paafyldningsRegistrering.getAntalLiter()).sum();
+    }
+
+    public double getOprindeligAntalLiter(){
         return antalLiter;
     }
 
@@ -57,15 +61,21 @@ public class Destillat {
         return new ArrayList<>(destilleringer);
     }
 
-    public void reducerResterendeLiter(double liter) {
-        if (liter > antalLiter) {
+    public void tjekLiterNok(double liter) {
+        if (liter > getAntalLiter()) {
             throw new IllegalArgumentException("Ikke nok væske");
         }
-        this.antalLiter -= liter;
     }
 
     @Override
     public String toString() {
         return destillatNr + " (" + antalLiter + " liter, " + String.format("%.2f", alkoholProcent) + "%)";
+    }
+
+    public void addPaafyldningsregistrering(PaafyldningsRegistrering paafyldningsRegistrering) {
+        if (!paafyldningsRegistreringer.contains(paafyldningsRegistrering)){
+            this.paafyldningsRegistreringer.add(paafyldningsRegistrering);
+            paafyldningsRegistrering.setDestillat(this);
+        }
     }
 }
