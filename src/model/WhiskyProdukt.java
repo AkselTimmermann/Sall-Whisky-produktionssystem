@@ -1,7 +1,10 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class WhiskyProdukt {
     private int produktNr;
@@ -101,6 +104,62 @@ public class WhiskyProdukt {
         return (int) ((samletAntalLiter()-antalLiterIFlasker())/stoerrelse);
     }
 
+    public int getModningsAlderIAar() {
+        ProduktRegistrering nyeste = produktRegistreringer.getFirst();
+        for (ProduktRegistrering produktRegistrering : produktRegistreringer) {
+            LocalDate nyesteDato = nyeste.getFadIndhold().getPaafyldningsRegistreringer().getLast().getDato();
+            LocalDate prDato = produktRegistrering.getFadIndhold().getPaafyldningsRegistreringer().getLast().getDato();
+            if (nyesteDato.isBefore(prDato)) {
+                nyeste = produktRegistrering;
+            }
+        }
+        FadIndhold fadIndhold = nyeste.getFadIndhold();
+
+        LocalDate first = fadIndhold.getPaafyldningsRegistreringer().getLast().getDato();
+        LocalDate last = getDato();
+
+        return Period.between(first, last).getYears();
+    }
+
+    public Set<MaltBatch> getDistinctMaltBatches() {
+        Set<MaltBatch> maltBatch = new HashSet<>();
+        for (ProduktRegistrering pr : produktRegistreringer) {
+            maltBatch.addAll(pr.getFadIndhold().getDistinctMaltBatch());
+        }
+        return maltBatch;
+    }
+    public Set<String> getDistinctFadeBeskrivelser() {
+        Set<String> fadeBeskrivelser = new HashSet<>();
+        for (ProduktRegistrering pr : produktRegistreringer) {
+            fadeBeskrivelser.add(pr.getFadIndhold().getFad().getBeskrivelse());
+        }
+        return fadeBeskrivelser;
+    }
+
+    public Set<Fad> getDistinctFade() {
+        Set<Fad> distinctFade = new HashSet<>();
+        for (ProduktRegistrering pr : produktRegistreringer) {
+            distinctFade.add(pr.getFadIndhold().getFad());
+        }
+        return distinctFade;
+    }
+
+    public Set<Destillering> getDistinctDestilleringer() {
+        Set<Destillering> distinctDestilleringer = new HashSet<>();
+        for (ProduktRegistrering pr : produktRegistreringer) {
+            distinctDestilleringer.addAll(pr.getFadIndhold().getDistinctDestillering());
+        }
+        return distinctDestilleringer;
+    }
+
+    public Set<Double> getDistinctFlaskeStoerrelser() {
+        Set<Double> flaskeStoerrelse = new HashSet<>();
+        for (Flaske flaske : getFlasker()) {
+            flaskeStoerrelse.add(flaske.getStoerrelse());
+        }
+        return flaskeStoerrelse;
+    }
+
     public double beregnAlkoholProcent(){
         if (samletAntalLiter()<=0){
             throw new IllegalStateException("Alkoholprocenten kan ikke udregnet, da der ikke er tilføjet whisky til produktet");
@@ -149,9 +208,18 @@ public class WhiskyProdukt {
         return new ArrayList<>(flasker);
     }
 
+    public LocalDate getDato() {
+        return dato;
+    }
+
+    public String getBeskrivelse() {
+        return beskrivelse;
+    }
+
     public String toString() {
         return navn + ", " + samletAntalLiter();
     }
+
 
 
 }

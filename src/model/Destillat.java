@@ -1,6 +1,8 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Destillat {
     private double antalLiter;
@@ -20,6 +22,23 @@ public class Destillat {
             updateAntalLiterAndAlkoholprocent(antalLiterAfHverDestillering[i],destilleringer.get(i).getAlkoholProcent());
         }
     }
+
+    public Set<MaltBatch> getDistinctMaltBatch() {
+        Set<MaltBatch> maltBatch = new HashSet<>();
+        for (Destillering destillering : destilleringer) {
+            maltBatch.add(destillering.getMaltBatch());
+        }
+        return maltBatch;
+    }
+
+    public Set<Destillering> getDistinctDestillering() {
+        Set<Destillering> distinctDestilleringer = new HashSet<>();
+        for (Destillering destillering : destilleringer) {
+            distinctDestilleringer.add(destillering);
+        }
+        return distinctDestilleringer;
+    }
+
 
     private void setDestilleringer(ArrayList<Destillering> destilleringer) {
         destilleringer.forEach(destillering -> addDestillering(destillering));

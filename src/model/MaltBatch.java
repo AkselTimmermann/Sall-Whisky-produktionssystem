@@ -13,5 +13,8 @@ public class MaltBatch {
         this.batchNr = batchNr;
     }
 
+    public String toString() {
+        return "Mark: " + kornMark + " | " + " Korn sort" + bygSort + "\n";
+    }
 
 }
