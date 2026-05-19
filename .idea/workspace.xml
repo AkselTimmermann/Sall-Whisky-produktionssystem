@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Mini-ændringer i ForsidePane mm.">
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/ForsidePane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/ForsidePane.class" afterDir="false" />
-    </list>
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Mini-ændringer i ForsidePane mm. + xml" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,11 +182,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
-      <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
+      <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
+      <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
@@ -223,7 +221,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="paafyldningsRegistrering lavet i Controller" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerr" />
     <MESSAGE value="paafyldningsRegistrering lavet i Controllerrr" />
     <MESSAGE value="Test navne opdateret" />
@@ -248,6 +245,7 @@
     <MESSAGE value="3 tests" />
     <MESSAGE value="Paafyldning af fad ændrer maengde destillat" />
     <MESSAGE value="Mini-ændringer i ForsidePane mm." />
-    <option name="LAST_COMMIT_MESSAGE" value="Mini-ændringer i ForsidePane mm." />
+    <MESSAGE value="Mini-ændringer i ForsidePane mm. + xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mini-ændringer i ForsidePane mm. + xml" />
   </component>
 </project>
