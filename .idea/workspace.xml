@@ -4,23 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Ændringer primært på laget">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Ændringer i initData">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ModningsRegistrering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_beregnAlkoholProcent.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_beregnAlkoholProcent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_beregnWhiskyTilovers.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_beregnWhiskyTilovers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_createProduktRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_createProduktRegistrering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_create_Flasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_create_Flasker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_isCaskStrength.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_isCaskStrength.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_isWhiskyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_isWhiskyType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_maksAntalFlasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_maksAntalFlasker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_samletAlkoholMaengde.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_samletAlkoholMaengde.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,114 +58,97 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.Test_Lager_Metoder (1).executor": "Run",
-    "JUnit.Test_Lager_Metoder.executor": "Run",
-    "JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor": "Run",
-    "JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet.executor": "Run",
-    "JUnit.Test_Lager_Metoder.findPlads_HyldeFindesIkke_CastException.executor": "Run",
-    "JUnit.Test_Lager_Metoder.findPlads_ReolFindesIkke_CastException.executor": "Run",
-    "JUnit.Test_Lager_Metoder.findPlads_gyldigplads_returnererPlads.executor": "Run",
-    "JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException.executor": "Run",
-    "JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes.executor": "Run",
-    "JUnit.Test_Lager_Metoder.placerObjekt_GyldigPlads_objektPlaceres.executor": "Run",
-    "JUnit.Test_Lager_Metoder.placerObjekt_PlaceringFindesIkke_CastException.executor": "Run",
-    "JUnit.Test_Lager_Metoder.placerObjekt_UgyldigPlads_PladsOptaget.executor": "Run",
-    "JUnit.Test_antalLiterIFlasker.antalFlaskerIngenFlasker.executor": "Run",
-    "JUnit.Test_antalLiterIFlasker.antalLiterIFlaskerAlmindeligTest.executor": "Run",
-    "JUnit.Test_beregnAlkoholProcent.testBeregnAlkoholProcent_MereAlkoholEndVaeske_Exception.executor": "Run",
-    "JUnit.Test_beregnAlkoholProcent.testDividerMedNul.executor": "Run",
-    "JUnit.Test_beregnAlkoholProcent.testNormal.executor": "Run",
-    "JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul.executor": "Run",
-    "JUnit.Test_beregnWhiskyTilovers.testLidtNegativ.executor": "Run",
-    "JUnit.Test_beregnWhiskyTilovers.testLidtPositiv.executor": "Run",
-    "JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul.executor": "Run",
-    "JUnit.Test_createProduktRegistrering.testCreateProduktRegistrering_ErLagretForKortTid_Exception.executor": "Run",
-    "JUnit.Test_createProduktRegistrering.testCreateProduktRegistrering_FadindholdNull_Exception.executor": "Run",
-    "JUnit.Test_createProduktRegistrering.testCreateProduktRegistrering_NormalErTilføjetListe.executor": "Run",
-    "JUnit.Test_createProduktRegistrering.testCreateProduktRegistrering_antalLiterMindreEnd0_Exception.executor": "Run",
-    "JUnit.Test_createProduktRegistrering.testCreateProduktRegistrering_ikkeNotLiterIFadindhold_Exception.executor": "Run",
-    "JUnit.Test_create_Flasker.testExceptionAntalFlasker0.executor": "Run",
-    "JUnit.Test_create_Flasker.testExceptionStoerrelse0.executor": "Run",
-    "JUnit.Test_isCaskStrength.testIsCaskStrength_False01Fortynding.executor": "Run",
-    "JUnit.Test_isCaskStrength.testIsCaskStrength_True0Fortynding.executor": "Run",
-    "JUnit.Test_isWhiskyType.executor": "Run",
-    "JUnit.Test_isWhiskyType.testIsWhiskyType_SingleMaltOgSingleCask.executor": "Run",
-    "JUnit.Test_isWhiskyType.testIsWhiskyType_SingleMaltOgSingleCaskSammeFadindhold.executor": "Run",
-    "JUnit.Test_isWhiskyType.testIsWhiskyType_TomListe_exception.executor": "Run",
-    "JUnit.Test_maksAntalFlasker.testMaksAntalFlasker_RundNedTilHeleFlasker.executor": "Run",
-    "JUnit.Test_maksAntalFlasker.testMaksAntalFlasker_stoerrelseMindreEnd0_Exception.executor": "Run",
-    "JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_100pAlkohol.executor": "Run",
-    "JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_IngenProduktregistreringer.executor": "Run",
-    "JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_lilleMaengde.executor": "Run",
-    "Maven.sall-whisky-produktionssystem [clean].executor": "Run",
-    "Maven.sall-whisky-produktionssystem [javafx:run].executor": "Run",
-    "Maven.sall-whisky-produktionssystem [test].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Sall-Whisky-produktionssystem/pom.xml",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.Test_Lager_Metoder (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.findPlacering_ObjektetFindesIkke_PlaceringIkkeFundet.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.findPlads_HyldeFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.findPlads_ReolFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.findPlads_gyldigplads_returnererPlads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.fjernObjekt_ObjektFindes_ObjektFjernes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.placerObjekt_GyldigPlads_objektPlaceres.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.placerObjekt_PlaceringFindesIkke_CastException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_Lager_Metoder.placerObjekt_UgyldigPlads_PladsOptaget.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_antalLiterIFlasker.antalFlaskerIngenFlasker.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_antalLiterIFlasker.antalLiterIFlaskerAlmindeligTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_beregnAlkoholProcent.testDividerMedNul.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_beregnAlkoholProcent.testNormal.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_beregnWhiskyTilovers.testLidtNegativ.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_beregnWhiskyTilovers.testLidtPositiv.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_create_Flasker.testExceptionAntalFlasker0.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Test_create_Flasker.testExceptionStoerrelse0.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sall-whisky-produktionssystem [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sall-whisky-produktionssystem [javafx:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.sall-whisky-produktionssystem [test].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Sall-Whisky-produktionssystem/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_100pAlkohol">
-    <configuration name="Test_maksAntalFlasker.testMaksAntalFlasker_RundNedTilHeleFlasker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Maven.sall-whisky-produktionssystem [javafx:run]">
+    <configuration name="Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_maksAntalFlasker" />
-      <option name="METHOD_NAME" value="testMaksAntalFlasker_RundNedTilHeleFlasker" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_beregnWhiskyTilovers" />
+      <option name="METHOD_NAME" value="testFlaskerFaerreEndNul" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_maksAntalFlasker.testMaksAntalFlasker_stoerrelseMindreEnd0_Exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_beregnWhiskyTilovers.testLidtNegativ" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_maksAntalFlasker" />
-      <option name="METHOD_NAME" value="testMaksAntalFlasker_stoerrelseMindreEnd0_Exception" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_beregnWhiskyTilovers" />
+      <option name="METHOD_NAME" value="testLidtNegativ" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_samletAlkoholMaengde.testSamletAlkoholMaengde_100pAlkohol" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_beregnWhiskyTilovers.testLidtPositiv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_samletAlkoholMaengde" />
-      <option name="METHOD_NAME" value="testSamletAlkoholMaengde_100pAlkohol" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_beregnWhiskyTilovers" />
+      <option name="METHOD_NAME" value="testLidtPositiv" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_samletAlkoholMaengde.testSamletAlkoholMaengde_IngenProduktregistreringer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_create_Flasker.testExceptionAntalFlasker0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_samletAlkoholMaengde" />
-      <option name="METHOD_NAME" value="testSamletAlkoholMaengde_IngenProduktregistreringer" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
+      <option name="METHOD_NAME" value="testExceptionAntalFlasker0" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_samletAlkoholMaengde.testSamletAlkoholMaengde_lilleMaengde" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_create_Flasker.testExceptionStoerrelse0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_samletAlkoholMaengde" />
-      <option name="METHOD_NAME" value="testSamletAlkoholMaengde_lilleMaengde" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
+      <option name="METHOD_NAME" value="testExceptionStoerrelse0" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -216,20 +185,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.Test_maksAntalFlasker.testMaksAntalFlasker_RundNedTilHeleFlasker" />
-      <item itemvalue="JUnit.Test_maksAntalFlasker.testMaksAntalFlasker_stoerrelseMindreEnd0_Exception" />
-      <item itemvalue="JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_100pAlkohol" />
-      <item itemvalue="JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_IngenProduktregistreringer" />
-      <item itemvalue="JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_lilleMaengde" />
+      <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
+      <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
+      <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />
+      <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
+      <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_100pAlkohol" />
-        <item itemvalue="JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_IngenProduktregistreringer" />
-        <item itemvalue="JUnit.Test_samletAlkoholMaengde.testSamletAlkoholMaengde_lilleMaengde" />
-        <item itemvalue="JUnit.Test_maksAntalFlasker.testMaksAntalFlasker_RundNedTilHeleFlasker" />
-        <item itemvalue="JUnit.Test_maksAntalFlasker.testMaksAntalFlasker_stoerrelseMindreEnd0_Exception" />
+        <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
+        <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
+        <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
+        <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
+        <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />
       </list>
     </recent_temporary>
   </component>
@@ -279,7 +248,7 @@
     <MESSAGE value="ModningsRegistrering opdateret" />
     <MESSAGE value="RegistrerFlaskningPane ændret så man kan se antal flaskesamlinger, der skal placeres" />
     <MESSAGE value="blabla" />
-    <MESSAGE value="Ændringer primært på laget" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændringer primært på laget" />
+    <MESSAGE value="Ændringer i initData" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændringer i initData" />
   </component>
 </project>

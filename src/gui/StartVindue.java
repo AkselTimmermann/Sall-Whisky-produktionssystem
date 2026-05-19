@@ -5,8 +5,10 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Separator;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 
@@ -122,56 +124,64 @@ public class StartVindue extends BorderPane {
         button.setStyle(menuButtonStyle(false));
         return button;
     }
+    private void setCenterWithScroll(Pane pane) {
+        ScrollPane scrollPane = new ScrollPane(pane);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setFitToHeight(false);
+        scrollPane.setPannable(true);
+
+        this.setCenter(scrollPane);
+    }
 
     private void showForside() {
         markSelected(btnForside);
-        this.setCenter(new ForsidePane(controller));
+        setCenterWithScroll(new ForsidePane(controller));
     }
 
     private void showOpretLager() {
         markSelected(btnOpretLager);
-        this.setCenter(new OpretLagerPane(controller));
+        setCenterWithScroll(new OpretLagerPane(controller));
     }
 
     private void showOpretFad() {
         markSelected(btnOpretFad);
-        this.setCenter(new OpretFadPane(controller, this));
+        setCenterWithScroll(new OpretFadPane(controller, this));
     }
 
     private void showOpretDestillering() {
         markSelected(btnOpretDestillering);
-        this.setCenter(new OpretDestilleringPane(controller));
+        setCenterWithScroll(new OpretDestilleringPane(controller));
     }
 
     private void showOpretDestillat() {
         markSelected(btnOpretDestillat);
-        this.setCenter(new OpretDestillatPane(controller));
+        setCenterWithScroll(new OpretDestillatPane(controller));
     }
 
     private void showRegistrerPaafyldning() {
         markSelected(btnRegistrerPaafyldning);
-        this.setCenter(new RegistrerPaafyldningPane(controller));
+        setCenterWithScroll(new RegistrerPaafyldningPane(controller));
     }
 
     private void showRegistrerModning() {
         markSelected(btnRegistrerModning);
-        this.setCenter(new RegistrerModningPane(controller));
+        setCenterWithScroll(new RegistrerModningPane(controller));
     }
 
 
 
     private void showOpretWhiskyProdukt() {
         markSelected(btnOpretWhiskyProdukt);
-        this.setCenter(new OpretWhiskyProduktPane(controller));
+        setCenterWithScroll(new OpretWhiskyProduktPane(controller));
     }
 
     private void showRegistrerFlaskning() {
         markSelected(btnRegistrerFlaskning);
-        this.setCenter(new RegistrerFlaskningPane(controller, this));
+        setCenterWithScroll(new RegistrerFlaskningPane(controller, this));
     }
     public void showRegistrerLagerPlacering() {
         markSelected(btnRegistrerLagerPlacering);
-        this.setCenter(new RegistrerLagerPlacering(controller));
+        setCenterWithScroll(new RegistrerLagerPlacering(controller));
     }
 
 
