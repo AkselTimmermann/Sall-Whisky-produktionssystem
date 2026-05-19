@@ -51,10 +51,6 @@ public class WhiskyProdukt {
         return produktRegistrering;
     }
 
-    public LocalDate getDato() {
-        return dato;
-    }
-
     public double getFortynding() {
         return fortynding;
     }

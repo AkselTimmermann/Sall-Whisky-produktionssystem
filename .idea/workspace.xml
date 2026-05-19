@@ -185,11 +185,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
-      <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testFlaskerFaerreEndNul" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtNegativ" />
       <item itemvalue="JUnit.Test_beregnWhiskyTilovers.testLidtPositiv" />
+      <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
+      <item itemvalue="JUnit.Test_create_Flasker.testExceptionStoerrelse0" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
