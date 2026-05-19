@@ -24,6 +24,10 @@ public class ForsidePane extends BorderPane {
 
     private Label lblAntalFade;
     private Label lblAntalFadIndhold;
+    private ListView<WhiskyProdukt> whiskyProduktListView = new ListView<>();
+    private TextArea whiskyTextArea = new TextArea();
+    private Label whiskyLbl = new Label("Whisky produkter");
+    private Label whiskyInfoLbl = new Label("Whisky produkt info");
 
     public ForsidePane(Controller controller) {
         this.controller = controller;
@@ -109,6 +113,14 @@ public class ForsidePane extends BorderPane {
                 }
         );
 
+        whiskyProduktListView.getSelectionModel().selectedItemProperty().addListener((
+                observableValue, oldWhiskyProdukt, newWhiskyProdukt) -> {
+            if (newWhiskyProdukt != null) {
+                whiskyProduktListView.getSelectionModel().clearSelection();
+                whiskyProduktInfo(newWhiskyProdukt);
+            }
+        });
+
         pane.add(lblFadeTitel, 0, 0);
         pane.add(lblFadIndholdTitel, 1, 0);
         pane.add(lblDetaljerTitel, 2, 0);
@@ -119,6 +131,11 @@ public class ForsidePane extends BorderPane {
 
         pane.add(lblAntalFade, 0, 2);
         pane.add(lblAntalFadIndhold, 1, 2);
+
+        pane.add(whiskyLbl,0,3);
+        pane.add(whiskyProduktListView,0,4);
+        pane.add(whiskyInfoLbl,1,3);
+        pane.add(whiskyTextArea,1,4);
 
 
         return pane;
@@ -220,5 +237,10 @@ public class ForsidePane extends BorderPane {
         lblAntalFadIndhold.setText("Antal fadindhold: " + controller.getFadIndhold().size());
 
         txaDetaljer.setText("Vælg et fad eller fadindhold for at se detaljer.");
+    }
+
+    private void whiskyProduktInfo(WhiskyProdukt whiskyProdukt) {
+        StringBuilder sb = new StringBuilder();
+
     }
 }
