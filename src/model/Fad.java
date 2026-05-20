@@ -100,7 +100,7 @@ public class Fad implements LagerObjekt {
         return "FadID: " + fadId + " | " +
                 "Trætype: " + traaType + " | " +
                 "Størrelse: " + stoerrelse + " | " +
-                "Status: " + status;
+                "Status: " + getStatus();
     }
 
     public void setNuvaerendeFadindhold(FadIndhold nuvaerendeFadindhold) {

@@ -25,7 +25,7 @@ public class Test_create_Flasker {
     }
 
     @Test
-    void testExceptionStoerrelse0(){
+    void testCreateFlasker_Stoerrelse0_Exception(){
         //Arrange
         double stoerrelse = 0;
         int antal = 10;
@@ -35,7 +35,7 @@ public class Test_create_Flasker {
     }
 
     @Test
-    void testExceptionAntalFlasker0(){
+    void testCreateFlasker_AntalFlasker0_Exception(){
         //Arrange
         double stoerrelse = 10;
         int antal = 0;
@@ -44,7 +44,7 @@ public class Test_create_Flasker {
         assertThrows(IllegalArgumentException.class,()->whiskyProdukt.createFlasker(stoerrelse,antal,flaskeSamling));
     }
 @Test
-    void testOpret1LilleFlaske(){
+    void testCreateFlasker_Opret1LilleFlaske(){
         //Arrange
         double stoerrelse = 0.1;
         int antal = 1;
@@ -63,7 +63,7 @@ public class Test_create_Flasker {
     }
 
     @Test
-    void test100StoreFlasker(){
+    void testOpretFlasker_100StoreFlasker(){
         //Arrange
         double stoerrelse = 0.75;
         int antal = 100;

@@ -13,6 +13,9 @@ public class ModningsRegistrering {
         if (alkoholProcent<0){
             throw new IllegalArgumentException("Du kan ikke have negativ alkoholprocent");
         }
+        if (alkoholProcent>100){
+            throw new IllegalArgumentException("Du kan ikke have en alkoholprocent på mere end 100%");
+        }
         if (antalLiter<0){
             throw new IllegalArgumentException("Der skal være mere mindst 0 liter tilbage");
         }

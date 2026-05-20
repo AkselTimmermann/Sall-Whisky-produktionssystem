@@ -26,7 +26,7 @@ public class Test_beregnAlkoholProcent {
     }
 
     @Test
-    void testDividerMedNul() {
+    void testBeregnAlkoholProcent_DividerMedNul_Exception() {
         //Arrange
 
         Mockito.when(whiskyProdukt.samletAntalLiter()).thenReturn((double) 0);
@@ -38,7 +38,17 @@ public class Test_beregnAlkoholProcent {
     }
 
     @Test
-    void testNormal() {
+    void testBeregnAlkoholProcent_MereAlkoholEndVaeske_Exception(){
+        //Arrange
+        Mockito.when(whiskyProdukt.samletAntalLiter()).thenReturn( 20.0);
+        Mockito.when(whiskyProdukt.samletAlkoholMaengde()).thenReturn(20.1);
+
+        //Act and Assert
+        assertThrows(RuntimeException.class,()->whiskyProdukt.beregnAlkoholProcent());
+    }
+
+    @Test
+    void testBeregnAlkoholProcent_Normal() {
         //Arrange
 
         Mockito.when(whiskyProdukt.samletAntalLiter()).thenReturn((double) 20);

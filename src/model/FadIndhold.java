@@ -2,6 +2,8 @@ package model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class FadIndhold {
 
@@ -19,6 +21,21 @@ public class FadIndhold {
         this.fad = fad;
     }
 
+    public Set<MaltBatch> getDistinctMaltBatch() {
+        Set<MaltBatch> maltBatch = new HashSet<>();
+        for (PaafyldningsRegistrering pr : paafyldningsRegistreringer) {
+            maltBatch.addAll(pr.getDestillat().getDistinctMaltBatch());
+        }
+        return maltBatch;
+    }
+
+    public Set<Destillering> getDistinctDestillering() {
+        Set<Destillering> distinctDestilleringer = new HashSet<>();
+        for (PaafyldningsRegistrering pr : paafyldningsRegistreringer) {
+            distinctDestilleringer.addAll(pr.getDestillat().getDistinctDestillering());
+        }
+        return distinctDestilleringer;
+    }
 
 
     public PaafyldningsRegistrering opretPaafyldningsRegistrering(double antalLiter, LocalDate dato, Destillat destillat, Medarbejder medarbejder) {
@@ -107,6 +124,11 @@ public class FadIndhold {
     public ArrayList<ModningsRegistrering> getModningsRegistreringer() {
         initierModningsregistreringHvisIngen();
         return new ArrayList<>(modningsRegistreringer);
+    }
+
+    public double getSidstRegistreredeAlkoholProcent(){
+        initierModningsregistreringHvisIngen();
+        return getModningsRegistreringer().getLast().getAlkoholProcent();
     }
 
     public void initierModningsregistreringHvisIngen(){

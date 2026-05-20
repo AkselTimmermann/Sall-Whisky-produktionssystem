@@ -12,7 +12,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import model.*;
 
+import java.time.Period;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ForsidePane extends BorderPane {
 
@@ -240,7 +243,6 @@ public class ForsidePane extends BorderPane {
     }
 
     private void whiskyProduktInfo(WhiskyProdukt whiskyProdukt) {
-        StringBuilder sb = new StringBuilder();
-
+        controller.visHistorik(whiskyProdukt);
     }
 }
