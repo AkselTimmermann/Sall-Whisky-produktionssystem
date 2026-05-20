@@ -211,7 +211,6 @@ public class Controller {
     }
 
     public int  registrerFlaskning(WhiskyProdukt whiskyProdukt, double stoerrelse, int antal) {
-
         int resterendeFlasker = antal;
         int antalSamlinger = 0;
 

@@ -13,7 +13,7 @@ public class ProduktRegistrering {
     }
 
     public void setFadindhold(FadIndhold fadIndhold) {
-        if (!this.fadIndhold.equals(fadIndhold)){
+        if (this.fadIndhold != fadIndhold){
             this.fadIndhold = fadIndhold;
             fadIndhold.addProduktRegistrering(this);
         }
