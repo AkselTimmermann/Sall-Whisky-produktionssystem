@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 public class WhiskyProdukt {
@@ -168,11 +169,11 @@ public class WhiskyProdukt {
     }
 
     public double beregnAlkoholProcent(){
-        if (samletAntalLiter()<=0){
-            throw new IllegalStateException("Alkoholprocenten kan ikke udregnet, da der ikke er tilføjet whisky til produktet");
-        }
         if (samletAlkoholMaengde()>samletAntalLiter()){
             throw new RuntimeException("Der er sket en fejl et sted. Der er mere ren alkohol end der er vaeske tilknyttet produktet");
+        }
+        if (samletAntalLiter()==0){
+            return 0;
         }
         return samletAlkoholMaengde()/samletAntalLiter();
     }

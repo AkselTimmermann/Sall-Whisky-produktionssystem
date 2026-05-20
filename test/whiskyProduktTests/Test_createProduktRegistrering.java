@@ -50,10 +50,10 @@ public class Test_createProduktRegistrering {
     }
 
     @Test
-    void testCreateProduktRegistrering_ikkeNotLiterIFadindhold_Exception() {
+    void testCreateProduktRegistrering_ikkeNokLiterIFadindhold_Exception() {
         //Arrange
-        double antalLiter = 100;
-        Mockito.when(fadIndhold.getResterendeLiter()).thenReturn(99.5);
+        double antalLiter = 100.5;
+        Mockito.when(fadIndhold.getResterendeLiter()).thenReturn(100.0);
         Mockito.when(fadIndhold.isLagretMinimum3Aar(whiskyProdukt.getDato())).thenReturn(true);
 
         //Act & Assert

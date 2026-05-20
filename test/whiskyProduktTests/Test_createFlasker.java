@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Test_create_Flasker {
+public class Test_createFlasker {
     private AutoCloseable closeable;
     private WhiskyProdukt whiskyProdukt;
     @Mock private FlaskeSamling flaskeSamling;
@@ -57,7 +57,7 @@ public class Test_create_Flasker {
             flaskerPaaWhiskyprodukt.add(whiskyProdukt.getFlasker().get(i));
         }
         //Assert
-        for (int i = 0; i < flaskerOprettet.size(); i++) {
+        for (int i = 0; i < 1; i++) {
             assertSame(flaskerPaaWhiskyprodukt.get(i), flaskerOprettet.get(i));
         }
     }

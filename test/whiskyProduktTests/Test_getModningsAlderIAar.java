@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Test_GetModningsAlderIAar {
+public class Test_getModningsAlderIAar {
     FadIndhold fadIndhold1;
     WhiskyProdukt whiskyProdukt1;
     Fad fad1;

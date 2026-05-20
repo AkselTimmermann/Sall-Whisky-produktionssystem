@@ -54,34 +54,50 @@ public class Test_beregnWhiskyTilovers {
     }
 
     @Test
-    void testBeregnWhiskyTilovers_LidtNegativ() {
+    void testBeregnWhiskyTilovers_graense() {
         //Arrange
-        double stoerrelse = 0.5;
-        int antalFlasker = 10;
+        double stoerrelse = 0.1;
+        int antalFlasker = 1;
         Mockito.when(whiskyProdukt.samletAntalLiter()).thenReturn(10.0);
-        Mockito.when(whiskyProdukt.antalLiterIFlasker()).thenReturn(5.1);
+        Mockito.when(whiskyProdukt.antalLiterIFlasker()).thenReturn(5.0);
 
         //Act
         double whiskyTilovers = whiskyProdukt.beregnWhiskyTilovers(stoerrelse,antalFlasker);
 
         //Assert
         //Pga. afrundinger i Java bliver vi nødt til at indføre en fejlmargin
-        assertEquals(-0.1,whiskyTilovers,0.00000005);
+        assertEquals(4.9,whiskyTilovers,0.00000005);
+    }
+
+    @Test
+    void testBeregnWhiskyTilovers_LidtNegativ() {
+        //Arrange
+        double stoerrelse = 0.6;
+        int antalFlasker = 10;
+        Mockito.when(whiskyProdukt.samletAntalLiter()).thenReturn(10.0);
+        Mockito.when(whiskyProdukt.antalLiterIFlasker()).thenReturn(5.0);
+
+        //Act
+        double whiskyTilovers = whiskyProdukt.beregnWhiskyTilovers(stoerrelse,antalFlasker);
+
+        //Assert
+        //Pga. afrundinger i Java bliver vi nødt til at indføre en fejlmargin
+        assertEquals(-1,whiskyTilovers,0.00000005);
     }
 
     @Test
     void testBeregnWhiskyTilovers_LidtPositiv() {
         //Arrange
-        double stoerrelse = 0.5;
+        double stoerrelse = 0.4;
         int antalFlasker = 10;
         Mockito.when(whiskyProdukt.samletAntalLiter()).thenReturn(10.0);
-        Mockito.when(whiskyProdukt.antalLiterIFlasker()).thenReturn(4.9);
+        Mockito.when(whiskyProdukt.antalLiterIFlasker()).thenReturn(5.0);
 
         //Act
         double whiskyTilovers = whiskyProdukt.beregnWhiskyTilovers(stoerrelse,antalFlasker);
 
         //Pga. afrundinger i Java bliver vi nødt til at indføre en fejlmargin
         //Assert
-        assertEquals(0.1,whiskyTilovers,0.000000005);
+        assertEquals(1,whiskyTilovers,0.000000005);
     }
 }
