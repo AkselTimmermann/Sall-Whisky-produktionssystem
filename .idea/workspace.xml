@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Ændringer i initData">
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Tilføjet ScrollBar til alle vinduer og sat default-vindue størrelse">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +32,12 @@
     &quot;assignee&quot;: &quot;AkselTimmermann&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,
-    &quot;accountId&quot;: &quot;48052c54-ad71-490d-957e-0f0b68768a0e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem",
+    "accountId": "a87361ce-942a-4756-8cd3-042006455c4f"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -224,7 +223,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="a" />
     <MESSAGE value="Oprettet nye klasser til iteration5 og lavet automatisk udregning af alkoholProcent i Destillatklassen" />
     <MESSAGE value="associeringer rettet" />
     <MESSAGE value="controller og storage opdateret" />
@@ -249,6 +247,7 @@
     <MESSAGE value="RegistrerFlaskningPane ændret så man kan se antal flaskesamlinger, der skal placeres" />
     <MESSAGE value="blabla" />
     <MESSAGE value="Ændringer i initData" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændringer i initData" />
+    <MESSAGE value="Tilføjet ScrollBar til alle vinduer og sat default-vindue størrelse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjet ScrollBar til alle vinduer og sat default-vindue størrelse" />
   </component>
 </project>
