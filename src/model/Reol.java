@@ -49,6 +49,11 @@ public class Reol {
         }
     }
 
+    public Lager getLager() {
+        return lager;
+    }
+
+
     public ArrayList<Hylde> getHylder() {
         return new ArrayList<>(hylder);
     }

@@ -119,7 +119,6 @@ public class ForsidePane extends BorderPane {
         whiskyProduktListView.getSelectionModel().selectedItemProperty().addListener((
                 observableValue, oldWhiskyProdukt, newWhiskyProdukt) -> {
             if (newWhiskyProdukt != null) {
-                whiskyProduktListView.getSelectionModel().clearSelection();
                 whiskyProduktInfo(newWhiskyProdukt);
             }
         });
@@ -157,7 +156,8 @@ public class ForsidePane extends BorderPane {
         sb.append("Leverandør: ").append(fad.getLeverandoer()).append("\n");
 
         if (fad.getLagerPlads() != null) {
-            sb.append("Lagerplacering : ").append(fad.getLagerPlads()).append("\n");
+            sb.append("Lagerplacering : ").append(fad.getLagerPlads().getHylde().getReol().getLager().getNavn())
+                    .append(" ").append(fad.getLagerPlads()).append("\n");
         } else {
             sb.append("Lagerplacering: Ikke placeret\n");
         }
@@ -232,9 +232,11 @@ public class ForsidePane extends BorderPane {
     private void updateLists() {
         lvwFade.getItems().clear();
         lvwFadIndhold.getItems().clear();
+        whiskyProduktListView.getItems().clear();
 
         lvwFade.getItems().addAll(controller.getFade());
         lvwFadIndhold.getItems().addAll(controller.getFadIndhold());
+        whiskyProduktListView.getItems().addAll(controller.getWhiskyprodukter());
 
         lblAntalFade.setText("Antal fade: " + controller.getFade().size());
         lblAntalFadIndhold.setText("Antal fadindhold: " + controller.getFadIndhold().size());
@@ -243,6 +245,6 @@ public class ForsidePane extends BorderPane {
     }
 
     private void whiskyProduktInfo(WhiskyProdukt whiskyProdukt) {
-        controller.visHistorik(whiskyProdukt);
+        whiskyTextArea.setText(controller.visHistorik(whiskyProdukt));
     }
 }

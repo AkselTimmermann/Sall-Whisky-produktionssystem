@@ -278,7 +278,6 @@ public class OpretWhiskyProduktPane extends BorderPane {
             visFejl("Produkt nr. skal være et heltal.");
             return;
         }
-
         LocalDate dato = dpDato.getValue();
         if (dato == null) {
             visFejl("Dato skal vælges.");
@@ -302,8 +301,6 @@ public class OpretWhiskyProduktPane extends BorderPane {
             visFejl("Fortynding må ikke være negativ.");
             return;
         }
-
-
         if (beskrivelse.isEmpty()) {
             visFejl("Beskrivelse skal udfyldes");
             return;

@@ -31,10 +31,10 @@ public class Destillat {
         return maltBatch;
     }
 
-    public Set<Destillering> getDistinctDestillering() {
-        Set<Destillering> distinctDestilleringer = new HashSet<>();
+    public Set<String> getDistinctDestillering() {
+        Set<String> distinctDestilleringer = new HashSet<>();
         for (Destillering destillering : destilleringer) {
-            distinctDestilleringer.add(destillering);
+            distinctDestilleringer.add(destillering.getNewMakeNr());
         }
         return distinctDestilleringer;
     }

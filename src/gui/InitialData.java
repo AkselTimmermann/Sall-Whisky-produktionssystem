@@ -4,6 +4,7 @@ import controller.Controller;
 import model.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class InitialData {
 
@@ -28,30 +29,61 @@ public class InitialData {
 
 
 
-        controller.createFad("54", "Egetræ",
-                "Ex-bourbon", 32, l2);
-        controller.createFad("58", "Egetræ",
+        Fad fad1 = controller.createFad("54", "Egetræ",
+                "Ex-bourbon", 200, l2);
+        Fad fad2 = controller.createFad("58", "Egetræ",
                 "Ex-cherry", 94, l1);
-        controller.createFad("314", "Egetræ",
+        Fad fad3= controller.createFad("314", "Egetræ",
                 "Ex-Revesaltes Ambré",
                 230, l3);
 
 
-        controller.createDestillering("NM77P",
+        Destillering destillering1 = controller.createDestillering("NM77P",
                 LocalDate.of(2026, 1, 1),
                 LocalDate.of(2026, 1, 1),
-                120, 42, "Tørv",
+                80, 42, "Tørv",
                 "Testdestillering", ma1, me2);
 
-        controller.createDestillering("NM76P",
+        Destillering destillering2 = controller.createDestillering("NM76P",
                 LocalDate.of(2026, 2, 2),
                 LocalDate.of(2026, 2, 2),
-                140, 52, "",
+                80, 52, "",
                 "Testdestillering 2", ma2, me2);
 
+        ArrayList<Destillering>destilleringer = new ArrayList<>();
+        destilleringer.add(destillering1);
+
+        ArrayList<Destillering> destilleringer2 = new ArrayList<>();
+        destilleringer2.add(destillering2);
+
+        double[] antalLiter = {50};
+
+        double[] antalLiter2 = {50};
+
+        Destillat destillat1 =  controller.createDestillat("1", destilleringer, antalLiter);
+
+        Destillat destillat2 = controller.createDestillat("2", destilleringer2, antalLiter2);
+
+        FadIndhold fadIndhold1 = controller.createFadindhold(fad1);
+
+        FadIndhold fadIndhold2 = controller.createFadindhold(fad2);
+
+
+        ModningsRegistrering modningsRegistrering1 = controller.createModningsRegistrering(42, LocalDate.of(2025,6,24),45,"Ikke relevant","Ikke relevant", fadIndhold1);
+        PaafyldningsRegistrering paafyldningsRegistrering1 = controller.createPaafyldningsRegistrering(42, LocalDate.of(2016,6,24),destillat1,fad1,me1);
+        ModningsRegistrering modningsRegistrering2 = controller.createModningsRegistrering(42, LocalDate.of(2025,6,24),45,"Ikke relevant", "ikke relevant",fadIndhold2);
+        PaafyldningsRegistrering paafyldningsRegistrering2 = controller.createPaafyldningsRegistrering(42, LocalDate.of(2016,6,24), destillat2, fad2, me1);
+
+        ArrayList<FadIndhold> fadindholerne1 = new ArrayList<>();
+        fadindholerne1.add(fadIndhold1);
+
+        ArrayList<Double> antalLiterIWhisky = new ArrayList<Double>();
+        antalLiterIWhisky.add(20.0);
+
+        WhiskyProdukt whiskyProdukt1 = controller.createWhiskyProdukt("Fryd", 1, "Ikke relevant",LocalDate.of(2026,5,18),0,fadindholerne1,antalLiterIWhisky);
+        ProduktRegistrering produktRegistrering1 = controller.createProduktRegistrering(20,fadIndhold1,whiskyProdukt1);
 
     }
-
     private static void opretLagerStruktur(Controller controller, Lager lager,
                                            int antalReoler, int antalHylderPrReol,
                                            int antalPladserPrHylde) {

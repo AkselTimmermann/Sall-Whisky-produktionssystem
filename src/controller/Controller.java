@@ -37,7 +37,7 @@ public class Controller {
         StringBuilder sb = new StringBuilder();
         sb.append("Historik for Whiskyproduktet \n");
 
-        sb.append("Type: ").append(whiskyProdukt.isWhiskyType()).append("\n");
+        sb.append("-Type: ").append(whiskyProdukt.isWhiskyType()).append("\n");
 
         for (MaltBatch maltBatch : whiskyProdukt.getDistinctMaltBatches()) {
             sb.append("- ").append(maltBatch).append("\n");
@@ -47,18 +47,18 @@ public class Controller {
             sb.append("- ").append(string).append("\n");
         }
 
-        sb.append("Alder: ").append(whiskyProdukt.getModningsAlderIAar()).append(" år\n");
+        sb.append("-Alder: ").append(whiskyProdukt.getModningsAlderIAar()).append(" år\n");
 
-        sb.append("Flaske størrelser med dette whiskyprodukt: ").append(whiskyProdukt.getDistinctFlaskeStoerrelser()).append("\n");
+        sb.append("-Flaske størrelser med dette whiskyprodukt: ").append(whiskyProdukt.getDistinctFlaskeStoerrelser()).append("\n");
 
-        sb.append("Alkohol procent: ").append(whiskyProdukt.beregnAlkoholProcent()).append("% \n");
+        sb.append("-Alkohol procent: ").append(String.format("%.1f",whiskyProdukt.beregnAlkoholProcent() * 100)).append("% \n");
 
-        sb.append("Antal flasker produceret: ").append(whiskyProdukt.getFlasker().size()).append("\n");
+        sb.append("-Antal flasker produceret: ").append(whiskyProdukt.getFlasker().size()).append("\n");
         sb.append("\n");
 
         sb.append("Destilleringsbatch: ").append(whiskyProdukt.getDistinctDestilleringer()).append("\n");
 
-        sb.append("Fade:" ).append(whiskyProdukt.getDistinctFade()).append("\n");
+        sb.append("Fade:" ).append(whiskyProdukt.getDistinctFadId()).append("\n");
 
         return sb.toString();
     }
@@ -91,6 +91,12 @@ public class Controller {
         Lager lager = new Lager(navn, lokation, stoerrelse);
         storage.addLager(lager);
         return lager;
+    }
+
+    public FadIndhold createFadindhold(Fad fad) {
+        FadIndhold fadIndhold = new FadIndhold(fad);
+        storage.addFadIndhold(fadIndhold);
+        return fadIndhold;
     }
 
     public Reol createReol(int reolNr){
@@ -172,6 +178,11 @@ public class Controller {
         return modningsRegistrering;
     }
 
+    public ProduktRegistrering createProduktRegistrering(double antalLiter, FadIndhold fadIndhold, WhiskyProdukt whiskyProdukt) {
+        ProduktRegistrering produktRegistrering = whiskyProdukt.createProduktRegistrering(antalLiter, fadIndhold);
+        return produktRegistrering;
+    }
+
     public Destillering createDestillering(String newMakeNr, LocalDate startDato, LocalDate slutDato, double maengdeVaeske, double alkoholProcent, String rygeMateriale, String kommentar, MaltBatch maltBatch, Medarbejder medarbejder){
         Destillering destillering = new Destillering(newMakeNr, startDato, slutDato, maengdeVaeske, alkoholProcent, rygeMateriale, kommentar, maltBatch, medarbejder);
         storage.addDestillering(destillering);
@@ -200,7 +211,6 @@ public class Controller {
     }
 
     public int  registrerFlaskning(WhiskyProdukt whiskyProdukt, double stoerrelse, int antal) {
-
         int resterendeFlasker = antal;
         int antalSamlinger = 0;
 
@@ -219,6 +229,10 @@ public class Controller {
 
     public ArrayList<Leverandoer> getLeverandoer() {
         return storage.getLeverandoer();
+    }
+
+    public ArrayList<WhiskyProdukt> getWhiskyprodukter() {
+        return storage.getWhiskyProdukt();
     }
 
     public ArrayList<Destillering> getDestilleringer() {
