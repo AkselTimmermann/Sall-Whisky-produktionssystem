@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Næsten alle tests">
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_Constructor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_getFlasker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_getProduktRegistreringer.java" afterDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="tests færdige">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/InitialData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/InitialData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/StartVindue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_createProduktRegistrering.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_createProduktRegistrering.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_samletAntalLiter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_samletAntalLiter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_createProduktRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_createProduktRegistrering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_samletAntalLiter.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_samletAntalLiter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Fad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Fad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProduktRegistrering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProduktRegistrering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_Constructor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/whiskyProduktTests/Test_Constructor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_Constructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_Constructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_antalLiterIFlasker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +94,7 @@
     "JUnit.Test_getProduktRegistreringer.executor": "Run",
     "JUnit.Test_samletAntalLiter.executor": "Run",
     "JUnit.Test_samletAntalLiter.testSamletAntalLiter_IngenProduktRegistreringer.executor": "Run",
+    "JUnit.whiskyProduktTests in sall-whisky-produktionssystem.executor": "Run",
     "Maven.sall-whisky-produktionssystem [clean].executor": "Run",
     "Maven.sall-whisky-produktionssystem [javafx:run].executor": "Run",
     "Maven.sall-whisky-produktionssystem [test].executor": "Run",
@@ -232,7 +229,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="a" />
     <MESSAGE value="Oprettet nye klasser til iteration5 og lavet automatisk udregning af alkoholProcent i Destillatklassen" />
     <MESSAGE value="associeringer rettet" />
     <MESSAGE value="controller og storage opdateret" />
@@ -257,6 +253,7 @@
     <MESSAGE value="RegistrerFlaskningPane ændret så man kan se antal flaskesamlinger, der skal placeres" />
     <MESSAGE value="blabla" />
     <MESSAGE value="Ændringer i initData" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændringer i initData" />
+    <MESSAGE value="tests færdige" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests færdige" />
   </component>
 </project>

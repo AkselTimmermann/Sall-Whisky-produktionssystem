@@ -57,7 +57,7 @@ public class Test_antalLiterIFlasker {
     }
 
     @Test
-    void testAntalFlasker_IngenFlasker_Exception(){
+    void testAntalFlasker_IngenFlasker(){
         //Arrange
         //Vi tester en resultatet ved en tom liste af flasker, så der skal ikke tilknyttes nogen
 

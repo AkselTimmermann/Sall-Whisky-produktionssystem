@@ -141,4 +141,11 @@ public class FadIndhold {
         }
         return "Hej";
     }
+
+    public void addProduktRegistrering(ProduktRegistrering produktRegistrering) {
+        if (!produktRegistreringer.contains(produktRegistrering)){
+            produktRegistreringer.add(produktRegistrering);
+            produktRegistrering.setFadindhold(this);
+        }
+    }
 }

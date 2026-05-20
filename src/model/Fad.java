@@ -106,7 +106,7 @@ public class Fad implements LagerObjekt {
     public void setNuvaerendeFadindhold(FadIndhold nuvaerendeFadindhold) {
         if (this.nuvaerendeFadindhold!=null){
             if (this.nuvaerendeFadindhold.getResterendeLiter()==0){
-                gammeltFadIndholdListe.add(this.nuvaerendeFadindhold);
+                addGammmeltFadIndhold(this.nuvaerendeFadindhold);
             }
             else {
                 throw new IllegalArgumentException("Der er allerede oprettet indhold til dette fad");

@@ -29,7 +29,7 @@ public class Test_Constructor {
         whiskyProdukt = new WhiskyProdukt("nyWhisky", 1, "Smager godt", LocalDate.of(2026, 12, 24), fortynding);
         whiskyProduktAnden = new WhiskyProdukt("nyWhisky", 1, "Smager godt", LocalDate.of(2026, 12, 24), fortynding);
         //Assert
-        Assertions.assertTrue(whiskyProdukt instanceof WhiskyProdukt);
-        Assertions.assertFalse(whiskyProdukt.equals(whiskyProduktAnden));
+        Assertions.assertInstanceOf(WhiskyProdukt.class, whiskyProdukt);
+        Assertions.assertNotEquals(whiskyProdukt, whiskyProduktAnden);
     }
 }
