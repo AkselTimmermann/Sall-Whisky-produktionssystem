@@ -19,8 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class Test_createProduktRegistrering {
     private AutoCloseable closeable;
     private WhiskyProdukt whiskyProdukt;
-    @Mock
-    private FadIndhold fadIndhold;
+    @Mock private FadIndhold fadIndhold;
 
     @BeforeEach
     void setup() {

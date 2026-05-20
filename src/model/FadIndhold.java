@@ -29,8 +29,8 @@ public class FadIndhold {
         return maltBatch;
     }
 
-    public Set<Destillering> getDistinctDestillering() {
-        Set<Destillering> distinctDestilleringer = new HashSet<>();
+    public Set<String> getDistinctDestillering() {
+        Set<String> distinctDestilleringer = new HashSet<>();
         for (PaafyldningsRegistrering pr : paafyldningsRegistreringer) {
             distinctDestilleringer.addAll(pr.getDestillat().getDistinctDestillering());
         }
@@ -157,5 +157,12 @@ public class FadIndhold {
 
         }
         return "Hej";
+    }
+
+    public void addProduktRegistrering(ProduktRegistrering produktRegistrering) {
+        if (!produktRegistreringer.contains(produktRegistrering)){
+            produktRegistreringer.add(produktRegistrering);
+            produktRegistrering.setFadindhold(this);
+        }
     }
 }

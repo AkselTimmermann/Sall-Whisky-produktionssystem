@@ -7,8 +7,16 @@ public class ProduktRegistrering {
 
     public ProduktRegistrering(double antalLiter, FadIndhold fadIndhold, WhiskyProdukt whiskyProdukt) {
         this.antalLiter = antalLiter;
-        this.fadIndhold = fadIndhold;
+        setFadindhold(fadIndhold);
         this.whiskyProdukt = whiskyProdukt;
+
+    }
+
+    public void setFadindhold(FadIndhold fadIndhold) {
+        if (!this.fadIndhold.equals(fadIndhold)){
+            this.fadIndhold = fadIndhold;
+            fadIndhold.addProduktRegistrering(this);
+        }
     }
 
     public WhiskyProdukt getWhiskyProdukt() {

@@ -18,7 +18,6 @@ public class Storage implements StorageInterface {
     private ArrayList<FadIndhold> fadIndholdListe = new ArrayList<>();
     private ArrayList<PaafyldningsRegistrering> paafyldningsRegistreringer = new ArrayList<>();
 
-
     public void addDestillering(Destillering destillering) {
         if (!destilleringer.contains(destillering)) {
             destilleringer.add(destillering);
