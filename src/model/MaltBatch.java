@@ -14,7 +14,7 @@ public class MaltBatch {
     }
 
     public String toString() {
-        return "Mark: " + kornMark + " | " + " Korn sort" + bygSort + "\n";
+        return "Mark: " + kornMark + " | " + " Kornsort: " + bygSort + "\n";
     }
 
 }

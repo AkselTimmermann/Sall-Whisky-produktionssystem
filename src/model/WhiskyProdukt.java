@@ -143,16 +143,16 @@ public class WhiskyProdukt {
         return fadeBeskrivelser;
     }
 
-    public Set<Fad> getDistinctFade() {
-        Set<Fad> distinctFade = new HashSet<>();
+    public Set<String> getDistinctFadId() {
+        Set<String> distinctFade = new HashSet<>();
         for (ProduktRegistrering pr : produktRegistreringer) {
-            distinctFade.add(pr.getFadIndhold().getFad());
+            distinctFade.add(pr.getFadIndhold().getFad().getId());
         }
         return distinctFade;
     }
 
-    public Set<Destillering> getDistinctDestilleringer() {
-        Set<Destillering> distinctDestilleringer = new HashSet<>();
+    public Set<String> getDistinctDestilleringer() {
+        Set<String> distinctDestilleringer = new HashSet<>();
         for (ProduktRegistrering pr : produktRegistreringer) {
             distinctDestilleringer.addAll(pr.getFadIndhold().getDistinctDestillering());
         }
