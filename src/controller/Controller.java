@@ -6,7 +6,6 @@ import storage.StorageInterface;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.concurrent.atomic.AtomicReferenceArray;
 
 public class Controller {
     private StorageInterface storage;
@@ -32,6 +31,36 @@ public class Controller {
         liste.sort(Comparator.comparing(fadIndhold -> fadIndhold.getModningsRegistreringer().getLast().getDato()));
 
         return liste;
+    }
+
+    public String visHistorik(WhiskyProdukt whiskyProdukt) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Historik for Whiskyproduktet \n");
+
+        sb.append("Type: ").append(whiskyProdukt.isWhiskyType()).append("\n");
+
+        for (MaltBatch maltBatch : whiskyProdukt.getDistinctMaltBatches()) {
+            sb.append("- ").append(maltBatch).append("\n");
+        }
+
+        for(String string : whiskyProdukt.getDistinctFadeBeskrivelser()) {
+            sb.append("- ").append(string).append("\n");
+        }
+
+        sb.append("Alder: ").append(whiskyProdukt.getModningsAlderIAar()).append(" år\n");
+
+        sb.append("Flaske størrelser med dette whiskyprodukt: ").append(whiskyProdukt.getDistinctFlaskeStoerrelser()).append("\n");
+
+        sb.append("Alkohol procent: ").append(whiskyProdukt.beregnAlkoholProcent()).append("% \n");
+
+        sb.append("Antal flasker produceret: ").append(whiskyProdukt.getFlasker().size()).append("\n");
+        sb.append("\n");
+
+        sb.append("Destilleringsbatch: ").append(whiskyProdukt.getDistinctDestilleringer()).append("\n");
+
+        sb.append("Fade:" ).append(whiskyProdukt.getDistinctFade()).append("\n");
+
+        return sb.toString();
     }
 
     public ArrayList<Fad> getFadeUdenPlacering() {
