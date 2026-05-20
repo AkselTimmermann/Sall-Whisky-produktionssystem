@@ -56,8 +56,7 @@ public class LagerPlads {
     }
 
     public String toString() {
-        return "Lager: " + hylde.getReol().getLager().getNavn()
-                + " | Reol: " + hylde.getReol().getReolNr()
+        return "| Reol: " + hylde.getReol().getReolNr()
                 + " | Hylde: " + hylde.getHyldeNr()
                 + " | Plads: "+ pladsNr + " |";
     }

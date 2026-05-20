@@ -156,7 +156,8 @@ public class ForsidePane extends BorderPane {
         sb.append("Leverandør: ").append(fad.getLeverandoer()).append("\n");
 
         if (fad.getLagerPlads() != null) {
-            sb.append("Lagerplacering : ").append(fad.getLagerPlads()).append("\n");
+            sb.append("Lagerplacering : ").append(fad.getLagerPlads().getHylde().getReol().getLager().getNavn())
+                    .append(" ").append(fad.getLagerPlads()).append("\n");
         } else {
             sb.append("Lagerplacering: Ikke placeret\n");
         }
