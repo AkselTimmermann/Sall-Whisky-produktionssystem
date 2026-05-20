@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="WhiskyProdukt getDistinctmetoder oprettet. Controller visHistorik metoder. Tests påbegyndtt">
-      <change afterPath="$PROJECT_DIR$/test/whiskyProduktTests/Test_getDistinctFadId.java" afterDir="false" />
+    <list default="true" id="958af90f-d980-4a57-96aa-3356086db14e" name="Changes" comment="Fadindhold forbindelse">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/ForsidePane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ForsidePane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/InitialData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/InitialData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Destillat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Destillat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/FadIndhold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FadIndhold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/MaltBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/MaltBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/WhiskyProdukt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/storage/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/storage/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/MaltBatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/storage/Storage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storage/Storage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +32,12 @@
     &quot;assignee&quot;: &quot;AkselTimmermann&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git",
-    "accountId": "243a52f7-dc64-4338-89d3-b4e43ed51bf1"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AkselTimmermann/Sall-Whisky-produktionssystem.git&quot;,
+    &quot;accountId&quot;: &quot;48052c54-ad71-490d-957e-0f0b68768a0e&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -74,6 +61,7 @@
   "keyToString": {
     "Application.App.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.Test_Constructor.executor": "Run",
     "JUnit.Test_Lager_Metoder (1).executor": "Run",
     "JUnit.Test_Lager_Metoder.executor": "Run",
     "JUnit.Test_Lager_Metoder.findPlacering_ObjektFindes_Placeringprintes.executor": "Run",
@@ -96,10 +84,11 @@
     "JUnit.Test_beregnWhiskyTilovers.testStoerrelseMindreEndNul.executor": "Run",
     "JUnit.Test_create_Flasker.testExceptionAntalFlasker0.executor": "Run",
     "JUnit.Test_create_Flasker.testExceptionStoerrelse0.executor": "Run",
-    "JUnit.Test_getDistinctFadId.TC1_getDistinctFade_2Produktregistreringer_sammeFad.executor": "Run",
-    "JUnit.Test_getDistinctFadId.TC2_getDistinctFade_2Produktregistreringer_2fade.executor": "Run",
-    "JUnit.Test_getDistinctFade.TC1_getDistinctFade_2Produktregistreringer_sammeFad.executor": "Run",
-    "JUnit.Test_getDistinctFade.TC2_getDistinctFade_2Produktregistreringer_2fade.executor": "Run",
+    "JUnit.Test_getFlasker.executor": "Run",
+    "JUnit.Test_getProduktRegistreringer.executor": "Run",
+    "JUnit.Test_samletAntalLiter.executor": "Run",
+    "JUnit.Test_samletAntalLiter.testSamletAntalLiter_IngenProduktRegistreringer.executor": "Run",
+    "JUnit.whiskyProduktTests in sall-whisky-produktionssystem.executor": "Run",
     "Maven.sall-whisky-produktionssystem [clean].executor": "Run",
     "Maven.sall-whisky-produktionssystem [javafx:run].executor": "Run",
     "Maven.sall-whisky-produktionssystem [test].executor": "Run",
@@ -119,53 +108,47 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="Maven.sall-whisky-produktionssystem [javafx:run]">
-    <configuration name="Test_create_Flasker.testExceptionAntalFlasker0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.whiskyProduktTests in sall-whisky-produktionssystem">
+    <configuration name="Test_Constructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_create_Flasker" />
-      <option name="METHOD_NAME" value="testExceptionAntalFlasker0" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_Constructor" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_getDistinctFadId.TC1_getDistinctFade_2Produktregistreringer_sammeFad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_getFlasker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_getDistinctFadId" />
-      <option name="METHOD_NAME" value="TC1_getDistinctFade_2Produktregistreringer_sammeFad" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_getFlasker" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_getDistinctFadId.TC2_getDistinctFade_2Produktregistreringer_2fade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_getProduktRegistreringer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_getDistinctFadId" />
-      <option name="METHOD_NAME" value="TC2_getDistinctFade_2Produktregistreringer_2fade" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_getProduktRegistreringer" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_getDistinctFade.TC1_getDistinctFade_2Produktregistreringer_sammeFad" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Test_samletAntalLiter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_getDistinctFade" />
-      <option name="METHOD_NAME" value="TC1_getDistinctFade_2Produktregistreringer_sammeFad" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_samletAntalLiter" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test_getDistinctFade.TC2_getDistinctFade_2Produktregistreringer_2fade" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="whiskyProduktTests in sall-whisky-produktionssystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="sall-whisky-produktionssystem" />
       <option name="PACKAGE_NAME" value="whiskyProduktTests" />
-      <option name="MAIN_CLASS_NAME" value="whiskyProduktTests.Test_getDistinctFade" />
-      <option name="METHOD_NAME" value="TC2_getDistinctFade_2Produktregistreringer_2fade" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,20 +184,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.Test_getDistinctFadId.TC1_getDistinctFade_2Produktregistreringer_sammeFad" />
-      <item itemvalue="JUnit.Test_getDistinctFadId.TC2_getDistinctFade_2Produktregistreringer_2fade" />
-      <item itemvalue="JUnit.Test_getDistinctFade.TC1_getDistinctFade_2Produktregistreringer_sammeFad" />
-      <item itemvalue="JUnit.Test_getDistinctFade.TC2_getDistinctFade_2Produktregistreringer_2fade" />
-      <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
+      <item itemvalue="JUnit.Test_Constructor" />
+      <item itemvalue="JUnit.Test_getFlasker" />
+      <item itemvalue="JUnit.Test_getProduktRegistreringer" />
+      <item itemvalue="JUnit.Test_samletAntalLiter" />
+      <item itemvalue="JUnit.whiskyProduktTests in sall-whisky-produktionssystem" />
       <item itemvalue="Maven.sall-whisky-produktionssystem [javafx:run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Test_getDistinctFadId.TC2_getDistinctFade_2Produktregistreringer_2fade" />
-        <item itemvalue="JUnit.Test_getDistinctFadId.TC1_getDistinctFade_2Produktregistreringer_sammeFad" />
-        <item itemvalue="JUnit.Test_getDistinctFade.TC1_getDistinctFade_2Produktregistreringer_sammeFad" />
-        <item itemvalue="JUnit.Test_getDistinctFade.TC2_getDistinctFade_2Produktregistreringer_2fade" />
-        <item itemvalue="JUnit.Test_create_Flasker.testExceptionAntalFlasker0" />
+        <item itemvalue="JUnit.whiskyProduktTests in sall-whisky-produktionssystem" />
+        <item itemvalue="JUnit.Test_getFlasker" />
+        <item itemvalue="JUnit.Test_getProduktRegistreringer" />
+        <item itemvalue="JUnit.Test_Constructor" />
+        <item itemvalue="JUnit.Test_samletAntalLiter" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +223,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Oprettet nye klasser til iteration5 og lavet automatisk udregning af alkoholProcent i Destillatklassen" />
     <MESSAGE value="associeringer rettet" />
     <MESSAGE value="controller og storage opdateret" />
     <MESSAGE value="controller og storage opdaterett" />
@@ -264,7 +246,8 @@
     <MESSAGE value="RegistrerFlaskningPane ændret så man kan se antal flaskesamlinger, der skal placeres" />
     <MESSAGE value="blabla" />
     <MESSAGE value="Ændringer i initData" />
-    <MESSAGE value="WhiskyProdukt getDistinctmetoder oprettet. Controller visHistorik metoder. Tests påbegyndtt" />
-    <option name="LAST_COMMIT_MESSAGE" value="WhiskyProdukt getDistinctmetoder oprettet. Controller visHistorik metoder. Tests påbegyndtt" />
+    <MESSAGE value="tests færdige" />
+    <MESSAGE value="Fadindhold forbindelse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fadindhold forbindelse" />
   </component>
 </project>
