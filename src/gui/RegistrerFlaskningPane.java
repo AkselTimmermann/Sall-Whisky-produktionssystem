@@ -97,6 +97,7 @@ public class RegistrerFlaskningPane extends BorderPane {
         HBox hBox = new HBox(30, registrerBtn, rydBtn);
         pane.add(hBox,0,7);
 
+        whiskyProduktComboBox.getItems().addAll(controller.getWhiskyprodukter());
         whiskyProduktComboBox.setOnAction(actionEvent -> updateWhiskyInfo());
 
         vaelgFlaskeStoerrelseBtn.setOnAction(actionEvent -> beregnMaksAntalFlaskerAction());
