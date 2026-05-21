@@ -24,7 +24,7 @@ public class Test_isWhiskyType {
     @Mock private FadIndhold mockFadindhold3;
     @Mock private Fad mockFad1;
     @Mock private Fad mockFad2;
-    ArrayList<ProduktRegistrering> mockedProduktRegistreringer = new ArrayList<>();
+    private ArrayList<ProduktRegistrering> mockedProduktRegistreringer = new ArrayList<>();
 
 
     @BeforeEach

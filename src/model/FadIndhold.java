@@ -82,7 +82,7 @@ public class FadIndhold {
 
     public boolean isLagretMinimum3Aar(LocalDate produktDato){
         LocalDate paafyldningsDato = paafyldningsRegistreringer.getLast().getDato();
-        return paafyldningsDato.plusYears(3).isBefore(produktDato);
+        return !paafyldningsDato.plusYears(3).isAfter(produktDato);
     }
 
     public Fad getFad() {
